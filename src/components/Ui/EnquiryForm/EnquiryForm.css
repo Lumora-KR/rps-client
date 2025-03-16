@@ -1,0 +1,277 @@
+/* .enquiry-form {
+  background-color: white;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.enquiry-tabs {
+  display: flex;
+  width: 100%;
+}
+
+.enquiry-tab {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  background-color: var(--text-dark);
+  color: white;
+  font-weight: var(--font-weight-medium);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.enquiry-tab svg {
+  font-size: 1.2rem;
+}
+
+.enquiry-tab.active {
+  background-color: var(--secondary-color);
+}
+
+.enquiry-tab:hover:not(.active) {
+  background-color: #333;
+}
+
+.enquiry-content {
+  padding: 25px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form-group-btn {
+}
+
+.form-group label {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px 15px;
+  border: 1px solid var(--text-light);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-md);
+  transition: all var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+}
+
+.mui-button {
+  text-transform: none !important;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: var(--font-weight-medium) !important;
+  padding: 10px 15px !important;
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .enquiry-tab {
+    padding: 10px;
+    font-size: var(--font-size-sm);
+  }
+
+  .enquiry-tab svg {
+    font-size: 1rem;
+  }
+
+  .enquiry-content {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .enquiry-tabs {
+    flex-direction: column;
+  }
+
+  .enquiry-tab {
+    padding: 8px;
+  }
+} */
+/* components/EnquiryForm/EnquiryForm.css */
+.enquiry-form {
+  background-color: white;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.enquiry-tabs {
+  display: flex;
+  width: 100%;
+}
+
+.enquiry-tab {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  background-color: var(--text-dark);
+  color: white;
+  font-weight: var(--font-weight-medium);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.enquiry-tab svg {
+  font-size: 1.2rem;
+}
+
+.enquiry-tab.active {
+  background-color: var(--secondary-color);
+}
+
+.enquiry-tab:hover:not(.active) {
+  background-color: #333;
+}
+
+.enquiry-content {
+  padding: 25px;
+}
+
+.common-fields {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--text-light);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group-btn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.form-group label {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px 15px;
+  border: 1px solid var(--text-light);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-md);
+  transition: all var(--transition-fast);
+  color: var(--text-dark);
+  background-color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+}
+
+/* Fix for auto-fill not changing color */
+.form-group input:-webkit-autofill,
+.form-group input:-webkit-autofill:hover,
+.form-group input:-webkit-autofill:focus,
+.form-group select:-webkit-autofill,
+.form-group select:-webkit-autofill:hover,
+.form-group select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  -webkit-text-fill-color: var(--text-dark);
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.mui-button {
+  text-transform: none !important;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: var(--font-weight-medium) !important;
+  padding: 10px 24px !important;
+  min-width: 180px !important;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .enquiry-tab {
+    padding: 10px;
+    font-size: var(--font-size-sm);
+  }
+
+  .enquiry-tab svg {
+    font-size: 1rem;
+  }
+
+  .enquiry-content {
+    padding: 15px;
+  }
+
+  .common-fields {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .enquiry-tabs {
+    flex-direction: column;
+  }
+
+  .enquiry-tab {
+    padding: 8px;
+  }
+
+  .form-group-btn {
+    width: 100%;
+  }
+
+  .mui-button {
+    width: 100% !important;
+  }
+}

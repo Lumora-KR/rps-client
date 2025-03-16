@@ -1,0 +1,374 @@
+/* SiteSeen.css */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+.site-seen-container {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* Hero Section */
+.site-seen-hero {
+  position: relative;
+  height: 60vh;
+  background-image: url("https://source.unsplash.com/1600x900/?tamil,nadu,temple");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.site-seen-hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Sections */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Locations Section */
+.locations-section {
+  padding: 4rem 0;
+  background-color: #f9f9f9;
+}
+
+.locations-swiper {
+  padding: 30px 0;
+}
+
+.location-card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  height: 400px;
+}
+
+.location-card:hover {
+  transform: translateY(-10px);
+}
+
+.location-image {
+  position: relative;
+  height: 100%;
+}
+
+.location-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.location-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.location-card:hover .location-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.location-overlay h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.location-overlay p {
+  display: none;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.location-card:hover .location-overlay p {
+  display: block;
+}
+
+.btn-explore {
+  display: none;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.location-card:hover .btn-explore {
+  display: inline-block;
+}
+
+.btn-explore:hover {
+  background: linear-gradient(to right, #feb47b, #ff7e5f);
+  transform: scale(1.05);
+}
+
+/* Spots Section */
+.spots-section {
+  padding: 4rem 0;
+  background-color: #fff;
+}
+
+.btn-back {
+  background: transparent;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+  background: #f5f5f5;
+  color: #ff7e5f;
+}
+
+.spot-detail-swiper {
+  margin-bottom: 3rem;
+}
+
+.spot-detail-card {
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.spot-image {
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.spot-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.spot-image:hover img {
+  transform: scale(1.05);
+}
+
+.spot-content {
+  padding: 20px 0;
+}
+
+.spot-content h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.spot-content h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.spot-info {
+  margin-top: 1rem;
+}
+
+.info-item {
+  margin-bottom: 1rem;
+}
+
+.info-item i {
+  color: #ff7e5f;
+  margin-right: 10px;
+}
+
+.info-item span {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.spot-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.spot-card:hover {
+  transform: translateY(-5px);
+}
+
+.spot-card .spot-image {
+  height: 200px;
+}
+
+.spot-card .spot-content {
+  padding: 15px;
+}
+
+.spot-info p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.spot-info i {
+  color: #ff7e5f;
+  margin-right: 8px;
+}
+
+.specialty {
+  font-style: italic;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .section-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .spot-content h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-seen-hero {
+    height: 50vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .location-overlay h3 {
+    font-size: 1.5rem;
+  }
+
+  .spot-detail-card .row {
+    flex-direction: column;
+  }
+
+  .spot-image {
+    height: 250px;
+    margin-bottom: 15px;
+  }
+
+  .spot-content {
+    padding: 15px 0;
+  }
+
+  .spot-content h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .site-seen-hero {
+    height: 40vh;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .spot-image {
+    height: 200px;
+  }
+
+  .spot-card .spot-image {
+    height: 150px;
+  }
+}

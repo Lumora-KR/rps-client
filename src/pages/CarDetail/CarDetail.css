@@ -1,0 +1,324 @@
+/* pages/CarDetail/CarDetail.css */
+.car-detail-page {
+    padding-top: 80px;
+  }
+  
+  /* Hero Banner */
+  .car-detail-hero {
+    position: relative;
+    height: 500px;
+  }
+  
+  .car-detail-swiper {
+    height: 100%;
+  }
+  
+  .car-detail-slide {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .car-detail-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+  }
+  
+  .car-detail-hero-content {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    color: white;
+  }
+  
+  .breadcrumb {
+    display: flex;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  .breadcrumb span {
+    margin: 0 5px;
+  }
+  
+  .breadcrumb span:first-child {
+    margin-left: 0;
+  }
+  
+  .breadcrumb .separator {
+    color: var(--primary-color);
+  }
+  
+  .breadcrumb .active {
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+  
+  .car-detail-title {
+    font-weight: 700 !important;
+    margin-bottom: 20px !important;
+    font-size: 36px !important;
+  }
+  
+  .car-detail-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 15px;
+    border-radius: 5px;
+  }
+  
+  .meta-item svg {
+    color: var(--primary-color);
+  }
+  
+  /* Main Content */
+  .car-detail-container {
+    padding: 60px 0;
+  }
+  
+  .car-detail-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2) !important;
+    margin-bottom: 30px;
+    padding: 30px;
+  }
+  
+  .content-title {
+    font-weight: 600 !important;
+    margin-bottom: 20px !important;
+    color: var(--text-dark);
+  }
+  
+  .content-divider {
+    margin: 30px 0 !important;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Car Features */
+  .car-features-grid {
+    margin-top: 20px;
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .feature-icon {
+    color: var(--primary-color);
+  }
+  
+  /* Car Specifications */
+  .car-specs-grid {
+    margin-top: 20px;
+  }
+  
+  .spec-item {
+    margin-bottom: 15px;
+  }
+  
+  .spec-item h6 {
+    font-weight: 600 !important;
+    margin-bottom: 5px !important;
+    color: var(--text-dark);
+  }
+  
+  /* Rental Options */
+  .rental-options-grid {
+    margin-top: 20px;
+  }
+  
+  .rental-option-card {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  .rental-option-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+    border-color: var(--primary-color);
+  }
+  
+  .option-title {
+    font-weight: 600 !important;
+    margin-bottom: 15px !important;
+    color: var(--text-dark);
+  }
+  
+  .option-price {
+    color: var(--primary-color);
+    font-weight: 700 !important;
+    margin-bottom: 15px !important;
+    position: relative;
+  }
+  
+  .price-unit {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-medium);
+    margin-left: 5px;
+  }
+  
+  .option-description {
+    color: var(--text-medium);
+  }
+  
+  /* FAQs */
+  .faq-list {
+    margin-top: 20px;
+  }
+  
+  .faq-item {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .faq-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  .faq-question {
+    font-weight: 600 !important;
+    margin-bottom: 10px !important;
+    color: var(--text-dark);
+  }
+  
+  .faq-answer {
+    color: var(--text-medium);
+  }
+  
+  /* Booking Card */
+  .booking-card {
+    padding: 25px;
+  }
+  
+  .booking-title {
+    font-weight: 600 !important;
+    text-align: center;
+  }
+  
+  .booking-divider {
+    margin: 15px 0 !important;
+  }
+  
+  .car-prices {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .car-prices h4 {
+    color: var(--primary-color);
+    font-weight: 700 !important;
+  }
+  
+  .booking-form {
+    margin-top: 20px;
+  }
+  
+  .booking-button {
+    margin-top: 20px !important;
+    padding: 12px !important;
+    font-weight: 600 !important;
+  }
+  
+  .whatsapp-button {
+    margin-top: 15px !important;
+  }
+  
+  /* Contact Card */
+  .contact-card {
+    padding: 25px;
+  }
+  
+  .contact-title {
+    font-weight: 600 !important;
+    text-align: center;
+  }
+  
+  .contact-divider {
+    margin: 15px 0 !important;
+  }
+  
+  .contact-info {
+    margin-top: 15px;
+  }
+  
+  .contact-info p {
+    margin-bottom: 10px !important;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 960px) {
+    .car-detail-meta {
+      gap: 15px;
+    }
+    
+    .meta-item {
+      padding: 6px 12px;
+    }
+    
+    .car-detail-card {
+      padding: 25px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .car-detail-hero {
+      height: 400px;
+    }
+    
+    .car-detail-title {
+      font-size: 30px !important;
+    }
+    
+    .car-detail-meta {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .car-detail-card {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .car-detail-page {
+      padding-top: 70px;
+    }
+    .car-detail-hero {
+      height: 350px;
+    }
+    
+    .car-detail-title {
+      font-size: 24px !important;
+    }
+    
+    .car-detail-card {
+      padding: 15px;
+    }
+  }

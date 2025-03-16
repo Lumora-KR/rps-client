@@ -1,0 +1,40 @@
+/* components/Card/Card.css */
+.custom-card {
+    background-color: var(--background-light);
+    border-radius: var(--border-radius-md) !important;
+    overflow: hidden;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  }
+  
+  .custom-card-default:hover {
+    box-shadow: var(--shadow-md) !important;
+  }
+  
+  .custom-card-elevated {
+    box-shadow: var(--shadow-md) !important;
+  }
+  
+  .custom-card-elevated:hover {
+    box-shadow: var(--shadow-lg) !important;
+    transform: translateY(-4px);
+  }
+  
+  .custom-card-bordered {
+    border: 1px solid var(--text-light) !important;
+  }
+  
+  .custom-card-header {
+    padding: var(--spacing-md) !important;
+    border-bottom: 1px solid var(--text-light);
+    font-weight: var(--font-weight-medium);
+  }
+  
+  .custom-card-body {
+    padding: var(--spacing-md) !important;
+  }
+  
+  .custom-card-footer {
+    padding: var(--spacing-md) !important;
+    border-top: 1px solid var(--text-light);
+    background-color: var(--background-off);
+  }

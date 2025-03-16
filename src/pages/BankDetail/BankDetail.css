@@ -1,0 +1,243 @@
+/* pages/BankDetail/BankDetail.css */
+.bank-detail-page {
+    padding-top: 80px;
+  }
+  
+  /* Hero Banner */
+  .page-hero-banner {
+    height: 300px;
+    background-image: url('https://source.unsplash.com/1600x900/?bank,finance');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+  
+  .page-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+  }
+  
+  .page-hero-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .breadcrumb {
+    display: flex;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  .breadcrumb span {
+    margin: 0 5px;
+  }
+  
+  .breadcrumb span:first-child {
+    margin-left: 0;
+  }
+  
+  .breadcrumb .separator {
+    color: var(--primary-color);
+  }
+  
+  .breadcrumb .active {
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+  
+  .page-hero-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  /* Main Content */
+  .bank-detail-container {
+    padding: 60px 0;
+  }
+  
+  .bank-detail-card {
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2) !important;
+  }
+  
+  .section-title {
+    display: flex;
+    align-items: center;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    margin-bottom: 20px !important;
+    color: var(--text-dark);
+  }
+  
+  .title-icon {
+    margin-right: 10px;
+    color: var(--primary-color);
+  }
+  
+  .title-divider {
+    margin-bottom: 25px !important;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Bank Info */
+  .bank-info-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+  }
+  
+  .bank-info-item h6 {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+  }
+  
+  .bank-info-item p {
+    color: var(--text-medium);
+    font-size: 16px;
+  }
+  
+  /* Payment Instructions */
+  .payment-instructions {
+    color: var(--text-medium);
+  }
+  
+  .instruction-list {
+    padding-left: 20px;
+  }
+  
+  .instruction-list li {
+    margin-bottom: 15px;
+  }
+  
+  /* Other Payment Methods */
+  .payment-methods-grid {
+    margin-top: 20px;
+  }
+  
+  .payment-method-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--background-light);
+    height: 100%;
+  }
+  
+  .payment-method-item img {
+    margin-bottom: 15px;
+  }
+  
+  .payment-method-item h6 {
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  
+  /* Contact Card */
+  .contact-card {
+    background-color: var(--background-light);
+  }
+  
+  .contact-title {
+    font-weight: 600 !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .contact-info {
+    color: var(--text-medium);
+  }
+  
+  .contact-item {
+    margin-bottom: 20px;
+  }
+  
+  .contact-item h6 {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+  }
+  
+  .whatsapp-button {
+    margin-top: 20px !important;
+    padding: 12px !important;
+    font-weight: 500 !important;
+  }
+  
+  /* Note Card */
+  .note-card {
+    background-color: #fff8e1;
+  }
+  
+  .note-title {
+    display: flex;
+    align-items: center;
+    font-weight: 600 !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .note-icon {
+    margin-right: 10px;
+    color: #ff9800;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 960px) {
+    .bank-info-container {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .page-hero-banner {
+      height: 250px;
+    }
+    
+    .page-hero-title {
+      font-size: 36px;
+    }
+    
+    .bank-detail-card {
+      padding: 25px;
+    }
+    
+    .section-title {
+      font-size: 22px !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .bank-detail-page {
+      padding-top: 70px;
+    }
+    .page-hero-banner {
+      height: 200px;
+    }
+    
+    .page-hero-title {
+      font-size: 30px;
+    }
+    
+    .bank-detail-card {
+      padding: 20px;
+    }
+    
+    .bank-info-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+      font-size: 20px !important;
+    }
+  }

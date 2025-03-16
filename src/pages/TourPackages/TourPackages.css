@@ -1,0 +1,138 @@
+/* pages/TourPackages/TourPackages.css */
+.tour-packages-page {
+    padding-top: 80px;
+  }
+  
+  /* Hero Banner */
+  .page-hero-banner {
+    height: 300px;
+    background-image: url('https://source.unsplash.com/1600x900/?travel,india');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+  
+  .page-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+  }
+  
+  .page-hero-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .breadcrumb {
+    display: flex;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  .breadcrumb span {
+    margin: 0 5px;
+  }
+  
+  .breadcrumb span:first-child {
+    margin-left: 0;
+  }
+  
+  .breadcrumb .separator {
+    color: var(--primary-color);
+  }
+  
+  .breadcrumb .active {
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+  
+  .page-hero-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  /* Main Content */
+  .tour-packages-container {
+    padding: 60px 0;
+  }
+  
+  /* Filter Section */
+  .filter-section {
+    margin-bottom: 40px;
+  }
+  
+  .package-tabs {
+    margin-bottom: 20px;
+  }
+  
+  .filter-controls {
+    padding: 20px;
+    background-color: var(--background-light);
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  /* Packages Grid */
+  .packages-grid-section {
+    min-height: 400px;
+  }
+  
+  .no-packages-found {
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .no-packages-found h5 {
+    margin-bottom: 15px;
+    color: var(--text-dark);
+  }
+  
+  .no-packages-found p {
+    color: var(--text-medium);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 960px) {
+    .filter-controls {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .page-hero-banner {
+      height: 250px;
+    }
+    
+    .page-hero-title {
+      font-size: 36px;
+    }
+    
+    .filter-section {
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .tour-packages-page {
+      padding-top:70px;
+    }
+    
+    .page-hero-banner {
+      height: 200px;
+    }
+    
+    .page-hero-title {
+      font-size: 30px;
+    }
+    
+    .filter-controls {
+      padding: 10px;
+    }
+  }

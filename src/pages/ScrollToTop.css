@@ -1,0 +1,86 @@
+.scroll-top-circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  background-color: var(--Text-Light);
+  background-image: url("../assets/HowSeilaxWorks/roundDividerBallSmall.svg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 38px, rgba(0, 0, 0, 0.22) 0px 0px 12px;
+  transition: all 0.3s ease-in-out;
+  animation: scrollTopAni 0.3s ease-in-out;
+}
+
+@keyframes scrollTopAni {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.scroll-top-circle:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px, rgba(0, 0, 0, 0.22) 0px 0px 0px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.scroll-top-circle:hover .scroll-top-icon {
+  animation-play-state: paused;
+}
+.scroll-top-icon {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 20px;
+  animation: scrollIconAnimation 0.5s linear infinite alternate-reverse;
+}
+
+@keyframes scrollIconAnimation {
+  0% {
+    transform: translateY(5px);
+    filter: blur(1px);
+  }
+
+  70% {
+    filter: blur(0.5px);
+  }
+
+  100% {
+    transform: translateY(-5px);
+    filter: blur(0px);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .scroll-top-circle {
+    width: 60px;
+    height: 60px;
+    bottom: 50px;
+    right: 50px;
+  }
+  .scroll-top-icon {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .scroll-top-circle {
+    width: 40px;
+    height: 40px;
+    bottom: 40px;
+    right: 40px;
+  }
+  .scroll-top-icon {
+    font-size: 16px;
+  }
+}
