@@ -22,6 +22,7 @@ const CarCard = ({
   description 
 }) => {
   return (
+    //checking 
     <Paper elevation={0} className="car-card">
       <div className="car-image">
         <img src={image || "/placeholder.svg"} alt={title} />
