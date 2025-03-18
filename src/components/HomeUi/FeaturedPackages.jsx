@@ -33,7 +33,7 @@ const FeaturedPackages = () => {
     {
       id: 1,
       title: 'Rameshwaram Tour Package',
-      image: '/src/assets/Poster-home/1.png',
+      image: '/src/assets/Poster-home/1.webp',
       location: 'Rameshwaram, Tamil Nadu',
       duration: '2 Days / 1 Night',
       price: '₹4,999',
@@ -44,7 +44,7 @@ const FeaturedPackages = () => {
     {
       id: 2,
       title: 'Kanyakumari Tour Package',
-      image: '/src/assets/Poster-home/6.png',
+      image: '/src/assets/Poster-home/6.webp',
       location: 'Kanyakumari, Tamil Nadu',
       duration: '3 Days / 2 Nights',
       price: '₹7,499',
@@ -55,7 +55,7 @@ const FeaturedPackages = () => {
     {
       id: 3,
       title: 'Madurai Tour Package',
-      image: '/src/assets/Poster-home/2.png',
+      image: '/src/assets/Poster-home/2.webp',
       location: 'Madurai, Tamil Nadu',
       duration: '2 Days / 1 Night',
       price: '₹5,499',
@@ -66,7 +66,7 @@ const FeaturedPackages = () => {
     {
       id: 4,
       title: 'Kodaikanal Tour Package',
-      image: '/src/assets/Poster-home/7.png',
+      image: '/src/assets/Poster-home/7.webp',
       location: 'Kodaikanal, Tamil Nadu',
       duration: '3 Days / 2 Nights',
       price: '₹8,999',
@@ -77,7 +77,7 @@ const FeaturedPackages = () => {
     {
       id: 5,
       title: 'Ooty Tour Package',
-      image: '/src/assets/Poster-home/5.png',
+      image: '/src/assets/Poster-home/5.webp',
       location: 'Ooty, Tamil Nadu',
       duration: '4 Days / 3 Nights',
       price: '₹10,499',
@@ -88,7 +88,7 @@ const FeaturedPackages = () => {
     {
       id: 6,
       title: 'Kerala Backwaters Package',
-      image: '/src/assets/Poster-home/3.png',
+      image: '/src/assets/Poster-home/3.webp',
       location: 'Alleppey, Kerala',
       duration: '5 Days / 4 Nights',
       price: '₹12,999',
