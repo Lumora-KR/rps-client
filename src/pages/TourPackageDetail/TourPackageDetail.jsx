@@ -68,8 +68,8 @@ const TourPackageDetail = () => {
       id: 'rameshwaram-one-day',
       title: 'Rameshwaram One Day Tour',
       images: [
-        'https://source.unsplash.com/1200x800/?rameshwaram,temple',
-        'https://source.unsplash.com/1200x800/?rameshwaram,sea',
+        '/src/assets/Poster-home/1.png',
+        '/src/assets/Tour-Images/Tour-4.jpeg',
         'https://source.unsplash.com/1200x800/?rameshwaram,bridge'
       ],
       price: 2000,

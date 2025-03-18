@@ -19,6 +19,7 @@ import { ToastContainer } from "react-toastify";
 import FloatingButton from "./components/FloatingButton/FloatingButton";
 import SiteSeen from "./pages/SiteSeen/SiteSeen";
 import ScrollToTopPath from "./pages/SrollToTopPath";
+import { LanguageProvider } from "./pages/LanguageContext";
 
 // New pages
 import AddCarRental from "./pages/AddCarRental/AddCarRental";
@@ -62,34 +63,37 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Router>
-        <div className="app">
-          <ToastContainer />
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/contact-us" element={<ContactUs />} />
-            <Route path="/travel-desk" element={<TravelDesk />} />
-            <Route path="/hotels" element={<Hotels />} />
-            <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/tour-packages" element={<TourPackages />} />
-            <Route path="/tour-packages/:id" element={<TourPackageDetail />} />
-            <Route path="/car-rental" element={<CarRental />} />
-            <Route path="/car-rental/:id" element={<CarDetail />} />
-            <Route path="/bank-detail" element={<BankDetail />} />
-            {/* New routes */}
-            <Route path="/site-seen" element={<SiteSeen />} />
-            <Route path="/add-car-rental" element={<AddCarRental />} />
-            <Route path="/enquire-car-rental" element={<EnquireCarRental />} />
-            <Route path="/add-hotel" element={<AddHotel />} />
-            <Route path="/enquire-hotel" element={<EnquireHotel />} />
-          </Routes>
-          <FloatingButton />
-          {/* <ScrollToTop /> */}
-          <ScrollToTopPath />
-          <Footer />
-        </div>
-      </Router>
+      <LanguageProvider>
+        <Router>
+          <div className="app">
+            <ToastContainer />
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/contact-us" element={<ContactUs />} />
+              <Route path="/travel-desk" element={<TravelDesk />} />
+              <Route path="/hotels" element={<Hotels />} />
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/tour-packages" element={<TourPackages />} />
+              <Route path="/tour-packages/:id" element={<TourPackageDetail />} />
+              <Route path="/car-rental" element={<CarRental />} />
+              <Route path="/car-rental/:id" element={<CarDetail />} />
+              <Route path="/bank-detail" element={<BankDetail />} />
+              {/* New routes */}
+              <Route path="/site-seen" element={<SiteSeen />} />
+              <Route path="/add-car-rental" element={<AddCarRental />} />
+              <Route path="/enquire-car-rental" element={<EnquireCarRental />} />
+              <Route path="/add-hotel" element={<AddHotel />} />
+              <Route path="/enquire-hotel" element={<EnquireHotel />} />
+            </Routes>
+            
+            <FloatingButton />
+            {/* <ScrollToTop /> */}
+            <ScrollToTopPath />
+            <Footer />
+          </div>
+        </Router>
+      </LanguageProvider>
     </ThemeProvider>
   );
 }

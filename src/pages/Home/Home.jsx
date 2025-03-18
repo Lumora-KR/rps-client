@@ -1,5 +1,5 @@
 // pages/Home/Home.jsx
-import React from "react";
+import React, { useState }from "react";
 import { Button } from "@mui/material";
 import HeroSlider from "../../components/Ui/HeroSlider/HeroSlider";
 import EnquiryForm from "../../components/Ui/EnquiryForm/EnquiryForm";
@@ -12,42 +12,168 @@ import FlightIcon from "@mui/icons-material/Flight";
 import PeopleIcon from "@mui/icons-material/People";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import Kanyakumari from "../../assets/home/HeroSection/kanyakuymari.jpeg";
-import Madurai from "../../assets/home/HeroSection/madurai.jpeg";
-import Rameswaram from "../../assets/home/HeroSection/rameswaram.jpeg";
+//import Kanyakumari from "/src/assets/home/HeroSection/kanyakumari-1.jpeg";
+//import Madurai from "/src/assets/home/HeroSection/Madu.jpeg";
+//import Rameswaram from "/src/assets/home/HeroSection/rameswaram-1.jpeg";
+//import Bangalore from "/src/assets/home/HeroSection/bangalore-home.jpg";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
-const Home = () => {
+
+const Home  = () => {
+  const [language, setLanguage] = useState("english"); // Default language
+
+  const handleLanguageChange = (lang) => {
+    setLanguage(lang);
+  };
+
+
+  
   // Hero slider data
   const heroSlides = [
+ 
+
     {
-      image: Rameswaram,
-      subtitle: "DISCOVER",
-      title: "RAMESHWARAM TOURS PACKAGE",
-      button: {
-        text: "Explore Now",
-        url: "/tour-packages/rameshwaram",
-      },
-    },
-    {
-      image: Kanyakumari,
-      subtitle: "EXPLORE",
-      title: "KANYAKUMARI TOURS PACKAGE",
-      button: {
-        text: "Explore Now",
-        url: "/tour-packages/kanyakumari",
-      },
-    },
-    {
-      image: Madurai,
-      subtitle: "EXPERIENCE",
-      title: "MADURAI TOURS PACKAGE",
-      button: {
-        text: "Explore Now",
-        url: "/tour-packages/madurai",
-      },
-    },
+      "home": {
+        "english": {
+          "seo": {
+            "title": "RPS Tours and Travels | Best Tour Packages in South India",
+            "description": "Explore affordable tour packages to Rameshwaram, Kanyakumari, and other South Indian destinations with RPS Tours & Travels. Book your perfect vacation now.",
+            "keywords": ["tour packages", "South India tours", "Rameshwaram tour", "Kanyakumari tour", "spiritual tours", "affordable travel", "holiday packages"],
+            "og": {
+              "title": "RPS Tours and Travels",
+              "description": "Explore the best tour packages with RPS Tours & Travels. Affordable, customized tour packages for Rameshwaram, Kanyakumari, Madurai, and more.",
+              "image": "/src/assets/home/HeroSection/rameswaram-1.jpeg",
+              // "url": "https://rps-tours.vercel.app/"
+            },
+            "twitter": {
+              "card": "summary_large_image",
+              "site": "@RPSTours",
+              "title": "RPS Tours and Travels",
+              "description": "Affordable and customized South India tour packages at RPS Tours & Travels.",
+              "image": "/src/assets/home/HeroSection/rameswaram-1.jpeg",
+            }
+          },
+          "heroSlides": [
+            {
+              "image": "/src/assets/home/HeroSection/rameswaram-1.jpeg",
+              "subtitle": "DISCOVER",
+              "title": "RAMESHWARAM TOURS PACKAGE",
+              "button": { "text": "Explore Now", "url": "/tour-packages/rameshwaram" }
+            },
+            {
+              "image": "/src/assets/home/HeroSection/kanyakumari-1.jpeg",
+              "subtitle": "EXPLORE",
+              "title": "KANYAKUMARI TOURS PACKAGE",
+              "button": { "text": "Explore Now", "url": "/tour-packages/kanyakumari" }
+            },
+            {
+              "image": "/src/assets/Tour-Images/Tour-7.jpeg",
+              "subtitle": "EXPLORE",
+              "title": "OOTY TOURS PACKAGE",
+              "button": { "text": "Explore Now", "url": "/tour-packages/kanyakumari" }
+            },
+            {
+              "image": "/src/assets/Tour-Images/Tour-6.jpeg",
+              "subtitle": "EXPLORE",
+              "title": "KODAIKANAL TOURS PACKAGE",
+              "button": { "text": "Explore Now", "url": "/tour-packages/kODAIKANAL" }
+            },
+            
+            {
+              "image": "/src/assets/home/HeroSection/Madu.jpeg",
+              "subtitle": "EXPLORE",
+              "title": "MADURAI TOURS PACKAGE",
+              "button": { "text": "Explore Now", "url": "/tour-packages/Madurai" }
+            },
+             
+            {
+              "image": "/src/assets/home/HeroSection/kerela-home.jpg",
+              "subtitle": "EXPLORE",
+              "title": "KERALA TOURS PACKAGE",
+              "button": { "text": "Explore Now", "url": "/tour-packages/Kerala" }
+            },
+            {
+              "image": "/src/assets/home/HeroSection/thirupati.jpg",
+              "subtitle": "EXPLORE",
+              "title": "TIRUPATI TOURS PACKAGE",
+              "button": { "text": "Explore Now", "url": "/tour-packages/kanyakumari" }
+            },
+
+          ]
+        },
+        "tamil": {
+          "seo": {
+            "title": "RPS டூர்ஸ் மற்றும் பயணங்கள் | சிறந்த சுற்றுலா தொகுப்புகள்",
+            "description": "ராமேஷ்வரம், கன்னியாகுமரி மற்றும் பிற தென் இந்திய சுற்றுலா இடங்களுக்கு பரிசுத்தமான சுற்றுலா தொகுப்புகளை ஆராயுங்கள். உங்கள் சிறந்த விடுமுறையை இப்போது புக்கிங் செய்யுங்கள்.",
+            "keywords": ["சுற்றுலா தொகுப்புகள்", "தென் இந்தியா சுற்றுலா", "ராமேஷ்வரமின் சுற்றுலா", "கன்னியாகுமரி சுற்றுலா", "ஆன்மிக சுற்றுலா", "சிறந்த பயணம்", "விடுமுறை தொகுப்புகள்"],
+            "og": {
+              "title": "RPS டூர்ஸ் மற்றும் பயணங்கள்",
+              "description": "ராமேஷ்வரம், கன்னியாகுமரி, மதுரை மற்றும் பிற இடங்களுக்கு சிறந்த சுற்றுலா தொகுப்புகளை ஆராயுங்கள்.",
+              "image": "https://source.unsplash.com/600x400/?south-india-tour",
+              "url": "https://rps-tours.vercel.app/"
+            },
+            "twitter": {
+              "card": "summary_large_image",
+              "site": "@RPSTours",
+              "title": "RPS டூர்ஸ் மற்றும் பயணங்கள்",
+              "description": "அனைத்து வகையான தென் இந்திய சுற்றுலா தொகுப்புகளை ஆராயுங்கள்.",
+              "image": "https://source.unsplash.com/600x400/?south-india-tour"
+            }
+          },
+          "heroSlides": [
+            {
+              "image": "https://source.unsplash.com/600x400/?rameshwaram",
+              "subtitle": "கண்டறி",
+              "title": "ராமேஷ்வரமின் சுற்றுலா தொகுப்பு",
+              "button": { "text": "இப்போது ஆராய்க", "url": "/tour-packages/rameshwaram" }
+            },
+            {
+              "image": "https://source.unsplash.com/600x400/?kanyakumari",
+              "subtitle": "ஆராயுங்கள்",
+              "title": "கன்னியாகுமரி சுற்றுலா தொகுப்பு",
+              "button": { "text": "இப்போது ஆராய்க", "url": "/tour-packages/kanyakumari" }
+            }
+          ]
+        },
+        "hindi": {
+          "seo": {
+            "title": "RPS टूर और यात्रा | दक्षिण भारत के बेहतरीन टूर पैकेज",
+            "description": "रामेश्वरम, कन्नiyakुमारी और अन्य दक्षिण भारतीय स्थलों के सस्ते टूर पैकेज के साथ आरपीएस टूर और यात्रा में अपना परफेक्ट अवकाश बुक करें।",
+            "keywords": ["टूर पैकेज", "दक्षिण भारत टूर", "रामेश्वरम टूर", "कन्नiyakुमारी टूर", "आध्यात्मिक टूर", "सस्ते यात्रा", "अवकाश पैकेज"],
+            "og": {
+              "title": "RPS टूर और यात्रा",
+              "description": "आरपीएस टूर और यात्रा के साथ बेहतरीन टूर पैकेजों की खोज करें।",
+              "image": "https://source.unsplash.com/600x400/?south-india-tour",
+              "url": "https://rps-tours.vercel.app/"
+            },
+            "twitter": {
+              "card": "summary_large_image",
+              "site": "@RPSTours",
+              "title": "RPS टूर और यात्रा",
+              "description": "दक्षिण भारत के सस्ते और कस्टमाइज्ड टूर पैकेज आरपीएस टूर और यात्रा में खोजें।",
+              "image": "https://source.unsplash.com/600x400/?south-india-tour"
+            }
+          },
+          "heroSlides": [
+            {
+              "image": "https://source.unsplash.com/600x400/?rameshwaram",
+              "subtitle": "खोजें",
+              "title": "रामेश्वरम टूर पैकेज",
+              "button": { "text": "अभी एक्सप्लोर करें", "url": "/tour-packages/rameshwaram" }
+            },
+            {
+              "image": "https://source.unsplash.com/600x400/?kanyakumari",
+              "subtitle": "अन्वेषण करें",
+              "title": "कन्नiyakुमारी टूर पैकेज",
+              "button": { "text": "अभी एक्सप्लोर करें", "url": "/tour-packages/kanyakumari" }
+            }
+          ]
+        }
+      }
+    }
+    
+
   ];
 
   // Featured packages data
@@ -130,7 +256,7 @@ const Home = () => {
     <div className="home-page">
       {/* Hero Section */}
       <section className="hero-section">
-        <HeroSlider slides={heroSlides} />
+      <HeroSlider slides={heroSlides[0]} language={language} />
 
         <div className="enquiry-form-container">
           <EnquiryForm />
@@ -189,7 +315,7 @@ const Home = () => {
             </div>
             <div className="welcome-image">
               <img
-                src="https://source.unsplash.com/600x400/?travel,india"
+                src="/src/assets/Home-Page/Poster.png"
                 alt="RPS Tours"
               />
             </div>
