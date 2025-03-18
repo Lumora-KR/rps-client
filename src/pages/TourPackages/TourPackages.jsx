@@ -1,4 +1,4 @@
-
+// pages/TourPackages/TourPackages.jsx
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Grid, Typography, Box, Tabs, Tab, TextField, MenuItem, Button } from '@mui/material';
@@ -6,7 +6,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import PackageCard from '../../components/PackageCard/PackageCard';
 import './TourPackages.css';
-import bannerImage from '/src/assets/home/HeroSection/banner-layer-1.webp';
+import bannerImage from '/src/assets/home/HeroSection/banner-layer-1.png';
 //fun
 const TourPackages = () => {
   const { id } = useParams();  // ✅ Updated: Get ID from URL
@@ -24,7 +24,7 @@ const TourPackages = () => {
     {
       id: 'rameshwaram-one-day',
       title: 'Rameshwaram One Day Tour',
-      image: '/src/assets/Poster-home/1.webp',
+      image: '/src/assets/Poster-home/1.png',
       price: 2000,
       rating: 5,
       duration: '1 Day',
@@ -36,7 +36,7 @@ const TourPackages = () => {
     {
       id: 'rameshwaram-kanyakumari-madurai',
       title: 'Rameshwaram [TN] - Kanyakumari [TN] - Madurai - (2 Nights - 3 Days)',
-      image: '/src/assets/Poster-home/2.webp',
+      image: '/src/assets/Poster-home/2.png',
       price: 18700,
       rating: 5,
       duration: '3 Days / 2 Nights',
@@ -48,7 +48,7 @@ const TourPackages = () => {
     {
       id: 'rameshwaram-kanyakumari-trivandrum',
       title: 'Rameshwaram [TN] - Kanyakumari [TN] - Thiruvananthapuram [Kerala]',
-      image: '/src/assets/Poster-home/5.webp',
+      image: '/src/assets/Poster-home/5.png',
       price: 12000,
       rating: 5,
       duration: '4 Days / 3 Nights',
@@ -60,7 +60,7 @@ const TourPackages = () => {
     {
       id: 'madurai-kodaikanal',
       title: 'Madurai - Kodaikanal Tour Package',
-      image: '/src/assets/Poster-home/7.webp',
+      image: '/src/assets/Poster-home/7.png',
       price: 8500,
       rating: 4.5,
       duration: '3 Days / 2 Nights',
@@ -72,7 +72,7 @@ const TourPackages = () => {
     {
       id: 'kerala-backwaters',
       title: 'Kerala Backwaters Special Tour',
-      image: '/src/assets/Poster-home/4.webp',
+      image: '/src/assets/Poster-home/4.png',
       price: 15000,
       rating: 5,
       duration: '5 Days / 4 Nights',
@@ -84,7 +84,7 @@ const TourPackages = () => {
     {
       id: 'ooty-coonoor',
       title: 'Ooty - Coonoor Hill Station Tour',
-      image: '/src/assets/Poster-home/3.webp',
+      image: '/src/assets/Poster-home/3.png',
       price: 9500,
       rating: 4.5,
       duration: '4 Days / 3 Nights',
@@ -96,7 +96,7 @@ const TourPackages = () => {
     {
       id: 'bangalore-mysore',
       title: 'Bangalore - Mysore Heritage Tour',
-      image: '/src/assets/Poster-home/6.webp',
+      image: '/src/assets/Poster-home/6.png',
       price: 9500,
       rating: 4.5,
       duration: '4 Days / 3 Nights',
@@ -107,7 +107,7 @@ const TourPackages = () => {
     },   {
       id: 'Tirupati',
       title: 'Tirupati-Andhra Pradesh Tour',
-      image: '/src/assets/Poster-home/8.webp',
+      image: '/src/assets/Poster-home/8.png',
       price: 9500,
       rating: 4.5,
       duration: '4 Days / 3 Nights',

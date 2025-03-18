@@ -12,6 +12,10 @@ import FlightIcon from "@mui/icons-material/Flight";
 import PeopleIcon from "@mui/icons-material/People";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+//import Kanyakumari from "/src/assets/home/HeroSection/kanyakumari-1.jpeg";
+//import Madurai from "/src/assets/home/HeroSection/Madu.jpeg";
+//import Rameswaram from "/src/assets/home/HeroSection/rameswaram-1.jpeg";
+//import Bangalore from "/src/assets/home/HeroSection/bangalore-home.jpg";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
@@ -19,9 +23,9 @@ import "./Home.css";
 const Home  = () => {
   const [language, setLanguage] = useState("english"); // Default language
 
-  // const handleLanguageChange = (lang) => {
-  //   setLanguage(lang);
-  // };
+  const handleLanguageChange = (lang) => {
+    setLanguage(lang);
+  };
 
 
   
@@ -39,7 +43,7 @@ const Home  = () => {
             "og": {
               "title": "RPS Tours and Travels",
               "description": "Explore the best tour packages with RPS Tours & Travels. Affordable, customized tour packages for Rameshwaram, Kanyakumari, Madurai, and more.",
-              "image": "/src/assets/home/HeroSection/rameswaram-1.webp",
+              "image": "/src/assets/home/HeroSection/rameswaram-1.jpeg",
               // "url": "https://rps-tours.vercel.app/"
             },
             "twitter": {
@@ -47,52 +51,55 @@ const Home  = () => {
               "site": "@RPSTours",
               "title": "RPS Tours and Travels",
               "description": "Affordable and customized South India tour packages at RPS Tours & Travels.",
-              "image": "/src/assets/home/HeroSection/rameswaram-1.webp",
+              "image": "/src/assets/home/HeroSection/rameswaram-1.jpeg",
             }
           },
           "heroSlides": [
             {
-              "image": "/src/assets/home/HeroSection/rameswaram-1.webp",
+              "image": "/src/assets/home/HeroSection/rameswaram-1.jpeg",
               "subtitle": "DISCOVER",
               "title": "RAMESHWARAM TOURS PACKAGE",
               "button": { "text": "Explore Now", "url": "/tour-packages/rameshwaram" }
             },
             {
-              "image": "/src/assets/home/HeroSection/kanyakumari-1.webp",
+              "image": "/src/assets/home/HeroSection/kanyakumari-1.jpeg",
               "subtitle": "EXPLORE",
               "title": "KANYAKUMARI TOURS PACKAGE",
               "button": { "text": "Explore Now", "url": "/tour-packages/kanyakumari" }
             },
             {
-              "image": "/src/assets/Tour-Images/Tour-7.webp",
+              "image": "/src/assets/Tour-Images/Tour-7.jpeg",
               "subtitle": "EXPLORE",
               "title": "OOTY TOURS PACKAGE",
               "button": { "text": "Explore Now", "url": "/tour-packages/kanyakumari" }
             },
             {
-              "image": "/src/assets/Tour-Images/Tour-6.webp",
+              "image": "/src/assets/Tour-Images/Tour-6.jpeg",
               "subtitle": "EXPLORE",
               "title": "KODAIKANAL TOURS PACKAGE",
               "button": { "text": "Explore Now", "url": "/tour-packages/kODAIKANAL" }
             },
+            
             {
-              "image": "/src/assets/home/HeroSection/Madu.webp",
+              "image": "/src/assets/home/HeroSection/Madu.jpeg",
               "subtitle": "EXPLORE",
               "title": "MADURAI TOURS PACKAGE",
               "button": { "text": "Explore Now", "url": "/tour-packages/Madurai" }
             },
+             
             {
-              "image": "/src/assets/home/HeroSection/kerela-home.webp",
+              "image": "/src/assets/home/HeroSection/kerela-home.jpg",
               "subtitle": "EXPLORE",
               "title": "KERALA TOURS PACKAGE",
               "button": { "text": "Explore Now", "url": "/tour-packages/Kerala" }
             },
             {
-              "image": "/src/assets/home/HeroSection/thirupati.webp",
+              "image": "/src/assets/home/HeroSection/thirupati.jpg",
               "subtitle": "EXPLORE",
               "title": "TIRUPATI TOURS PACKAGE",
               "button": { "text": "Explore Now", "url": "/tour-packages/kanyakumari" }
             },
+
           ]
         },
         "tamil": {
@@ -104,7 +111,7 @@ const Home  = () => {
               "title": "RPS டூர்ஸ் மற்றும் பயணங்கள்",
               "description": "ராமேஷ்வரம், கன்னியாகுமரி, மதுரை மற்றும் பிற இடங்களுக்கு சிறந்த சுற்றுலா தொகுப்புகளை ஆராயுங்கள்.",
               "image": "https://source.unsplash.com/600x400/?south-india-tour",
-              // "url": "https://rps-tours.vercel.app/"
+              "url": "https://rps-tours.vercel.app/"
             },
             "twitter": {
               "card": "summary_large_image",
@@ -138,7 +145,7 @@ const Home  = () => {
               "title": "RPS टूर और यात्रा",
               "description": "आरपीएस टूर और यात्रा के साथ बेहतरीन टूर पैकेजों की खोज करें।",
               "image": "https://source.unsplash.com/600x400/?south-india-tour",
-              // "url": "https://rps-tours.vercel.app/"
+              "url": "https://rps-tours.vercel.app/"
             },
             "twitter": {
               "card": "summary_large_image",
@@ -170,40 +177,40 @@ const Home  = () => {
   ];
 
   // Featured packages data
-  // const featuredPackages = [
-  //   {
-  //     title: "Rameshwaram Tour Package",
-  //     image: "https://source.unsplash.com/600x400/?rameshwaram",
-  //     duration: "2 Days / 1 Night",
-  //     price: "₹4,999",
-  //     description:
-  //       "Explore the spiritual beauty of Rameshwaram with our carefully crafted tour package.",
-  //   },
-  //   {
-  //     title: "Kanyakumari Tour Package",
-  //     image: "https://source.unsplash.com/600x400/?kanyakumari",
-  //     duration: "3 Days / 2 Nights",
-  //     price: "₹7,499",
-  //     description:
-  //       "Experience the mesmerizing sunrise and sunset at the southernmost tip of India.",
-  //   },
-  //   {
-  //     title: "Madurai Tour Package",
-  //     image: "https://source.unsplash.com/600x400/?madurai",
-  //     duration: "2 Days / 1 Night",
-  //     price: "₹5,499",
-  //     description:
-  //       "Visit the ancient Meenakshi Temple and explore the rich culture of Madurai.",
-  //   },
-  //   {
-  //     title: "Kodaikanal Tour Package",
-  //     image: "https://source.unsplash.com/600x400/?kodaikanal",
-  //     duration: "3 Days / 2 Nights",
-  //     price: "₹8,999",
-  //     description:
-  //       "Enjoy the cool climate and scenic beauty of the Princess of Hill Stations.",
-  //   },
-  // ];
+  const featuredPackages = [
+    {
+      title: "Rameshwaram Tour Package",
+      image: "https://source.unsplash.com/600x400/?rameshwaram",
+      duration: "2 Days / 1 Night",
+      price: "₹4,999",
+      description:
+        "Explore the spiritual beauty of Rameshwaram with our carefully crafted tour package.",
+    },
+    {
+      title: "Kanyakumari Tour Package",
+      image: "https://source.unsplash.com/600x400/?kanyakumari",
+      duration: "3 Days / 2 Nights",
+      price: "₹7,499",
+      description:
+        "Experience the mesmerizing sunrise and sunset at the southernmost tip of India.",
+    },
+    {
+      title: "Madurai Tour Package",
+      image: "https://source.unsplash.com/600x400/?madurai",
+      duration: "2 Days / 1 Night",
+      price: "₹5,499",
+      description:
+        "Visit the ancient Meenakshi Temple and explore the rich culture of Madurai.",
+    },
+    {
+      title: "Kodaikanal Tour Package",
+      image: "https://source.unsplash.com/600x400/?kodaikanal",
+      duration: "3 Days / 2 Nights",
+      price: "₹8,999",
+      description:
+        "Enjoy the cool climate and scenic beauty of the Princess of Hill Stations.",
+    },
+  ];
 
   // Services data
   const services = [
@@ -308,7 +315,7 @@ const Home  = () => {
             </div>
             <div className="welcome-image">
               <img
-                src="/src/assets/Home-Page/Poster.webp"
+                src="/src/assets/Home-Page/Poster.png"
                 alt="RPS Tours"
               />
             </div>
