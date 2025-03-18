@@ -68,8 +68,9 @@ const TourPackageDetail = () => {
       id: 'rameshwaram-one-day',
       title: 'Rameshwaram One Day Tour',
       images: [
-        '/src/assets/Tour-Images/rameshwaram-banner1.webp',
+        '/src/assets/Tour-Images/Banner-main.webp',
         '/src/assets/home/HeroSection/kalam-blog-banner.jpg',
+        '/src/assets/Tour-Images/rameshwaram-banner1.webp',
         '/src/assets/Tour-Images/Rmm-1.webp',
       ],
       price: 2000,
@@ -132,9 +133,10 @@ const TourPackageDetail = () => {
       id: 'rameshwaram-kanyakumari-madurai',
       title: 'Rameshwaram - Kanyakumari  ',
       images: [
-        '/src/assets/Tour-Images/kanyakumari-banner.webp',
-        '/src/assets/Tour-Images/kanyakumari-banner-1.webp',
-        '/src/assets/Tour-Images/kanyakumari-banner2.webp',
+        'https://source.unsplash.com/1200x800/?rameshwaram,temple',
+        'https://source.unsplash.com/1200x800/?kanyakumari,beach',
+        'https://source.unsplash.com/1200x800/?madurai,temple',
+        'https://source.unsplash.com/1200x800/?tamil,nadu'
       ],
       price: 18700,
       rating: 5,
@@ -365,12 +367,10 @@ const TourPackageDetail = () => {
         >
           {selectedPackage.images && selectedPackage.images.map((image, index) => (
             <SwiperSlide key={index}>
-            <div className="package-detail-slide">
-              <img src={image} alt={`Slide ${index}`} className="package-detail-image" />
-              <div className="package-detail-overlay"></div>
-            </div>
-          </SwiperSlide>
-          
+              <div className="package-detail-slide" style={{ backgroundImage: `url(${image})` }}>
+                <div className="package-detail-overlay"></div>
+              </div>
+            </SwiperSlide>
           ))}
         </Swiper>
         
