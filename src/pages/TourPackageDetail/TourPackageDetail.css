@@ -1,12 +1,12 @@
 /* pages/TourPackageDetail/TourPackageDetail.css */
 .tour-package-detail-page {
-    padding-top: 80px;
+    padding-top: 70px;
   }
   
   /* Hero Banner */
   .package-detail-hero {
     position: relative;
-    height: 500px;
+    height: 350px;
   }
   
   .package-detail-swiper {
@@ -14,21 +14,31 @@
   }
   
   .package-detail-slide {
-    height: 100%;
-    background-size: cover;
-    background-position: center;
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-  }
-  
-  .package-detail-overlay {
+    overflow: hidden; /* Ensures no unwanted stretching */
+}
+
+.package-detail-image {
+    width: 100%;
+    height: 100%;
+    object-fit: center center; /* Ensures proper fit without distortion */
+    object-position: center bottom ;/* Ensures the image is centered */
+}
+
+.package-detail-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
-  }
-  
+}
+
   .package-detail-hero-content {
     position: absolute;
     bottom: 50px;
