@@ -1,6 +1,7 @@
 .featured-packages {
     padding: var(--spacing-xl) 0 0 0;
-    overflow: hidden;
+    overflow:hidden;
+    height: auto;
   }
   
   .featured-packages-header {
@@ -9,7 +10,6 @@
     align-items: center;
     margin-bottom: var(--spacing-xl);
   }
-  
   .section-title {
     font-size: var(--font-size-xxl);
     font-weight: var(--font-weight-bold);
@@ -69,7 +69,7 @@
   .package-card {
     background-color: white;
     border-radius: var(--border-radius-lg);
-    overflow: hidden;
+    overflow: visible;
     box-shadow: var(--shadow-sm);
     transition: all var(--transition-normal);
     height: 100%;
@@ -81,37 +81,46 @@
     transform: translateY(-10px);
     box-shadow: var(--shadow-md);
   }
-  
-  .package-image {
-    position: relative;
-    height: 220px;
-    overflow: hidden;
-  }
-  
   .package-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform var(--transition-normal);
-  }
+    max-height: 100%;
+    object-fit: scale-down; /* Ensures full image is visible */
+}
+
+
+
   
-  .package-card:hover .package-image img {
-    transform: scale(1.1);
-  }
+.package-image {
+  position: relative;
+  height: auto; /* Allow image to maintain its original aspect ratio */
+  max-height: 100%;
+  overflow: hidden; /* Prevent unwanted stretching */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
   
-  .package-price {
-    position: absolute;
-    top: var(--spacing-md);
-    left: var(--spacing-md);
-    width: 80px;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 5px 10px;
-    border-radius: var(--border-radius-sm);
-    font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-sm);
-    z-index: 2;
-  }
+.package-card:hover .package-image img {
+  transform: scale(1.05); /* Slight zoom without cropping */
+}
+
+
+  
+.package-price {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Ensure it's aligned to the right */
+  background: rgba(255, 255, 255, 0.8); /* Optional: Add a slight background */
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  color: black; /* Adjust as per design */
+  z-index: 10; /* Ensure it stays above the image */
+}
+
   
   .package-rating {
     position: absolute;
@@ -252,3 +261,10 @@
       display: none;
     }
   }
+  @media (max-width: 768px) {
+    .package-price {
+        top: 5px;
+        right: 5px;
+        font-size: 14px;
+    }
+}
