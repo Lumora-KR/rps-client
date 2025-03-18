@@ -34,8 +34,8 @@ const TourPackages = () => {
       category: 'tamil-nadu'
     },
     {
-      id: 'rameshwaram-kanyakumari-madurai',
-      title: 'Rameshwaram [TN] - Kanyakumari [TN] - Madurai - (2 Nights - 3 Days)',
+      id: 'rameshwaram-kanyakumari',
+      title: 'Rameshwaram  - Kanyakumari ',
       image: '/src/assets/Poster-home/2.webp',
       price: 18700,
       rating: 5,
@@ -46,8 +46,8 @@ const TourPackages = () => {
       category: 'tamil-nadu'
     },
     {
-      id: 'rameshwaram-kanyakumari-trivandrum',
-      title: 'Rameshwaram [TN] - Kanyakumari [TN] - Thiruvananthapuram [Kerala]',
+      id: 'rameshwaram-trivandrum',
+      title: 'Rameshwaram - Thiruvananthapuram [Kerala]',
       image: '/src/assets/Poster-home/5.webp',
       price: 12000,
       rating: 5,

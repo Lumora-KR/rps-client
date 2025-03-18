@@ -97,6 +97,20 @@ const PackageModal = ({ open, onClose, packageData }) => {
           ]
         });
       }
+      if (days >= 3) {
+        itinerary.push({
+          day: 'Day 3',
+          title: 'Kushi Beach & Local Sightseeing',
+          activities: [
+            'Breakfast at hotel',
+            'Visit to Aadheman Beach',
+            'Vivekananda Memorial',
+            'CMFRI Aquarium',
+            'BOATTING',
+            'Overnight stay at hotel'
+          ]
+        });
+      }
     } else if (packageData.location.includes('Kanyakumari')) {
       itinerary.push({
         day: 'Day 1',
@@ -355,12 +369,12 @@ const PackageModal = ({ open, onClose, packageData }) => {
                   <Box className="overview-tab">
                     <Typography variant="h6" gutterBottom>Package Overview</Typography>
                     <Typography variant="body1" paragraph>
-                      {packageData.description} This carefully crafted tour package offers a perfect blend of sightseeing, culture, and relaxation. Explore the beauty and heritage of {packageData.location} with our experienced guides who will ensure you don't miss any important attractions.
+                      {packageData.description} Unforgettable Travel Experiences with Our Customized Tour Packages
+                      Explore the best of South India with our meticulously crafted tour packages, designed to offer an unforgettable travel experience. Whether you seek spiritual enlightenment, scenic hill stations, serene backwaters, pristine beaches, or historical wonders, we have the perfect itinerary tailored to your travel preferences.
                     </Typography>
                     
                     <Typography variant="body1" paragraph>
-                      The package includes comfortable accommodation, daily breakfast, and transportation in air-conditioned vehicles. You'll have ample time to explore the local markets, taste authentic cuisine, and immerse yourself in the local culture.
-                    </Typography>
+                    Our all-inclusive tour packages provide seamless travel solutions, ensuring comfort, convenience, and immersive cultural experiences. With expert guides, premium accommodations, and handpicked destinations, each journey promises a blend of adventure, relaxation, and exploration.                    </Typography>
                     
                     <Grid container spacing={3} className="overview-features">
                       <Grid item xs={12} sm={6} md={3}>

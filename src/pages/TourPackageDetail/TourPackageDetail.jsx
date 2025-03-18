@@ -68,9 +68,8 @@ const TourPackageDetail = () => {
       id: 'rameshwaram-one-day',
       title: 'Rameshwaram One Day Tour',
       images: [
-        '/src/assets/Tour-Images/Banner-main.png',
-        '/src/assets/home/HeroSection/kalam-blog-banner.jpg',
         '/src/assets/Tour-Images/rameshwaram-banner1.webp',
+        '/src/assets/home/HeroSection/kalam-blog-banner.jpg',
         '/src/assets/Tour-Images/Rmm-1.webp',
       ],
       price: 2000,
@@ -86,13 +85,35 @@ const TourPackageDetail = () => {
           day: 'Day 1',
           title: 'Rameshwaram Sightseeing',
           activities: [
-            'Pickup from Coimbatore railway station/bus stand',
+            'Pickup from  railway station/bus stand',
             'Visit to Ramanathaswamy Temple',
             'Explore Dhanushkodi Beach & Ghost Town',
-            'Pamban Bridge photo stop',
+            'Ramar patham',
             'Drop back to pickup location'
           ]
-        }
+        }, 
+         {
+          day: 'Day 2',
+          title: 'Rameshwaram Sightseeing',
+          activities: [
+            'Pooja Arangenment ',
+            'APJ KALAM memorial',
+            'Pamban Bridge photo stop',
+            'light house',
+            'Drop back to pickup location'
+          ]
+        },
+        {
+          day: 'Day 3',
+          title: 'Rameshwaram Sightseeing',
+          activities: [
+            'Aariyaman beach',
+            'vivekananda memorial',
+            'Pamban Bridge photo stop',
+            'Boat ride',
+            'Drop back to pickup location'
+          ]
+        },
       ],
       inclusions: ['AC Transport', 'Tour Guide', 'Entry Fees'],
       exclusions: ['Meals', 'Personal Expenses', 'Camera Fees'],
@@ -109,7 +130,7 @@ const TourPackageDetail = () => {
     },
     {
       id: 'rameshwaram-kanyakumari-madurai',
-      title: 'Rameshwaram [TN] - Kanyakumari [TN] - Madurai (2 Nights - 3 Days)',
+      title: 'Rameshwaram - Kanyakumari  ',
       images: [
         '/src/assets/Tour-Images/kanyakumari-banner.webp',
         '/src/assets/Tour-Images/kanyakumari-banner-1.webp',
@@ -185,79 +206,84 @@ const TourPackageDetail = () => {
       ]
     },
     {
-      id: 'ooty-coonoor',
-      title: 'Ooty - Coonoor Hill Station Tour',
+      id: 'ooty-tour',
+      title: 'Ooty - The Queen of Hills',
       images: [
-        'https://source.unsplash.com/1200x800/?ooty,hills',
-        'https://source.unsplash.com/1200x800/?coonoor,tea',
-        'https://source.unsplash.com/1200x800/?nilgiri'
+        '/src/assets/Tour-Images/ooty-banner.webp',
+        '/src/assets/Tour-Images/ooty-banner-1.webp',
+        '/src/assets/Tour-Images/ooty-banner2.webp'
       ],
-      price: 9500,
-      rating: 4.5,
-      duration: '4 Days / 3 Nights',
+      price: 16500,
+      rating: 5,
+      duration: '3 Days / 2 Nights',
       location: 'Ooty, Coonoor',
       pickupFrom: 'Coimbatore',
       persons: 2,
       category: 'tamil-nadu',
-      description: 'Enjoy the misty mountains of Ooty and Coonoor, with visits to scenic tea gardens, lakes, and viewpoints.',
+      description: 'Discover the breathtaking beauty of Ooty and Coonoor with this 3-day tour. Enjoy the scenic landscapes, tea plantations, and colonial charm of the Nilgiris.',
       itinerary: [
         {
           day: 'Day 1',
-          title: 'Arrival in Ooty',
+          title: 'Arrival and Ooty Sightseeing',
           activities: [
             'Pickup from Coimbatore railway station/airport',
-            'Visit Ooty Lake and Botanical Garden',
-            'Check-in to hotel and leisure time'
+            'Drive to Ooty and check-in at hotel',
+            'Visit Ooty Lake & Boat House',
+            'Explore Government Rose Garden',
+            'Visit Ooty Botanical Garden',
+            'Overnight stay at Ooty hotel'
           ]
         },
         {
           day: 'Day 2',
-          title: 'Ooty Exploration',
+          title: 'Coonoor Excursion',
           activities: [
-            'Visit Doddabetta Peak',
-            'Tea Museum and Factory visit',
-            'Evening shopping at Charring Cross'
+            'Morning drive to Coonoor',
+            'Visit Sim’s Park',
+            'Explore Dolphin’s Nose Viewpoint',
+            'Lamb’s Rock sightseeing',
+            'Tea Factory visit & Tea Tasting',
+            'Return to Ooty & Overnight stay at hotel'
           ]
         },
         {
           day: 'Day 3',
-          title: 'Coonoor Excursion',
+          title: 'Departure',
           activities: [
-            'Drive to Coonoor',
-            'Visit Sim’s Park, Dolphin’s Nose',
-            'Toy Train Ride (Optional)'
-          ]
-        },
-        {
-          day: 'Day 4',
-          title: 'Return Journey',
-          activities: [
-            'Check-out and drop-off at Coimbatore'
+            'Visit Doddabetta Peak for panoramic views',
+            'Breakfast at hotel',
+            'Drop off at Coimbatore railway station/airport'
           ]
         }
       ],
       inclusions: [
-        '3 Nights Hotel Stay',
-        'Breakfast at Hotel',
-        'Sightseeing Transport',
-        'Entry Fees'
+        'Accommodation in 3-star hotels',
+        'AC vehicle for sightseeing and transfers',
+        'Breakfast at hotels',
+        'All taxes and service charges',
+        'Professional tour guide',
+        'Entry tickets to sightseeing places'
       ],
       exclusions: [
-        'Lunch and Dinner',
-        'Personal Expenses',
-        'Guide Charges'
+        'Lunch and dinner',
+        'Personal expenses',
+        'Camera fees at attractions',
+        'Any activities not mentioned in inclusions',
+        'Travel insurance'
       ],
       faqs: [
         {
-          question: 'Is the toy train ride included?',
-          answer: 'No, but we can arrange tickets upon request.'
+          question: 'What is the best time to visit Ooty?',
+          answer: 'The best time to visit Ooty is from October to June when the weather is pleasant and ideal for sightseeing.'
         },
         {
-          question: 'What is the best season to visit Ooty?',
-          answer: 'Ooty is best visited between March to June or September to November.'
+          question: 'Can we customize the itinerary?',
+          answer: 'Yes, the itinerary can be customized based on your preferences.'
         }
       ]
-    }
+  }
+  
+  
   ];
 
   const handleChange = (e) => {

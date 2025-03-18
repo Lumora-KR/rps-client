@@ -32,7 +32,7 @@ const FeaturedPackages = () => {
   const featuredPackages = [
     {
       id: 1,
-      title: 'Rameshwaram Tour Package',
+      title: 'Rameswaram Tour Package',
       image: '/src/assets/Poster-home/1.webp',
       location: 'Rameshwaram, Tamil Nadu',
       duration: '2 Days / 1 Night',
