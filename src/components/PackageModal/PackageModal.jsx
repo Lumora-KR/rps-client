@@ -45,22 +45,20 @@ const PackageModal = ({ open, onClose, packageData }) => {
   
   // If no package data is provided, don't render anything
   if (!packageData) return null;
+  //THE data is not getting from the packageData 
   
   const handleTabChange = (event, newValue) => {
     setActiveTab(newValue);
   };
-  
+ 
   // Generate additional images based on the main image
-  const getPackageImages = () => {
-    // In a real app, you would have multiple images in your packageData
-    // Here we're just creating variations for demo purposes
-    return [
-      packageData.image,
-      packageData.image.replace('600x400', '600x401'),
-      packageData.image.replace('600x400', '600x402'),
-      packageData.image.replace('600x400', '600x403')
-    ];
-  };
+  // const getPackageImages = () => {
+  //   if (!packageData || !packageData.images || packageData.images.length === 0) {
+  //     console.warn("Package data is  missing images daaa");
+  //     return ["/placeholder.svg"]; // Provide a fallback image
+  //   }
+  //   return packageData.images; // Return all images in the array
+  // };
   
   // Sample itinerary based on package duration
   const getItinerary = () => {
@@ -78,6 +76,7 @@ const PackageModal = ({ open, onClose, packageData }) => {
           'Arrival at Rameshwaram',
           'Check-in at hotel',
           'Visit to Ramanathaswamy Temple',
+          'Yatra Darshanam',
           'Evening Aarti ceremony',
           'Dinner at hotel'
         ]
@@ -86,7 +85,7 @@ const PackageModal = ({ open, onClose, packageData }) => {
       if (days >= 2) {
         itinerary.push({
           day: 'Day 2',
-          title: 'Dhanushkodi & Beaches',
+          title: 'Dhanushkodi & Beaches ',
           activities: [
             'Breakfast at hotel',
             'Visit to Dhanushkodi Ghost Town',
@@ -106,7 +105,7 @@ const PackageModal = ({ open, onClose, packageData }) => {
             'Visit to Aadheman Beach',
             'Vivekananda Memorial',
             'CMFRI Aquarium',
-            'BOATTING',
+            'Boating',
             'Overnight stay at hotel'
           ]
         });
@@ -255,10 +254,10 @@ const PackageModal = ({ open, onClose, packageData }) => {
                 navigation
                 pagination={{ clickable: true }}
                 autoplay={{ delay: 5000, disableOnInteraction: false }}
-                loop
+                // loop
                 className="package-gallery-swiper"
               >
-                {getPackageImages().map((image, index) => (
+                {packageData.image.map((image, index) => (
                   <SwiperSlide key={index}>
                     <img src={image || "/placeholder.svg"} alt={`${packageData.title} - ${index + 1}`} />
                   </SwiperSlide>

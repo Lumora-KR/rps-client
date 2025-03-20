@@ -41,10 +41,31 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
+import Rmm1 from '/src/assets/Tour-Images/rmm1.jpg';
+import Rmm2 from '/src/assets/Tour-Images/Tour-4.jpeg';
+import Rmm3 from '/src/assets/RPS-2.jpeg';
+import Rmm4 from '/src/assets/Temple/Temp-10-main1.jpeg';
+import Kkm1 from '/src/assets/Tour-Images/kanayakumari-2.jpg';
+import Kkm2 from '/src/assets/Temple/Tem-1.jpeg';
+import Kkm3 from '/src/assets/Tour-Images/Tour-9.jpeg';
+import Ooty1 from '/src/assets/Tour-Images/ooty.jpg';
+import Ooty2 from '/src/assets/Tour-Images/ooty1.jpg';
+import Ooty3 from '/src/assets/Tour-Images/Ooty3.webp';
+import Ooty4 from '/src/assets/Tour-Images/Tour-6.jpeg';
+import Kerala1 from '/src/assets/Tour-Images/Kerala2.webp';
+import Kerala2 from '/src/assets/Tour-Images/Kerala-1.webp';
+import Kerala3 from '/src/assets/Tour-Images/Kerala-2.webp';
+import Kerala4 from '/src/assets/Tour-Images/Kerala-3.webp';
+import Madu1 from '/src/assets/Tour-Images/Tour-2.jpeg';
+import Madu2 from '/src/assets/home/HeroSection/Madu.jpeg';
+import Madu3 from '/src/assets/Home-Page/Tamil Nadu _ Bharat.jpeg';
+
+
 import './TourPackageDetail.css';
 
 const TourPackageDetail = () => {
   const { id } = useParams();
+  console.log('Package ID from URL:', id);
   const [activeTab, setActiveTab] = useState(0);
   const [formData, setFormData] = useState({
     name: '',
@@ -66,18 +87,14 @@ const TourPackageDetail = () => {
   const packageData =[
     {
       id: 'rameshwaram-one-day',
-      title: 'Rameshwaram One Day Tour',
-      images: [
-        '/src/assets/Tour-Images/Banner-main.webp',
-        '/src/assets/home/HeroSection/kalam-blog-banner.jpg',
-        '/src/assets/Tour-Images/rameshwaram-banner1.webp',
-        '/src/assets/Tour-Images/Rmm-1.webp',
+      title: 'Rameshwaram  Tour',
+      images: [Rmm1,Rmm2,Rmm3,Rmm4,
+      
       ],
-      price: 2000,
       rating: 5,
       duration: '1 Day',
       location: 'Rameshwaram, Tamil Nadu',
-      pickupFrom: 'Coimbatore',
+      pickupFrom: 'Tamil Nadu',
       persons: 2,
       category: 'tamil-nadu',
       description: 'A spiritual day tour exploring the sacred sites of Rameshwaram, including the famous Ramanathaswamy Temple and Pamban Bridge.',
@@ -130,162 +147,836 @@ const TourPackageDetail = () => {
       ]
     },
     {
-      id: 'rameshwaram-kanyakumari-madurai',
-      title: 'Rameshwaram - Kanyakumari  ',
-      images: [
-        'https://source.unsplash.com/1200x800/?rameshwaram,temple',
-        'https://source.unsplash.com/1200x800/?kanyakumari,beach',
-        'https://source.unsplash.com/1200x800/?madurai,temple',
-        'https://source.unsplash.com/1200x800/?tamil,nadu'
-      ],
-      price: 18700,
+      id: 'rameshwaram-kanyakumari',
+      title: 'Kanyakumari One Day Tour',
+      images: [Kkm1, Kkm2, Kkm3],
       rating: 5,
-      duration: '3 Days / 2 Nights',
-      location: 'Rameshwaram, Kanyakumari, Madurai',
-      pickupFrom: 'Rameshwaram',
+      duration: '1 Day',
+      location: 'Kanyakumari, Tamil Nadu',
+      pickupFrom: 'Trivandrum',
       persons: 2,
       category: 'tamil-nadu',
-      description: 'Experience the spiritual and cultural richness of Tamil Nadu with a 3-day tour covering Rameshwaram, Kanyakumari, and Madurai.',
+      description: 'A mesmerizing one-day tour to Kanyakumari, the southernmost tip of India, known for its spectacular sunrise and rich cultural heritage.',
       itinerary: [
         {
           day: 'Day 1',
-          title: 'Rameshwaram Exploration',
+          title: 'Kanyakumari Sightseeing',
           activities: [
-            'Pickup from Rameshwaram railway station/bus stand',
-            'Visit to Ramanathaswamy Temple',
-            'Explore Dhanushkodi Ghost Town',
-            'Visit Pamban Bridge',
-            'Overnight stay at Rameshwaram hotel'
+            'Pickup from railway station/bus stand',
+            'Visit to Vivekananda Rock Memorial',
+            'Explore Thiruvalluvar Statue',
+            'Kanyakumari Devi Temple',
+            'Sunset View at Kanyakumari Beach',
+            'Drop back to pickup location'
           ]
         },
         {
           day: 'Day 2',
-          title: 'Journey to Kanyakumari',
+          title: 'Kanyakumari Sightseeing',
           activities: [
-            'Early morning departure to Kanyakumari',
-            'Visit Vivekananda Rock Memorial',
-            'Thiruvalluvar Statue',
-            'Sunset view at the confluence of three oceans',
-            'Overnight stay at Kanyakumari hotel'
+            'Sunrise View at Kanyakumari Beach',
+            'Visit to Gandhi Memorial',
+            'Padmanabhapuram Palace',
+            'Suchindram Temple',
+            'Drop back to pickup location'
           ]
         },
         {
           day: 'Day 3',
-          title: 'Madurai and Departure',
+          title: 'Kanyakumari Sightseeing',
           activities: [
-            'Morning departure to Madurai',
-            'Visit Meenakshi Amman Temple',
-            'Explore Thirumalai Nayakkar Palace',
-            'Local shopping at Madurai markets',
-            'Drop off at Madurai railway station/airport'
+            'Explore Vattakottai Fort',
+            'Mathur Aqueduct',
+            'Baywatch Water Park',
+            'Shopping at Kanyakumari Market',
+            'Drop back to pickup location'
           ]
         }
       ],
-      inclusions: [
-        'Accommodation in 3-star hotels',
-        'AC vehicle for sightseeing and transfers',
-        'Breakfast at hotels',
-        'All taxes and service charges',
-        'Professional tour guide',
-        'Entry tickets to monuments'
-      ],
-      exclusions: [
-        'Lunch and dinner',
-        'Personal expenses',
-        'Camera fees at monuments',
-        'Any activities not mentioned in inclusions',
-        'Travel insurance'
-      ],
+      inclusions: ['AC Transport', 'Tour Guide', 'Entry Fees'],
+      exclusions: ['Meals', 'Personal Expenses', 'Camera Fees'],
       faqs: [
         {
-          question: 'What is the best time to visit these destinations?',
-          answer: 'The best time to visit is between October and March when the weather is pleasant.'
+          question: 'Is hotel accommodation included?',
+          answer: 'No, this is a one-day tour and does not include hotel stays.'
         },
         {
-          question: 'Can the itinerary be customized?',
-          answer: 'Yes, we can customize the itinerary based on your preferences.'
+          question: 'Can I get a pickup from Nagercoil?',
+          answer: 'Yes, but it will incur additional charges. Please contact us for details.'
         }
       ]
     },
     {
-      id: 'ooty-tour',
-      title: 'Ooty - The Queen of Hills',
-      images: [
-        '/src/assets/Tour-Images/ooty-banner.webp',
-        '/src/assets/Tour-Images/ooty-banner-1.webp',
-        '/src/assets/Tour-Images/ooty-banner2.webp'
-      ],
-      price: 16500,
+      id: 'ooty-coonoor',
+      title: 'Ooty  Tour',
+      images: [Ooty1, Ooty2, Ooty3, Ooty4],
       rating: 5,
-      duration: '3 Days / 2 Nights',
-      location: 'Ooty, Coonoor',
+      duration: '1 Day',
+      location: 'Ooty, Tamil Nadu',
       pickupFrom: 'Coimbatore',
       persons: 2,
       category: 'tamil-nadu',
-      description: 'Discover the breathtaking beauty of Ooty and Coonoor with this 3-day tour. Enjoy the scenic landscapes, tea plantations, and colonial charm of the Nilgiris.',
+      description: 'A refreshing one-day tour exploring the scenic beauty of Ooty, including lush tea gardens, serene lakes, and breathtaking viewpoints.',
       itinerary: [
         {
-          day: 'Day 1',
-          title: 'Arrival and Ooty Sightseeing',
+          day: 'Site Seen 1',
+          title: 'Ooty Sightseeing',
           activities: [
-            'Pickup from Coimbatore railway station/airport',
-            'Drive to Ooty and check-in at hotel',
-            'Visit Ooty Lake & Boat House',
-            'Explore Government Rose Garden',
-            'Visit Ooty Botanical Garden',
-            'Overnight stay at Ooty hotel'
+            'Pickup from railway station/bus stand',
+            'Visit to Ooty Botanical Garden',
+            'Explore Ooty Lake & Boating',
+            'Doddabetta Peak Viewpoint',
+            'Drop back to pickup location'
           ]
         },
         {
-          day: 'Day 2',
-          title: 'Coonoor Excursion',
+          day: 'Site Seen 2',
+          title: 'Ooty Sightseeing',
           activities: [
-            'Morning drive to Coonoor',
-            'Visit Sim’s Park',
-            'Explore Dolphin’s Nose Viewpoint',
-            'Lamb’s Rock sightseeing',
-            'Tea Factory visit & Tea Tasting',
-            'Return to Ooty & Overnight stay at hotel'
+            'Visit to Tea Factory & Tea Museum',
+            'Pykara Lake & Waterfalls',
+            'Emerald Lake',
+            'Shooting Point',
+            'Drop back to pickup location'
           ]
         },
         {
-          day: 'Day 3',
-          title: 'Departure',
+          day: 'Site Seen 3',
+          title: 'Ooty Sightseeing',
           activities: [
-            'Visit Doddabetta Peak for panoramic views',
-            'Breakfast at hotel',
-            'Drop off at Coimbatore railway station/airport'
+            'Visit to Avalanche Lake',
+            'Explore Nilgiri Mountain Railway',
+            'Lamb’s Rock & Dolphin’s Nose',
+            'Shopping at Ooty Market',
+            'Drop back to pickup location'
           ]
         }
       ],
-      inclusions: [
-        'Accommodation in 3-star hotels',
-        'AC vehicle for sightseeing and transfers',
-        'Breakfast at hotels',
-        'All taxes and service charges',
-        'Professional tour guide',
-        'Entry tickets to sightseeing places'
-      ],
-      exclusions: [
-        'Lunch and dinner',
-        'Personal expenses',
-        'Camera fees at attractions',
-        'Any activities not mentioned in inclusions',
-        'Travel insurance'
-      ],
+      inclusions: ['AC Transport', 'Tour Guide', 'Entry Fees'],
+      exclusions: ['Meals', 'Personal Expenses', 'Camera Fees'],
       faqs: [
         {
-          question: 'What is the best time to visit Ooty?',
-          answer: 'The best time to visit Ooty is from October to June when the weather is pleasant and ideal for sightseeing.'
+          question: 'Is hotel accommodation included?',
+          answer: 'No, this is a one-day tour and does not include hotel stays.'
         },
         {
-          question: 'Can we customize the itinerary?',
-          answer: 'Yes, the itinerary can be customized based on your preferences.'
+          question: 'Can I get a pickup from Mysore?',
+          answer: 'Yes, but it will incur additional charges. Please contact us for details.'
         }
       ]
-  }
-  
-  
+    },
+    {
+      id: 'rameshwaram-trivandrum',
+      title: 'Kerala One Day Tour',
+      images: [Kerala1, Kerala2, Kerala3, Kerala4],
+      rating: 5,
+      duration: '1 Day',
+      location: 'Kerala, India',
+      pickupFrom: 'Kochi',
+      persons: 2,
+      category: 'kerala',
+      description: 'A scenic one-day tour through the lush greenery and backwaters of Kerala, exploring famous attractions and cultural heritage.',
+      itinerary: [
+        {
+          day: 'Scenic Escape 1',
+          title: 'Kerala Backwaters & Sightseeing',
+          activities: [
+            'Pickup from railway station/bus stand',
+            'Houseboat cruise in Alleppey backwaters',
+            'Explore Kumarakom Bird Sanctuary',
+            'Visit to Cochin Fort & Mattancherry Palace',
+            'Drop back to pickup location'
+          ]
+        },
+        {
+          day: 'Hilltop Adventure 2',
+          title: 'Munnar Hill Station Tour',
+          activities: [
+            'Visit to Tea Estates & Tata Tea Museum',
+            'Echo Point & Kundala Lake',
+            'Eravikulam National Park',
+            'Photo stop at Top Station Viewpoint',
+            'Drop back to pickup location'
+          ]
+        },
+        {
+          day: 'Waterfall Retreat 3',
+          title: 'Athirappilly & Vazhachal Waterfalls',
+          activities: [
+            'Visit to Athirappilly Waterfalls',
+            'Explore Vazhachal Waterfalls',
+            'Visit to Cheeyappara & Valara Waterfalls',
+            'Shopping for Kerala spices & souvenirs',
+            'Drop back to pickup location'
+          ]
+        }
+      ],
+      inclusions: ['AC Transport', 'Tour Guide', 'Entry Fees'],
+      exclusions: ['Meals', 'Personal Expenses', 'Camera Fees'],
+      faqs: [
+        {
+          question: 'Is hotel accommodation included?',
+          answer: 'No, this is a one-day tour and does not include hotel stays.'
+        },
+        {
+          question: 'Can I get a pickup from Trivandrum?',
+          answer: 'Yes, but it will incur additional charges. Please contact us for details.'
+        },
+        {
+          question: 'Are houseboat meals included?',
+          answer: 'No, meals are not included, but you can purchase food on the houseboat at an additional cost.'
+        },
+        {
+          question: 'What should I carry for the tour?',
+          answer: 'Comfortable clothing, sunglasses, sunscreen, camera, and some cash for personal expenses.'
+        },
+        {
+          question: 'Is the tour suitable for elderly people?',
+          answer: 'Yes, the tour is suitable for all age groups, but some locations may require walking.'
+        },
+        {
+          question: 'Do I need to book in advance?',
+          answer: 'Yes, it is recommended to book at least 24 hours in advance to secure availability.'
+        },
+        {
+          question: 'Are entry tickets for attractions included?',
+          answer: 'Yes, entry fees to major attractions are included in the package.'
+        }
+      ]
+    },
+    {
+      id: 'madurai',
+      title: 'Madurai One Day Tour',
+      images: [Madu1, Madu2, Madu3,],
+      rating: 5,
+      duration: '1 Day',
+      location: 'Madurai, Tamil Nadu',
+      pickupFrom: 'Madurai',
+      persons: 2,
+      category: 'tamil-nadu',
+      description: 'A cultural one-day tour through the ancient city of Madurai, exploring historic temples, vibrant markets, and architectural marvels.',
+      itinerary: [
+        {
+          day: 'Spiritual Awakening 1',
+          title: 'Temple & Cultural Tour',
+          activities: [
+            'Pickup from railway station/bus stand',
+            'Visit to Meenakshi Amman Temple',
+            'Explore Thirumalai Nayakkar Palace',
+            'Alagar Kovil visit',
+            'Drop back to pickup location'
+          ]
+        },
+        {
+          day: 'Heritage Trail 2',
+          title: 'Historical & Architectural Tour',
+          activities: [
+            'Visit to Gandhi Memorial Museum',
+            'Explore Vandiyur Mariamman Teppakulam',
+            'Visit to Koodal Azhagar Temple',
+            'Photo stop at Samanar Hills (Jain caves)',
+            'Drop back to pickup location'
+          ]
+        },
+        {
+          day: 'Cultural Delight 3',
+          title: 'Local Market & Food Tour',
+          activities: [
+            'Explore Madurai’s famous Puthu Mandapam market',
+            'Visit to Banana Market & Flower Market',
+            'Taste authentic Jigarthanda & Madurai street food',
+            'Shopping for souvenirs & traditional items',
+            'Drop back to pickup location'
+          ]
+        }
+      ],
+      inclusions: ['AC Transport', 'Tour Guide', 'Entry Fees'],
+      exclusions: ['Meals', 'Personal Expenses', 'Camera Fees'],
+      faqs: [
+        {
+          question: 'Is hotel accommodation included?',
+          answer: 'No, this is a one-day tour and does not include hotel stays.'
+        },
+        {
+          question: 'Can I get a pickup from a different city?',
+          answer: 'Yes, but it will incur additional charges. Please contact us for details.'
+        },
+        {
+          question: 'What is the best time to visit Madurai?',
+          answer: 'Early mornings and evenings are the best times to explore due to pleasant weather.'
+        },
+        {
+          question: 'Are food expenses included in the package?',
+          answer: 'No, but you will get recommendations on the best local eateries to try authentic Madurai cuisine.'
+        },
+        {
+          question: 'Do I need to follow a dress code for temples?',
+          answer: 'Yes, modest clothing is required. Avoid sleeveless tops and shorts when visiting temples.'
+        },
+        {
+          question: 'Is this tour suitable for families?',
+          answer: 'Yes, this tour is family-friendly and suitable for all age groups.'
+        },
+        {
+          question: 'Are photography and videography allowed at attractions?',
+          answer: 'Photography is allowed in most locations, but some sites may have restrictions or require a small fee.'
+        }
+      ]
+    },
+    {
+      id: 'Pondycherry',
+      title: 'Pondicherry One Day Tour',
+      images: ['/src/assets/Tour-Images/Pondy-1.webp','/src/assets/Tour-Images/pondy-2.webp'],
+      rating: 5,
+      duration: '1 Day',
+      location: 'Pondicherry, India',
+      pickupFrom: 'Chennai',
+      persons: 2,
+      category: 'pondicherry',
+      description: 'Pondicherry, affectionately known as "Pondy," is a vibrant coastal city that seamlessly blends French colonial heritage with rich Indian traditions. Its serene beaches, charming boulevards, and spiritual centers make it a captivating destination for travelers seeking both relaxation and cultural enrichment..',
+      itinerary: [
+        {
+          day: 'French Connection 1',
+          title: 'Colonial & Heritage Walk',
+          activities: [
+            'Pickup from railway station/bus stand',
+            'Visit to White Town & French Quarter',
+            'Explore Aurobindo Ashram',
+            'Visit to Basilica of the Sacred Heart of Jesus',
+            'Drop back to pickup location'
+          ]
+        },
+        {
+          day: 'Beachside Bliss 2',
+          title: 'Scenic & Relaxation Tour',
+          activities: [
+            'Sunrise at Promenade Beach',
+            'Visit to Serenity Beach & Rock Beach',
+            'Explore Auroville & Matrimandir (Outside view)',
+            'Photo stop at Paradise Beach',
+            'Drop back to pickup location'
+          ]
+        },
+        {
+          day: 'Cultural Escape 3',
+          title: 'Shopping & Café Experience',
+          activities: [
+            'Visit to Pondicherry Museum',
+            'Explore Botanical Garden',
+            'Shopping at Mission Street & Local Markets',
+            'Try French cuisine at a heritage café',
+            'Drop back to pickup location'
+          ]
+        }
+      ],
+      inclusions: ['AC Transport', 'Tour Guide', 'Entry Fees'],
+      exclusions: ['Meals', 'Personal Expenses', 'Camera Fees'],
+      faqs: [
+        {
+          question: 'Is hotel accommodation included?',
+          answer: 'No, this is a one-day tour and does not include hotel stays.'
+        },
+        {
+          question: 'Can I get a pickup from Bangalore?',
+          answer: 'Yes, but it will incur additional charges. Please contact us for details.'
+        },
+        {
+          question: 'Is Auroville open for visitors?',
+          answer: 'Yes, Auroville is open, but entry inside Matrimandir requires prior booking.'
+        },
+        {
+          question: 'What is the best time to visit Pondicherry?',
+          answer: 'Early morning or evening is best to explore, especially during cooler months (October to March).'
+        },
+        {
+          question: 'Are food and drinks included?',
+          answer: 'No, but we recommend famous French bakeries and local South Indian eateries for you to explore.'
+        },
+        {
+          question: 'Can we swim at the beaches?',
+          answer: 'Some beaches like Paradise Beach allow swimming, while others like Rock Beach are for sightseeing only.'
+        },
+        {
+          question: 'Is the tour family-friendly?',
+          answer: 'Yes, the tour is suitable for couples, families, and solo travelers.'
+        }
+      ]
+    },
+    {
+      id: 'bangalore-mysore',
+      title: 'Bangalore One Day Tour',
+      images: ['/src/assets/Tour-Images/Bangalore-1.webp','/src/assets/Tour-Images/Bangaloe-2.webp','/src/assets/Tour-Images/Bangalore-4.webp'],
+      rating: 5,
+      duration: '1 Day',
+      location: 'Bangalore, Karnataka',
+      pickupFrom: 'Bangalore',
+      persons: 2,
+      category: 'karnataka',
+      description: 'A one-day city tour exploring the vibrant culture, historical landmarks, and lush gardens of Bangalore, the Silicon Valley of India.',
+      itinerary: [
+        {
+          day: 'Heritage & History 1',
+          title: 'Palaces & Temples Tour',
+          activities: [
+            'Pickup from railway station/bus stand',
+            'Visit to Bangalore Palace',
+            'Explore Tipu Sultan’s Summer Palace',
+            'Visit to ISKCON Temple & Bull Temple',
+            'Drop back to pickup location'
+          ]
+        },
+        {
+          day: 'Nature & Science 2',
+          title: 'Garden & Museum Tour',
+          activities: [
+            'Morning walk at Lalbagh Botanical Garden',
+            'Explore Cubbon Park & Vidhana Soudha',
+            'Visit to Visvesvaraya Industrial & Technological Museum',
+            'Photo stop at MG Road & Brigade Road',
+            'Drop back to pickup location'
+          ]
+        },
+        {
+          day: 'Shopping & Food Trail 3',
+          title: 'Local Markets & Culinary Experience',
+          activities: [
+            'Visit to Commercial Street for shopping',
+            'Explore KR Market for local goods',
+            'Taste Bangalore’s famous Masala Dosa & Filter Coffee',
+            'Visit UB City for luxury shopping',
+            'Drop back to pickup location'
+          ]
+        }
+      ],
+      inclusions: ['AC Transport', 'Tour Guide', 'Entry Fees'],
+      exclusions: ['Meals', 'Personal Expenses', 'Camera Fees'],
+      faqs: [
+        {
+          question: 'Is hotel accommodation included?',
+          answer: 'No, this is a one-day tour and does not include hotel stays.'
+        },
+        {
+          question: 'Can I get a pickup from Mysore?',
+          answer: 'Yes, but it will incur additional charges. Please contact us for details.'
+        },
+        {
+          question: 'What is the best time to visit Bangalore?',
+          answer: 'Bangalore has pleasant weather year-round, but mornings and evenings are best for sightseeing.'
+        },
+        {
+          question: 'Are food expenses included?',
+          answer: 'No, but we will guide you to famous eateries where you can enjoy local food.'
+        },
+        {
+          question: 'Are there any trekking options in Bangalore?',
+          answer: 'Yes, short treks like Nandi Hills and Savandurga can be arranged separately.'
+        },
+        {
+          question: 'Is Bangalore safe for solo travelers?',
+          answer: 'Yes, Bangalore is considered safe for solo travelers, but it is recommended to avoid late-night travel alone.'
+        },
+        {
+          question: 'Are entry tickets to attractions included?',
+          answer: 'Yes, entry tickets to the main attractions mentioned in the itinerary are covered.'
+        }
+      ]
+    },
+    {
+      id: 'Tirupati',
+      title: 'Tirupati One Day Tour',
+      images: ['/src/assets/Tour-Images/Tirupati-2.webp','/src/assets/Tour-Images/Tirupati3.webp','/src/assets/Tour-Images/Tirupati-1.avif'],
+      rating: 5,
+      duration: '1 Day',
+      location: 'Tirupati, Andhra Pradesh',
+      pickupFrom: 'Chennai',
+      persons: 2,
+      category: 'andhra-pradesh',
+      description: 'A divine one-day pilgrimage to the sacred city of Tirupati, home to the world-famous Tirumala Venkateswara Temple and other spiritual sites.',
+      itinerary: [
+        {
+          day: 'Divine Blessings 1',
+          title: 'Tirumala Temple Visit',
+          activities: [
+            'Pickup from railway station/bus stand',
+            'Darshan at Tirumala Venkateswara Temple',
+            'Visit to Papavinasam Theertham & Akasha Ganga',
+            'Explore Sri Vari Museum',
+            'Drop back to pickup location'
+          ]
+        },
+        {
+          day: 'Sacred Exploration 2',
+          title: 'Nearby Temples & Spiritual Sites',
+          activities: [
+            'Visit to Sri Padmavathi Ammavari Temple',
+            'Explore Kapila Theertham',
+            'Visit to Sri Kalyana Venkateswara Swamy Temple',
+            'Photo stop at Silathoranam Rock Formation',
+            'Drop back to pickup location'
+          ]
+        },
+        {
+          day: 'Serene Pilgrimage 3',
+          title: 'Spiritual & Cultural Tour',
+          activities: [
+            'Visit to ISKCON Tirupati Temple',
+            'Exploring Chandragiri Fort & Raja Mahal',
+            'Shopping for Tirupati Laddu & souvenirs',
+            'Explore Talakona Waterfalls (optional)',
+            'Drop back to pickup location'
+          ]
+        }
+      ],
+      inclusions: ['AC Transport', 'Tour Guide', 'Special Entry Darshan Tickets'],
+      exclusions: ['Meals', 'Personal Expenses', 'Camera Fees'],
+      faqs: [
+        {
+          question: 'Is accommodation included?',
+          answer: 'No, this is a one-day tour and does not include hotel stays.'
+        },
+        {
+          question: 'Can I get a pickup from Bangalore?',
+          answer: 'Yes, but it will incur additional charges. Please contact us for details.'
+        },
+        {
+          question: 'What is the best time to visit Tirupati?',
+          answer: 'Tirupati is best visited during early mornings or weekdays to avoid heavy crowds.'
+        },
+        {
+          question: 'Is VIP Darshan included in the package?',
+          answer: 'No, but special entry darshan is included. VIP darshan requires separate booking.'
+        },
+        {
+          question: 'Is traditional dress mandatory for temple visit?',
+          answer: 'Yes, men should wear dhoti/kurtas, and women should wear saree/churidar for darshan.'
+        },
+        {
+          question: 'Are senior citizens given priority for darshan?',
+          answer: 'Yes, there are special queue arrangements for senior citizens and physically challenged visitors.'
+        },
+        {
+          question: 'Can I take prasad and Laddu back home?',
+          answer: 'Yes, the famous Tirupati Laddu can be purchased at the temple counter.'
+        }
+      ]
+    },
+    {
+      id: 'Vellore',
+      title: 'Vellore One Day Tour',
+      images: ['/src/assets/Tour-Images/vellore-1.jpg','/src/assets/Tour-Images/vellore-2.jpg','/src/assets/Tour-Images/vellore-3.jpg',],
+      rating: 5,
+      duration: '1 Day',
+      location: 'Vellore, Tamil Nadu',
+      pickupFrom: 'Chennai',
+      persons: 2,
+      category: 'tamil-nadu',
+      description: 'A one-day heritage and spiritual tour exploring the historic forts, golden temples, and cultural landmarks of Vellore.',
+      itinerary: [
+        {
+          day: 'Historic Marvels 1',
+          title: 'Exploring Vellore Fort',
+          activities: [
+            'Pickup from railway station/bus stand',
+            'Visit to Vellore Fort & Jalakandeswarar Temple',
+            'Explore Government Museum inside the fort',
+            'Photo stop at Tipu Sultan’s Prison',
+            'Drop back to pickup location'
+          ]
+        },
+        {
+          day: 'Divine Experience 2',
+          title: 'Spiritual & Temple Tour',
+          activities: [
+            'Visit to the famous Sripuram Golden Temple',
+            'Explore Ratnagiri Murugan Temple',
+            'Visit to Sri Lakshmi Narsimha Swamy Temple',
+            'Photo stop at Big Mosque & St. John’s Church',
+            'Drop back to pickup location'
+          ]
+        },
+        {
+          day: 'Nature & Leisure 3',
+          title: 'Parks & Local Markets',
+          activities: [
+            'Visit to Amirthi Zoological Park (optional)',
+            'Explore Periyar Park for relaxation',
+            'Shopping for traditional silk sarees & souvenirs',
+            'Taste local Vellore cuisine',
+            'Drop back to pickup location'
+          ]
+        }
+      ],
+      inclusions: ['AC Transport', 'Tour Guide', 'Entry Fees'],
+      exclusions: ['Meals', 'Personal Expenses', 'Camera Fees'],
+      faqs: [
+        {
+          question: 'Is hotel accommodation included?',
+          answer: 'No, this is a one-day tour and does not include hotel stays.'
+        },
+        {
+          question: 'Can I get a pickup from Bangalore?',
+          answer: 'Yes, but it will incur additional charges. Please contact us for details.'
+        },
+        {
+          question: 'Is photography allowed inside Vellore Fort?',
+          answer: 'Yes, photography is allowed in most areas, but some sections may have restrictions.'
+        },
+        {
+          question: 'What is the dress code for visiting Sripuram Golden Temple?',
+          answer: 'Modest clothing is required. Avoid sleeveless tops and shorts while visiting the temple.'
+        },
+        {
+          question: 'Are entry tickets included in the package?',
+          answer: 'Yes, entry tickets for major attractions are included.'
+        },
+        {
+          question: 'Can I purchase souvenirs at the temple?',
+          answer: 'Yes, Sripuram Golden Temple has a spiritual gift shop where you can buy prasad and souvenirs.'
+        },
+        {
+          question: 'Is this tour suitable for senior citizens?',
+          answer: 'Yes, but the fort and some temple areas require walking, so comfortable footwear is recommended.'
+        }
+      ]
+    },
+    {
+      id: 'Kodaikanal',
+      title: 'Kodaikanal One Day Tour',
+      images: ['/src/assets/Tour-Images/kodaikanal.jpg','/src/assets/Tour-Images/kodaikanal2.jpg','/src/assets/Tour-Images/kodaikanal3.jpg','/src/assets/Tour-Images/kodaikanal1.jpg'],
+      rating: 5,
+      duration: '1 Day',
+      location: 'Kodaikanal, Tamil Nadu',
+      pickupFrom: 'Madurai',
+      persons: 2,
+      category: 'tamil-nadu',
+      description: 'A refreshing one-day tour through the "Princess of Hill Stations," Kodaikanal, known for its misty hills, beautiful lakes, and scenic viewpoints.',
+      itinerary: [
+        {
+          day: 'Misty Escapade 1',
+          title: 'Lakes & Parks Tour',
+          activities: [
+            'Pickup from railway station/bus stand',
+            'Visit to Kodaikanal Lake & Boating',
+            'Explore Bryant Park & Coaker’s Walk',
+            'Pillar Rocks & Moir Point photo stop',
+            'Drop back to pickup location'
+          ]
+        },
+        {
+          day: 'Nature Retreat 2',
+          title: 'Waterfalls & Viewpoints',
+          activities: [
+            'Visit to Silver Cascade Waterfalls',
+            'Explore Bear Shola Falls',
+            'Visit to Dolphin’s Nose & Echo Point',
+            'Pine Forest walk & photo session',
+            'Drop back to pickup location'
+          ]
+        },
+        {
+          day: 'Adventurer’s Delight 3',
+          title: 'Caves & Shopping Tour',
+          activities: [
+            'Visit to Guna Caves (Devil’s Kitchen)',
+            'Explore Green Valley View (Suicide Point)',
+            'Shopping for homemade chocolates & handicrafts',
+            'Relax at Kurinji Andavar Temple',
+            'Drop back to pickup location'
+          ]
+        }
+      ],
+      inclusions: ['AC Transport', 'Tour Guide', 'Entry Fees'],
+      exclusions: ['Meals', 'Personal Expenses', 'Camera Fees'],
+      faqs: [
+        {
+          question: 'Is hotel accommodation included?',
+          answer: 'No, this is a one-day tour and does not include hotel stays.'
+        },
+        {
+          question: 'Can I get a pickup from Coimbatore?',
+          answer: 'Yes, but it will incur additional charges. Please contact us for details.'
+        },
+        {
+          question: 'What is the best time to visit Kodaikanal?',
+          answer: 'The best time to visit is from October to March for pleasant weather.'
+        },
+        {
+          question: 'Are adventure activities available?',
+          answer: 'Yes, cycling, trekking, and horse riding are available near Kodaikanal Lake.'
+        },
+        {
+          question: 'Is photography allowed at all locations?',
+          answer: 'Yes, but some places like Guna Caves have restrictions for safety reasons.'
+        },
+        {
+          question: 'Are there any local delicacies to try?',
+          answer: 'Yes, try homemade chocolates, hot tea, and Kodai’s special bread omelet.'
+        },
+        {
+          question: 'Is this tour suitable for families with kids?',
+          answer: 'Yes, Kodaikanal is family-friendly, but some trekking points may be difficult for young children.'
+        }
+      ]
+    },
+    {
+      id: 'Goa',
+      title: 'Goa One Day Tour',
+      images: ['/src/assets/Tour-Images/Goa-1.webp','/src/assets/Tour-Images/Goa-2.webp','/src/assets/Tour-Images/Goa-3.webp'],
+      rating: 5,
+      duration: '1 Day',
+      location: 'Goa, India',
+      pickupFrom: 'Goa Airport / Railway Station',
+      persons: 2,
+      category: 'goa',
+      description: 'A thrilling one-day tour exploring the golden beaches, historic forts, and vibrant nightlife of Goa, the Pearl of the Orient.',
+      itinerary: [
+        {
+          day: 'Beachside Bliss 1',
+          title: 'North Goa Exploration',
+          activities: [
+            'Pickup from railway station/bus stand',
+            'Visit to Calangute Beach & Baga Beach',
+            'Explore Anjuna Beach & Vagator Beach',
+            'Photo stop at Chapora Fort (Dil Chahta Hai Fort)',
+            'Drop back to pickup location'
+          ]
+        },
+        {
+          day: 'Heritage & Culture 2',
+          title: 'South Goa & Old Churches Tour',
+          activities: [
+            'Visit to Basilica of Bom Jesus & Se Cathedral',
+            'Explore Shanta Durga Temple & Mangeshi Temple',
+            'Visit to Dona Paula Viewpoint',
+            'Photo stop at Miramar Beach',
+            'Drop back to pickup location'
+          ]
+        },
+        {
+          day: 'Adventure & Shopping 3',
+          title: 'Water Sports & Local Markets',
+          activities: [
+            'Try Water Sports at Candolim Beach (Jet Ski, Banana Ride, Parasailing)',
+            'Explore Panjim Market for souvenirs & cashews',
+            'Visit to Aguada Fort',
+            'Sunset at SinQ Beach Club or Tito’s Lane (optional)',
+            'Drop back to pickup location'
+          ]
+        }
+      ],
+      inclusions: ['AC Transport', 'Tour Guide', 'Entry Fees'],
+      exclusions: ['Meals', 'Personal Expenses', 'Water Sports Fees'],
+      faqs: [
+        {
+          question: 'Is hotel accommodation included?',
+          answer: 'No, this is a one-day tour and does not include hotel stays.'
+        },
+        {
+          question: 'Can I get a pickup from Mumbai?',
+          answer: 'No, pickups are available only from Goa locations like the airport or railway station.'
+        },
+        {
+          question: 'What is the best time to visit Goa?',
+          answer: 'The best time is from November to March for great weather and beach activities.'
+        },
+        {
+          question: 'Are water sports included in the package?',
+          answer: 'No, but they can be arranged at an additional cost at the beachside vendors.'
+        },
+        {
+          question: 'Is Goa family-friendly?',
+          answer: 'Yes, but some nightlife spots are better suited for adults.'
+        },
+        {
+          question: 'Do I need to carry ID for casino entry?',
+          answer: 'Yes, a valid government-issued ID is required for casino entry in Goa.'
+        },
+        {
+          question: 'Are there vegetarian food options available?',
+          answer: 'Yes, Goa has a variety of vegetarian and vegan-friendly restaurants.'
+        }
+      ]
+    },
+    {
+      id: 'Thanjavur',
+      title: 'Thanjavur  Tour package ',
+      images: ['/src/assets/Temple/Temp-9-main.jpeg','/src/assets/Temple/Temp-4.jpeg','/src/assets/Temple/Temp-5.jpeg'],
+      rating: 5,
+      duration: '1 Day',
+      location: 'Thanjavur, Tamil Nadu',
+      pickupFrom: 'Trichy',
+      persons: 2,
+      category: 'tamil-nadu',
+      description: 'A cultural and historical one-day tour exploring the rich heritage of Thanjavur, home to the great Chola temples and artistic traditions.',
+      itinerary: [
+        {
+          day: 'Royal Heritage 1',
+          title: 'Temples & Palaces Exploration',
+          activities: [
+            'Pickup from railway station/bus stand',
+            'Visit to Brihadeeswarar Temple (UNESCO Heritage Site)',
+            'Explore Thanjavur Palace & Saraswathi Mahal Library',
+            'Visit to Schwartz Church & Sivaganga Park',
+            'Drop back to pickup location'
+          ]
+        },
+        {
+          day: 'Divine Journey 2',
+          title: 'Spiritual & Cultural Tour',
+          activities: [
+            'Visit to Thiruvaiyaru (Saint Tyagaraja Samadhi)',
+            'Explore Punnainallur Mariamman Temple',
+            'Visit to Rajarajan Manimandapam',
+            'Photo stop at Airavatesvara Temple (Kumbakonam)',
+            'Drop back to pickup location'
+          ]
+        },
+        {
+          day: 'Art & Craft 3',
+          title: 'Handicrafts & Traditional Shopping',
+          activities: [
+            'Explore Bronze Statue Making at Swamimalai',
+            'Visit to Thanjavur Art Gallery',
+            'Shopping for Thanjavur Paintings & Veena Instruments',
+            'Taste traditional South Indian meals on banana leaf',
+            'Drop back to pickup location'
+          ]
+        }
+      ],
+      inclusions: ['AC Transport', 'Tour Guide', 'Entry Fees'],
+      exclusions: ['Meals', 'Personal Expenses', 'Camera Fees'],
+      faqs: [
+        {
+          question: 'Is hotel accommodation included?',
+          answer: 'No, this is a one-day tour and does not include hotel stays.'
+        },
+        {
+          question: 'Can I get a pickup from Chennai?',
+          answer: 'Yes, but it will incur additional charges. Please contact us for details.'
+        },
+        {
+          question: 'What is the best time to visit Thanjavur?',
+          answer: 'The best time to visit is from October to March when the weather is pleasant.'
+        },
+        {
+          question: 'Are there guided tours available inside Brihadeeswarar Temple?',
+          answer: 'Yes, our guide will provide historical insights about the temple and its architecture.'
+        },
+        {
+          question: 'Can I buy original Thanjavur paintings during the tour?',
+          answer: 'Yes, we will visit authentic shops where you can purchase handmade Thanjavur paintings.'
+        },
+        {
+          question: 'Is this tour suitable for children and elderly people?',
+          answer: 'Yes, but some locations require walking, so comfortable footwear is recommended.'
+        },
+        {
+          question: 'Are photography and videography allowed inside the temples?',
+          answer: 'Photography is allowed in most temples, but videography may have restrictions in certain areas.'
+        }
+      ]
+    }, 
+    /// extra tour package content if need ... first update in TourPackage.jsx  
   ];
 
   const handleChange = (e) => {
@@ -305,7 +996,7 @@ const TourPackageDetail = () => {
         ...formData,
         packageId: selectedPackage.id,
         packageName: selectedPackage.title,
-        price: selectedPackage.price
+        // price: selectedPackage.price
       });
       
       if (response.data.success) {
@@ -754,7 +1445,7 @@ const TourPackageDetail = () => {
               
               <div className="contact-info">
                 <Typography variant="body1">
-                  <strong>Phone:</strong> +91 00000 00000
+                  <strong>Phone:</strong> +91 8667200183 | 9840214679 | 9629528420
                 </Typography>
                 <Typography variant="body1">
                   <strong>Email:</strong> rpstourstravels@gmail.com

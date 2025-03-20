@@ -25,20 +25,18 @@ const TourPackages = () => {
       id: 'rameshwaram-one-day',
       title: 'Rameshwaram One Day Tour',
       image: '/src/assets/Poster-home/1.png',
-      price: 2000,
       rating: 5,
       duration: '1 Day',
       location: 'Rameshwaram, Tamil Nadu',
-      pickupFrom: 'Coimbatore',
+      pickupFrom: 'Tamil Nadu',
       persons: 2,
       category: 'tamil-nadu'
     },
     {
 
       id: 'rameshwaram-kanyakumari',
-      title: 'Rameshwaram  - Kanyakumari ',
-      image: '/src/assets/Poster-home/2.webp',
-      price: 18700,
+      title: 'Kanyakumari ',
+      image: '/src/assets/Poster-home/5.png',
       rating: 5,
       duration: '3 Days / 2 Nights',
       location: 'Rameshwaram, Kanyakumari, Madurai',
@@ -49,9 +47,8 @@ const TourPackages = () => {
     {
 
       id: 'rameshwaram-trivandrum',
-      title: 'Rameshwaram - Thiruvananthapuram [Kerala]',
-      image: '/src/assets/Poster-home/5.webp',
-      price: 12000,
+      title: 'Thiruvananthapuram [Kerala]',
+      image: '/src/assets/Poster-home/3.png',
       rating: 5,
       duration: '4 Days / 3 Nights',
       location: 'Rameshwaram, Kanyakumari, Thiruvananthapuram',
@@ -60,10 +57,9 @@ const TourPackages = () => {
       category: 'kerala'
     },
     {
-      id: 'madurai-kodaikanal',
-      title: 'Madurai - Kodaikanal Tour Package',
-      image: '/src/assets/Poster-home/7.png',
-      price: 8500,
+      id: 'madurai',
+      title: 'Madurai - Tour Package',
+      image: '/src/assets/Poster-home/2.png',
       rating: 4.5,
       duration: '3 Days / 2 Nights',
       location: 'Madurai, Kodaikanal',
@@ -72,22 +68,31 @@ const TourPackages = () => {
       category: 'tamil-nadu'
     },
     {
-      id: 'kerala-backwaters',
-      title: 'Kerala Backwaters Special Tour',
+    id: 'Kodaikanal',
+    title: 'Kodaikanal  Tour Package',
+    image: '/src/assets/Poster-home/10.png',
+    rating: 4.5,
+    duration: '3 Days / 2 Nights',
+    location: 'Madurai, Kodaikanal',
+    pickupFrom: 'Madurai',
+    persons: 2,
+    category: 'tamil-nadu'
+  },
+    {
+      id: 'Pondycherry',
+      title: 'Pondycherry Special Tour',
       image: '/src/assets/Poster-home/4.png',
-      price: 15000,
       rating: 5,
       duration: '5 Days / 4 Nights',
-      location: 'Kochi, Munnar, Thekkady, Alleppey',
-      pickupFrom: 'Kochi',
+      location: 'Pondycherry,Aurovil-Beach',
+      pickupFrom: 'Tamil Nadu',
       persons: 2,
-      category: 'kerala'
+      category: 'Tamil Nadu'
     },
     {
       id: 'ooty-coonoor',
       title: 'Ooty - Coonoor Hill Station Tour',
-      image: '/src/assets/Poster-home/3.png',
-      price: 9500,
+      image: '/src/assets/Poster-home/9.png',
       rating: 4.5,
       duration: '4 Days / 3 Nights',
       location: 'Ooty, Coonoor',
@@ -99,7 +104,6 @@ const TourPackages = () => {
       id: 'bangalore-mysore',
       title: 'Bangalore - Mysore Heritage Tour',
       image: '/src/assets/Poster-home/6.png',
-      price: 9500,
       rating: 4.5,
       duration: '4 Days / 3 Nights',
       location: 'Bangalore, Mysore',
@@ -110,14 +114,49 @@ const TourPackages = () => {
       id: 'Tirupati',
       title: 'Tirupati-Andhra Pradesh Tour',
       image: '/src/assets/Poster-home/8.png',
-      price: 9500,
       rating: 4.5,
       duration: '4 Days / 3 Nights',
       location: 'Bangalore, Mysore',
       pickupFrom: 'Rameshwaram',
       persons: 2,
       category: 'Andhra Pradesh'
+    },
+    {
+      id: 'Vellore',
+      title: 'Vellore  Tour Package ',
+      image: '/src/assets/Poster-home/11.png',
+      rating: 4.5,
+      duration: '4 Days / 3 Nights',
+      location: 'Bangalore, Mysore',
+      pickupFrom: 'Rameshwaram',
+      persons: 2,
+      category: 'tamil-nadu'
+    },
+    {
+      id: 'Thanjavur',
+      title: 'Thanjavur Tour Package ',
+      image: '/src/assets/Poster-home/12.png',
+      rating: 4.5,
+      duration: '2 Days / 1 Nights',
+      location: 'Thanjavur',
+      pickupFrom: 'Tamil Nadu',
+      persons: 2,
+      category: 'tamil-nadu'
+    } ,
+    {
+      id: 'Goa',
+      title: 'Goa  Tour Package ',
+      image: '/src/assets/Poster-home/7.png',
+      rating: 4.5,
+      duration: '4 Days / 3 Nights',
+      location: 'Mumbai,Goa',
+      pickupFrom: 'Tamil Nadu',
+      persons: 2,
+      category: 'Tamil Nadu'
     }
+
+    // add card content  and add card here and update the TourPackageDetails.jsx
+    
   ];
 
   // Filter packages based on active tab, price range, duration, and search query
@@ -130,12 +169,16 @@ const TourPackages = () => {
     } else if (activeTab === 2) {
       filtered = filtered.filter(pkg => pkg.category === 'kerala');
     }
-    
-    // Filter by price range
-    if (priceRange) {
-      const [min, max] = priceRange.split('-').map(Number);
-      filtered = filtered.filter(pkg => pkg.price >= min && pkg.price <= max);
+    else if (activeTab === 3) {
+      filtered = filtered.filter(pkg => pkg.category === 'Bangalore');
+    }  else if (activeTab === 4) {
+      filtered = filtered.filter(pkg => pkg.category === 'Andhra Pradesh');
     }
+    // Filter by price range
+    // if (priceRange) {
+    //   const [min, max] = priceRange.split('-').map(Number);
+    //   filtered = filtered.filter(pkg => pkg.price >= min && pkg.price <= max);
+    // }
     
     // Filter by duration
     if (duration) {
@@ -164,6 +207,7 @@ const TourPackages = () => {
   return (
     <div className="tour-packages-page">
       {/* Hero Banner */}
+   
       <div className="page-hero-banner" style={{ backgroundImage: `url(${bannerImage})`,backgroundPosition: 'center 1' }}>
         <div className="page-hero-overlay"></div>
         <Container>
@@ -177,7 +221,6 @@ const TourPackages = () => {
           </div>
         </Container>
       </div>
-
       {/* Main Content */}
       <Container className="tour-packages-container">
         {/* Filter Section */}
