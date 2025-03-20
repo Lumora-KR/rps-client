@@ -11,7 +11,6 @@ const PackageCard = ({
   id, 
   title, 
   image, 
-  price, 
   rating, 
   duration, 
   location, 
@@ -22,7 +21,7 @@ const PackageCard = ({
     <Paper elevation={0} className="package-card">
       <div className="package-image">
         <img src={image || "/placeholder.svg"} alt={title} />
-        <div className="package-price">₹{price.toLocaleString()}</div>
+        {/* <div className="package-price">₹{price.toLocaleString()}</div> */}
         {persons && (
           <div className="package-persons">
             <PeopleIcon fontSize="small" />

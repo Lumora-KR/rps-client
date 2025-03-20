@@ -690,6 +690,8 @@
 
 // export default AddCarRental;
 // pages/AddCarRental/AddCarRental.jsx
+//--------------------------------------
+
 import React, { useState } from "react";
 import {
   Container,

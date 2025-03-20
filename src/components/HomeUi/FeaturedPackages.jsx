@@ -1,5 +1,5 @@
 // components/FeaturedPackages/FeaturedPackages.jsx
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Button } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
@@ -17,9 +17,14 @@ import { Link } from 'react-router-dom';
 const FeaturedPackages = () => {
   const swiperRef = useRef(null);
   const [selectedPackage, setSelectedPackage] = useState(null);
+
+
   const [openModal, setOpenModal] = useState(false);
 
+
+
   const handlePackageClick = (packageData) => {
+    console.log('Package Data hii:', packageData); // Log the package data to understand its source
     setSelectedPackage(packageData);
     setOpenModal(true);
   };
@@ -32,70 +37,95 @@ const FeaturedPackages = () => {
   const featuredPackages = [
     {
       id: 1,
-      title: 'Rameshwaram Tour Package',
-      image: '/src/assets/Poster-home/1.png',
+      title: 'Rameshwaram Tour  Package',
+      image: ['/src/assets/Poster-home/1.png','src/assets/home/HeroSection/rameswaram-1.jpeg','src/assets/Tour-Images/rmm1.jpg'],
       location: 'Rameshwaram, Tamil Nadu',
       duration: '2 Days / 1 Night',
-      price: '₹4,999',
-      description: 'Explore the spiritual beauty of Rameshwaram with our carefully crafted tour package.',
+      description: 'Explore the spiritual beauty of Rameshwaram with our carefully crafted tour package with RPS Tours & Travels.',
       rating: 4.8,
       reviewCount: 24
     },
     {
       id: 2,
       title: 'Kanyakumari Tour Package',
-      image: '/src/assets/Poster-home/6.png',
+      image: ['/src/assets/Poster-home/5.png','src/assets/Temple/Tem-1.jpeg','src/assets/Tour-Images/kanayakumari-2.jpg'],
       location: 'Kanyakumari, Tamil Nadu',
       duration: '3 Days / 2 Nights',
-      price: '₹7,499',
-      description: 'Experience the mesmerizing sunrise and sunset at the southernmost tip of India.',
+      description: 'Experience the mesmerizing sunrise and sunset at the southernmost tip of India with RPS Tours & Travels.',
       rating: 4.7,
       reviewCount: 32
     },
     {
       id: 3,
       title: 'Madurai Tour Package',
-      image: '/src/assets/Poster-home/2.png',
+      image: ['/src/assets/Poster-home/2.png','src/assets/Tour-Images/Tour-2.jpeg','src/assets/Temple/Temp-3.jpeg'],
       location: 'Madurai, Tamil Nadu',
       duration: '2 Days / 1 Night',
-      price: '₹5,499',
-      description: 'Visit the ancient Meenakshi Temple and explore the rich culture of Madurai.',
+      description: 'Visit the ancient Meenakshi Temple and explore the rich culture of Madurai with RPS Tours & Travels.',
       rating: 4.9,
       reviewCount: 41
     },
     {
       id: 4,
       title: 'Kodaikanal Tour Package',
-      image: '/src/assets/Poster-home/7.png',
+      image: ['/src/assets/Poster-home/10.png','src/assets/Tour-Images/kodaikanal.jpg','src/assets/Tour-Images/kodaikanal1.jpg','src/assets/Tour-Images/kodaikanal2.jpg','src/assets/Tour-Images/kodaikanal3.jpg'],
       location: 'Kodaikanal, Tamil Nadu',
       duration: '3 Days / 2 Nights',
-      price: '₹8,999',
-      description: 'Enjoy the cool climate and scenic beauty of the Princess of Hill Stations.',
+      description: 'Enjoy the cool climate and scenic beauty of the Princess of Hill Stations with RPS Tours & Travels.',
       rating: 4.6,
       reviewCount: 28
     },
     {
       id: 5,
       title: 'Ooty Tour Package',
-      image: '/src/assets/Poster-home/5.png',
+      image: ['src/assets/Poster-home/9.png','src/assets/Tour-Images/Tour-7.jpeg','src/assets/Tour-Images/ooty.jpg','src/assets/Tour-Images/ooty1.jpg','src/assets/Tour-Images/Ooty3.webp',],
       location: 'Ooty, Tamil Nadu',
       duration: '4 Days / 3 Nights',
-      price: '₹10,499',
-      description: 'Discover the beauty of the Queen of Hill Stations with our comprehensive package.',
+      description: 'Discover the beauty of the Queen of Hill Stations with our comprehensive package with RPS Tours & Travels.',
       rating: 4.8,
       reviewCount: 36
     },
     {
       id: 6,
       title: 'Kerala Backwaters Package',
-      image: '/src/assets/Poster-home/3.png',
+      image: ['src/assets/Poster-home/3.png','src/assets/Tour-Images/kerala2.webp','src/assets/Tour-Images/Kerala-2.webp','src/assets/Tour-Images/Kerala-3.webp','src/assets/Tour-Images/Kerala-1.webp'],
       location: 'Alleppey, Kerala',
       duration: '5 Days / 4 Nights',
-      price: '₹12,999',
-      description: 'Experience the serene backwaters of Kerala on a traditional houseboat.',
+      description: 'Experience the serene backwaters of Kerala on a traditional houseboat with RPS Tours & Travels.',
       rating: 4.9,
       reviewCount: 52
-    }
+    },
+    {
+      id: 7,
+      title: 'Tirupati Tour Package',
+      image: ['/src/assets/Poster-home/8.png','src/assets/home/HeroSection/thirupati.jpg','src/assets/Tour-Images/Tirupati-1.avif','src/assets/Tour-Images/Tirupati3.webp'],
+      location: 'tirupati, Andhra Pradesh',
+      duration: '5 Days / 4 Nights',
+      description: 'Experience the Tirupati is a major pilgrimage city in Andhra Pradesh, famous for the Sri Venkateswara Temple in Tirumala,RPS Tours & Travels',
+      rating: 4.9,
+      reviewCount: 52
+    },
+    {
+      id: 8,
+      title: 'Goa Tour Package',
+      image: ['/src/assets/Poster-home/7.png','src/assets/Tour-Images/Goa-1.webp','src/assets/Tour-Images/Goa-2.webp','src/assets/Tour-Images/Goa-3.webp'],
+      location: 'Goa',
+      duration: '5 Days / 4 Nights',
+      description: 'Explore the Goa is India’s top beach destination, known for its vibrant nightlife, stunning beaches, water sports, and Portuguese heritage. Popular beaches like Baga, Calangute, and Palolem attract tourists worldwide with RPS Tours & Travels',
+      rating: 4.9,
+      reviewCount: 52
+    },
+    {
+      id: 9,
+      title: 'Pondycherry Tour Package',
+      image: ['/src/assets/Poster-home/4.png','src/assets/Tour-Images/Goa-1.webp','src/assets/Tour-Images/Goa-2.webp','src/assets/Tour-Images/Goa-3.webp'],
+      location: 'Tamil Nadu',
+      duration: '5 Days / 4 Nights',
+      description: 'Explore the Pondicherry, also called Puducherry, is known for its French colonial charm, serene beaches, and spiritual vibes with RPS Tours & Travels',
+      rating: 4.9,
+      reviewCount: 52
+    },
+
   ];
 
   return (
@@ -160,8 +190,7 @@ const FeaturedPackages = () => {
           <SwiperSlide key={pkg.id}>
             <div className="package-card">
               <div className="package-image">
-                <img src={pkg.image || "/placeholder.svg"} alt={pkg.title} />
-                <div className="package-price">{pkg.price}</div>
+                <img src={pkg.image[0] || "/placeholder.svg"} alt={pkg.title} />
                 <div className="package-rating">
                   <span className="rating-value">{pkg.rating}</span>
                   <span className="review-count">{pkg.reviewCount} reviews</span>

@@ -1,10 +1,9 @@
-/* pages/Home/Home.css */
+
  .home-page {
     padding-top: 80px;
   }
-   */
-  /* Hero Section  */
-  .hero-section {
+   
+.hero-section {
     position: relative;
   }
   
@@ -18,7 +17,7 @@
     max-width: 1000px;
   }
   
-  /* Welcome Section */
+ 
   .welcome-section {
     background-color: var(--background-light);
   }
@@ -71,7 +70,7 @@
     box-shadow: var(--shadow-md);
   }
   
-  /* Featured Packages Section */
+  
   .featured-packages-section {
     background-color: var(--background-off);
   }
@@ -150,7 +149,7 @@
     margin-top: var(--spacing-xl);
   }
   
-  /* Services Section */
+
   .services-section {
     background-color: var(--background-light);
   }
@@ -191,7 +190,7 @@
     font-size: var(--font-size-sm);
   }
   
-  /* Testimonials Section */
+
   .testimonials-section {
     background-color: var(--background-off);
   }

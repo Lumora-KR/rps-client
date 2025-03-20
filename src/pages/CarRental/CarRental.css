@@ -1,11 +1,12 @@
-pages/CarRental/CarRental.css .car-rental-page {
+/*pages/CarRental/CarRental.css 
+.car-rental-page {
   padding-top: 80px;
 }
 
 /* Hero Banner */
 .page-hero-banner {
   height: 300px;
-  background-image: url("https://source.unsplash.com/1600x900/?car,rental");
+ 
   background-size: cover;
   background-position: center;
   position: relative;

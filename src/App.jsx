@@ -22,9 +22,9 @@ import ScrollToTopPath from "./pages/SrollToTopPath";
 import { LanguageProvider } from "./pages/LanguageContext";
 
 // New pages
-import AddCarRental from "./pages/AddCarRental/AddCarRental";
+//import AddCarRental from "./pages/AddCarRental/AddCarRental";
 import EnquireCarRental from "./pages/EnquireCarRental/EnquireCarRental";
-import AddHotel from "./pages/AddHotel/AddHotel";
+//import AddHotel from "./pages/AddHotel/AddHotel";
 import EnquireHotel from "./pages/EnquireHotel/EnquireHotel";
 
 // Create a custom MUI theme
@@ -79,9 +79,9 @@ function App() {
             <Route path="/car-rental/:id" element={<CarDetail />} />
             <Route path="/bank-detail" element={<BankDetail />} />
             <Route path="/site-seen" element={<SiteSeen />} />
-            <Route path="/add-car-rental" element={<AddCarRental />} />
+            {/* <Route path="/add-car-rental" element={<AddCarRental />} /> */}
             <Route path="/enquire-car-rental" element={<EnquireCarRental />} />
-            <Route path="/add-hotel" element={<AddHotel />} />
+            {/* <Route path="/add-hotel" element={<AddHotel />} /> */}
             <Route path="/enquire-hotel" element={<EnquireHotel />} />
           </Routes>
           <FloatingButton />

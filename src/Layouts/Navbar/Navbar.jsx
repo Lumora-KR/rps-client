@@ -116,11 +116,11 @@ const Navbar = () => {
                     Browse Cars
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/add-car-rental" onClick={() => setIsOpen(false)}>
                     Add Rental
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     to="/enquire-car-rental"
@@ -155,16 +155,18 @@ const Navbar = () => {
                     Browse Hotels
                   </Link>
                 </li>
-                <li>
+                {/* this add acrs and have to move to dashboard and enquire-hotel having some errror */}
+                {/* <li>
                   <Link to="/add-hotel" onClick={() => setIsOpen(false)}>
                     Add Hotel
                   </Link>
-                </li>
-                <li>
+                </li> */}
+                {/* and this enquire -hotel need backend dependencies need to fix this ram 
+                 <li>
                   <Link to="/enquire-hotel" onClick={() => setIsOpen(false)}>
                     Enquire Hotel
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </li>
 

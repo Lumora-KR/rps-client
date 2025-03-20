@@ -314,7 +314,7 @@ const EnquireHotel = () => {
                 <div className="hotel-image">
                   {hotel.images && hotel.images.length > 0 ? (
                     <img
-                      src={`http://localhost:5000${hotel.images[0]}`}
+                      src={`http://localhost:5001${hotel.images[0]}`}
                       alt={hotel.name}
                       style={{
                         width: "100%",
@@ -425,7 +425,7 @@ const EnquireHotel = () => {
                   <div className="hotel-detail-image">
                     {selectedHotel.images && selectedHotel.images.length > 0 ? (
                       <img
-                        src={`http://localhost:5000${selectedHotel.images[0]}`}
+                        src={`http://localhost:5001${selectedHotel.images[0]}`}
                         alt={selectedHotel.name}
                         style={{
                           width: "100%",
