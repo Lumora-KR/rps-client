@@ -52,7 +52,7 @@ import Ooty1 from '/src/assets/Tour-Images/ooty.jpg';
 import Ooty2 from '/src/assets/Tour-Images/ooty1.jpg';
 import Ooty3 from '/src/assets/Tour-Images/Ooty3.webp';
 import Ooty4 from '/src/assets/Tour-Images/Tour-6.jpeg';
-import Kerala1 from '/src/assets/Tour-Images/Kerala2.webp';
+//import Kerala1 from '/src/assets/Tour-Images/Kerala2.webp';
 import Kerala2 from '/src/assets/Tour-Images/Kerala-1.webp';
 import Kerala3 from '/src/assets/Tour-Images/Kerala-2.webp';
 import Kerala4 from '/src/assets/Tour-Images/Kerala-3.webp';
@@ -268,7 +268,7 @@ const TourPackageDetail = () => {
     {
       id: 'rameshwaram-trivandrum',
       title: 'Kerala One Day Tour',
-      images: [Kerala1, Kerala2, Kerala3, Kerala4],
+      images: [Kerala2, Kerala3, Kerala4],
       rating: 5,
       duration: '1 Day',
       location: 'Kerala, India',
