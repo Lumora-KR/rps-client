@@ -52,7 +52,7 @@ import Ooty1 from '/src/assets/Tour-Images/ooty.jpg';
 import Ooty2 from '/src/assets/Tour-Images/ooty1.jpg';
 import Ooty3 from '/src/assets/Tour-Images/Ooty3.webp';
 import Ooty4 from '/src/assets/Tour-Images/Tour-6.jpeg';
-import Kerala1 from '/src/assets/Tour-Images/Kerala2.webp';
+//import Kerala1 from '/src/assets/Tour-Images/Kerala2.webp';
 import Kerala2 from '/src/assets/Tour-Images/Kerala-1.webp';
 import Kerala3 from '/src/assets/Tour-Images/Kerala-2.webp';
 import Kerala4 from '/src/assets/Tour-Images/Kerala-3.webp';
