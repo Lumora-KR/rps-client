@@ -45,6 +45,7 @@ import "./TourPackageDetail.css";
 
 const TourPackageDetail = () => {
   const { id } = useParams();
+  console.log("Package ID from URL:", id);
   const [activeTab, setActiveTab] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
@@ -72,7 +73,6 @@ const TourPackageDetail = () => {
         "https://source.unsplash.com/1200x800/?rameshwaram,sea",
         "https://source.unsplash.com/1200x800/?rameshwaram,bridge",
       ],
-      price: 2000,
       rating: 5,
       duration: "1 Day",
       location: "Rameshwaram, Tamil Nadu",
@@ -779,7 +779,8 @@ const TourPackageDetail = () => {
 
               <div className="contact-info">
                 <Typography variant="body1">
-                  <strong>Phone:</strong> +91 00000 00000
+                  <strong>Phone:</strong> +91 8667200183 | 9840214679 |
+                  9629528420
                 </Typography>
                 <Typography variant="body1">
                   <strong>Email:</strong> rpstourstravels@gmail.com

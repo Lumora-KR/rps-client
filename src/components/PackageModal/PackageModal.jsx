@@ -246,7 +246,7 @@ const PackageModal = ({ open, onClose, packageData }) => {
                 navigation
                 pagination={{ clickable: true }}
                 autoplay={{ delay: 5000, disableOnInteraction: false }}
-                loop
+                // loop
                 className="package-gallery-swiper"
               >
                 {packageData.image.map((image, index) => (

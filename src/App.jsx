@@ -19,11 +19,12 @@ import { ToastContainer } from "react-toastify";
 import FloatingButton from "./components/FloatingButton/FloatingButton";
 import SiteSeen from "./pages/SiteSeen/SiteSeen";
 import ScrollToTopPath from "./pages/SrollToTopPath";
+import { LanguageProvider } from "./pages/LanguageContext";
 
 // New pages
-import AddCarRental from "./pages/AddCarRental/AddCarRental";
+//import AddCarRental from "./pages/AddCarRental/AddCarRental";
 import EnquireCarRental from "./pages/EnquireCarRental/EnquireCarRental";
-import AddHotel from "./pages/AddHotel/AddHotel";
+//import AddHotel from "./pages/AddHotel/AddHotel";
 import EnquireHotel from "./pages/EnquireHotel/EnquireHotel";
 
 // Create a custom MUI theme
@@ -62,7 +63,7 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Router>
+      <LanguageProvider>
         <div className="app">
           <ToastContainer />
           <Navbar />
@@ -77,21 +78,20 @@ function App() {
             <Route path="/car-rental" element={<CarRental />} />
             <Route path="/car-rental/:id" element={<CarDetail />} />
             <Route path="/bank-detail" element={<BankDetail />} />
-            {/* New routes */}
             <Route path="/site-seen" element={<SiteSeen />} />
-            <Route path="/add-car-rental" element={<AddCarRental />} />
+            {/* <Route path="/add-car-rental" element={<AddCarRental />} /> */}
             <Route path="/enquire-car-rental" element={<EnquireCarRental />} />
-            <Route path="/add-hotel" element={<AddHotel />} />
+            {/* <Route path="/add-hotel" element={<AddHotel />} /> */}
             <Route path="/enquire-hotel" element={<EnquireHotel />} />
           </Routes>
           <FloatingButton />
-          {/* <ScrollToTop /> */}
           <ScrollToTopPath />
           <Footer />
         </div>
-      </Router>
+      </LanguageProvider>
     </ThemeProvider>
   );
 }
+
 
 export default App;

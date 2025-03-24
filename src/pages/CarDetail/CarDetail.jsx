@@ -61,10 +61,7 @@ const CarDetail = () => {
       id: "toyota-innova",
       title: "Toyota Innova Crysta",
       images: [
-        "https://source.unsplash.com/1200x800/?toyota,innova,front",
-        "https://source.unsplash.com/1200x800/?toyota,innova,side",
-        "https://source.unsplash.com/1200x800/?toyota,innova,interior",
-        "https://source.unsplash.com/1200x800/?toyota,innova,rear",
+        "/src/assets/Cars/Car-11.jpg"
       ],
       price: 3000,
       priceUnit: "per day",
@@ -143,12 +140,9 @@ const CarDetail = () => {
     },
     {
       id: "swift-dzire",
-      title: "Toyota Innova Crysta",
+      title: "swift dzire",
       images: [
-        "https://source.unsplash.com/1200x800/?toyota,innova,front",
-        "https://source.unsplash.com/1200x800/?toyota,innova,side",
-        "https://source.unsplash.com/1200x800/?toyota,innova,interior",
-        "https://source.unsplash.com/1200x800/?toyota,innova,rear",
+      '/src/assets/Cars/Car-8no-bg.jpeg'
       ],
       price: 3000,
       priceUnit: "per day",
@@ -225,6 +219,489 @@ const CarDetail = () => {
         },
       ],
     },
+    {
+      id: "tempo-traveller",
+      title: "Tempo Traveller",
+      images: [
+        "/src/assets/Cars/Tempo-Trave1.jpg"
+      ],
+      price: 4500,
+      priceUnit: "per day",
+      carType: "van",
+      seating: "12 Seater",
+      ac: true,
+      transmission: "Manual",
+      fuel: "Diesel",
+      description:
+        "The Tempo Traveller is the perfect vehicle for large group travel, offering a spacious cabin, comfortable seating, and reliable performance. Ideal for family outings, corporate trips, and tourist travel.",
+      features: [
+        "Power Steering",
+        "Air Conditioning",
+        "Heater",
+        "Push-back Seats",
+        "Music System",
+        "Seat Belts",
+        "LED Interior Lighting",
+        "Ample Luggage Space",
+        "Charging Ports",
+        "High Roof for Extra Comfort"
+      ],
+      specifications: {
+        engine: "2.2L Diesel",
+        mileage: "10-12 km/l",
+        transmission: "Manual",
+        fuelType: "Diesel",
+        seatingCapacity: "12-17 Persons",
+        bootSpace: "500 liters",
+        length: "6175 mm",
+        width: "2110 mm",
+        height: "2670 mm"
+      },
+      rentalOptions: [
+        {
+          title: "Daily Rental",
+          price: 4500,
+          unit: "per day",
+          description: "Ideal for short group trips and city travel."
+        },
+        {
+          title: "Weekly Rental",
+          price: 28000,
+          unit: "per week",
+          description: "Best for extended vacations and outstation tours."
+        },
+        {
+          title: "Monthly Rental",
+          price: 95000,
+          unit: "per month",
+          description: "Cost-effective option for long-term travel needs."
+        }
+      ],
+      faqs: [
+        {
+          question: "Is a driver provided with the vehicle?",
+          answer:
+            "Yes, all our Tempo Traveller rentals come with a professional and experienced driver."
+        },
+        {
+          question: "Can we book the vehicle for outstation trips?",
+          answer:
+            "Yes, the Tempo Traveller is available for both local and outstation travel."
+        },
+        {
+          question: "Is fuel included in the rental price?",
+          answer:
+            "No, fuel expenses are the responsibility of the customer."
+        },
+        {
+          question: "What are the luggage space options?",
+          answer:
+            "The Tempo Traveller has ample luggage space, suitable for large suitcases and travel bags."
+        },
+        {
+          question: "Can we play our own music in the vehicle?",
+          answer:
+            "Yes, the Tempo Traveller comes with a music system with Bluetooth and AUX connectivity."
+        },
+        {
+          question: "What is the maximum seating capacity available?",
+          answer:
+            "We offer Tempo Travellers with seating options ranging from 12 to 17 passengers."
+        },
+        {
+          question: "Is night travel allowed?",
+          answer:
+            "Yes, night travel is allowed but must comply with local traffic regulations."
+        }
+      ]
+    },
+    {
+      id: "honda-city",
+      title: "Honda City",
+      images: [
+        "/src/assets/Cars/Hcity-1.jpg"
+      ],
+      price: 2800,
+      priceUnit: "per day",
+      carType: "sedan",
+      seating: "5 Seater",
+      ac: true,
+      transmission: "Automatic",
+      fuel: "Petrol",
+      description:
+        "The Honda City is a premium sedan known for its refined performance, luxurious interiors, and smooth driving experience. It is an ideal choice for business trips, city rides, and long highway drives.",
+      features: [
+        "Power Steering",
+        "Power Windows",
+        "Air Conditioning",
+        "Heater",
+        "Touchscreen Infotainment System",
+        "Rear AC Vents",
+        "Cruise Control",
+        "Parking Sensors",
+        "Airbags",
+        "ABS with EBD"
+      ],
+      specifications: {
+        engine: "1.5L i-VTEC Petrol",
+        mileage: "17-18 km/l",
+        transmission: "Manual / Automatic",
+        fuelType: "Petrol / Diesel",
+        seatingCapacity: "5 Persons",
+        bootSpace: "506 liters",
+        length: "4549 mm",
+        width: "1748 mm",
+        height: "1489 mm"
+      },
+      rentalOptions: [
+        {
+          title: "Daily Rental",
+          price: 2800,
+          unit: "per day",
+          description: "Perfect for city travel and business meetings."
+        },
+        {
+          title: "Weekly Rental",
+          price: 17500,
+          unit: "per week",
+          description: "Ideal for extended business trips and vacations."
+        },
+        {
+          title: "Monthly Rental",
+          price: 68000,
+          unit: "per month",
+          description: "Best for long-term requirements and corporate travel."
+        }
+      ],
+      faqs: [
+        {
+          question: "Is a driver provided with the car?",
+          answer:
+            "Yes, all our Honda City rentals come with a professional driver."
+        },
+        {
+          question: "Is self-drive available for Honda City?",
+          answer:
+            "No, currently, we only provide chauffeur-driven rentals."
+        },
+        {
+          question: "What documents are required for booking?",
+          answer:
+            "You need to provide a valid ID proof (Aadhar Card, Passport, Driving License) and address proof."
+        },
+        {
+          question: "Is fuel included in the rental price?",
+          answer:
+            "No, fuel expenses are not included and must be borne by the customer."
+        },
+        {
+          question: "Can I extend my rental period?",
+          answer:
+            "Yes, you can extend your rental period subject to availability. Please inform us at least 24 hours before your scheduled return."
+        },
+        {
+          question: "Does the car have Bluetooth connectivity?",
+          answer:
+            "Yes, the Honda City comes with a touchscreen infotainment system that supports Bluetooth, Apple CarPlay, and Android Auto."
+        },
+        {
+          question: "Is there a limit on daily mileage?",
+          answer:
+            "Yes, the standard limit is 250 km per day. Extra charges apply for additional kilometers."
+        }
+      ]
+    },
+    {
+      id: "toyota-fortuner",
+      title: "Toyota Fortuner",
+      images: [
+        "/src/assets/Cars/fortuner.jpg"
+      ],
+      price: 5500,
+      priceUnit: "per day",
+      carType: "suv",
+      seating: "7 Seater",
+      ac: true,
+      transmission: "Automatic",
+      fuel: "Diesel",
+      description:
+        "The Toyota Fortuner is a premium full-size SUV known for its bold design, powerful engine, and superior comfort. It is the perfect choice for long highway drives, off-road adventures, and luxury travel.",
+      features: [
+        "Power Steering",
+        "Power Windows",
+        "Air Conditioning",
+        "Heater",
+        "Touchscreen Infotainment System",
+        "Rear AC Vents",
+        "Cruise Control",
+        "Parking Sensors & Reverse Camera",
+        "Multiple Airbags",
+        "ABS with EBD",
+        "4x4 Off-Road Capability (Available in Select Variants)"
+      ],
+      specifications: {
+        engine: "2.8L Diesel / 2.7L Petrol",
+        mileage: "10-14 km/l",
+        transmission: "Automatic / Manual",
+        fuelType: "Diesel / Petrol",
+        seatingCapacity: "7 Persons",
+        bootSpace: "296 liters",
+        length: "4795 mm",
+        width: "1855 mm",
+        height: "1835 mm"
+      },
+      rentalOptions: [
+        {
+          title: "Daily Rental",
+          price: 5500,
+          unit: "per day",
+          description: "Ideal for luxury travel, road trips, and business tours."
+        },
+        {
+          title: "Weekly Rental",
+          price: 35000,
+          unit: "per week",
+          description: "Perfect for extended travel, family vacations, and corporate usage."
+        },
+        {
+          title: "Monthly Rental",
+          price: 120000,
+          unit: "per month",
+          description: "Best value for long-term travel needs and premium usage."
+        }
+      ],
+      faqs: [
+        {
+          question: "Is a driver provided with the car?",
+          answer:
+            "Yes, all our Toyota Fortuner rentals come with a professional and experienced driver."
+        },
+        {
+          question: "Can I rent the Toyota Fortuner for off-road trips?",
+          answer:
+            "Yes, but only the 4x4 variant is suitable for off-roading. Additional charges may apply for rough terrain usage."
+        },
+        {
+          question: "What documents are required for booking?",
+          answer:
+            "You need to provide a valid ID proof (Aadhar Card, Passport, Driving License) and address proof."
+        },
+        {
+          question: "Is fuel included in the rental price?",
+          answer:
+            "No, fuel expenses are not included in the rental cost and must be covered by the customer."
+        },
+        {
+          question: "Can I extend my rental period?",
+          answer:
+            "Yes, you can extend your rental period subject to availability. Please inform us at least 24 hours before your scheduled return."
+        },
+        {
+          question: "Does the car have luxury features like ventilated seats?",
+          answer:
+            "Yes, the Toyota Fortuner comes with premium leather seats, advanced infotainment, and rear AC vents for enhanced comfort."
+        },
+        {
+          question: "Is there a daily mileage limit?",
+          answer:
+            "Yes, the standard limit is 250 km per day. Extra charges apply for additional kilometers."
+        }
+      ]
+    },
+    {
+      id: "hyundai-Hb20",
+      title: "Hyundai HB20",
+      images: [
+        '/src/assets/Cars/Car-6no-bg.jpeg'
+      ],
+      price: 2200,
+      priceUnit: "per day",
+      carType: "hatchback",
+      seating: "5 Seater",
+      ac: true,
+      transmission: "Automatic",
+      fuel: "Petrol",
+      description:
+        "The Hyundai HB20 is a stylish and efficient hatchback, perfect for city driving and short trips. With a comfortable interior, modern features, and fuel efficiency, it provides a smooth and enjoyable ride.",
+      features: [
+        "Power Steering",
+        "Power Windows",
+        "Air Conditioning",
+        "Heater",
+        "Touchscreen Infotainment System",
+        "Bluetooth & USB Connectivity",
+        "Rear Parking Sensors",
+        "Dual Airbags",
+        "ABS with EBD",
+        "Eco Driving Mode"
+      ],
+      specifications: {
+        engine: "1.0L / 1.6L Petrol",
+        mileage: "14-18 km/l",
+        transmission: "Automatic / Manual",
+        fuelType: "Petrol",
+        seatingCapacity: "5 Persons",
+        bootSpace: "300 liters",
+        length: "3940 mm",
+        width: "1720 mm",
+        height: "1470 mm"
+      },
+      rentalOptions: [
+        {
+          title: "Daily Rental",
+          price: 2200,
+          unit: "per day",
+          description: "Perfect for city travel and short-distance trips."
+        },
+        {
+          title: "Weekly Rental",
+          price: 13500,
+          unit: "per week",
+          description: "Ideal for extended urban commuting and business travel."
+        },
+        {
+          title: "Monthly Rental",
+          price: 52000,
+          unit: "per month",
+          description: "Best for long-term usage and cost-effective city driving."
+        }
+      ],
+      faqs: [
+        {
+          question: "Is a driver provided with the car?",
+          answer:
+            "Yes, all our Hyundai HB20 rentals come with a professional driver."
+        },
+        {
+          question: "Is self-drive available for Hyundai HB20?",
+          answer:
+            "No, currently, we only provide chauffeur-driven rentals."
+        },
+        {
+          question: "What documents are required for booking?",
+          answer:
+            "You need to provide a valid ID proof (Aadhar Card, Passport, Driving License) and address proof."
+        },
+        {
+          question: "Is fuel included in the rental price?",
+          answer:
+            "No, fuel expenses are not included and must be borne by the customer."
+        },
+        {
+          question: "Can I extend my rental period?",
+          answer:
+            "Yes, you can extend your rental period subject to availability. Please inform us at least 24 hours before your scheduled return."
+        },
+        {
+          question: "Does the car have Bluetooth connectivity?",
+          answer:
+            "Yes, the Hyundai HB20 comes with a touchscreen infotainment system that supports Bluetooth and USB connectivity."
+        },
+        {
+          question: "Is there a limit on daily mileage?",
+          answer:
+            "Yes, the standard limit is 250 km per day. Extra charges apply for additional kilometers."
+        }
+      ]
+    },
+    {
+      id: "toyota-etios",
+      title: "Toyota Etios",
+      images: [
+        "/src/assets/Cars/Car-9no-bg.jpeg"
+      ],
+      price: 2500,
+      priceUnit: "per day",
+      carType: "sedan",
+      seating: "5 Seater",
+      ac: true,
+      transmission: "Manual",
+      fuel: "Diesel",
+      description:
+        "The Toyota Etios is a reliable and fuel-efficient sedan, ideal for city commutes and long-distance travel. With its spacious interiors and smooth handling, it ensures a comfortable journey for all passengers.",
+      features: [
+        "Power Steering",
+        "Power Windows",
+        "Air Conditioning",
+        "Heater",
+        "Touchscreen Infotainment System",
+        "Rear AC Vents",
+        "Parking Sensors",
+        "Dual Airbags",
+        "ABS with EBD",
+        "Spacious Boot Space"
+      ],
+      specifications: {
+        engine: "1.4L Diesel / 1.5L Petrol",
+        mileage: "18-23 km/l",
+        transmission: "Manual",
+        fuelType: "Diesel / Petrol",
+        seatingCapacity: "5 Persons",
+        bootSpace: "595 liters",
+        length: "4369 mm",
+        width: "1695 mm",
+        height: "1510 mm"
+      },
+      rentalOptions: [
+        {
+          title: "Daily Rental",
+          price: 2500,
+          unit: "per day",
+          description: "Perfect for city rides and business travel."
+        },
+        {
+          title: "Weekly Rental",
+          price: 16000,
+          unit: "per week",
+          description: "Great for long-distance trips and family outings."
+        },
+        {
+          title: "Monthly Rental",
+          price: 60000,
+          unit: "per month",
+          description: "Best for long-term travel needs at a cost-effective rate."
+        }
+      ],
+      faqs: [
+        {
+          question: "Is a driver provided with the car?",
+          answer:
+            "Yes, all our Toyota Etios rentals come with a professional driver."
+        },
+        {
+          question: "Is self-drive available for Toyota Etios?",
+          answer:
+            "No, currently, we only provide chauffeur-driven rentals."
+        },
+        {
+          question: "What documents are required for booking?",
+          answer:
+            "You need to provide a valid ID proof (Aadhar Card, Passport, Driving License) and address proof."
+        },
+        {
+          question: "Is fuel included in the rental price?",
+          answer:
+            "No, fuel expenses are not included and must be borne by the customer."
+        },
+        {
+          question: "Can I extend my rental period?",
+          answer:
+            "Yes, you can extend your rental period subject to availability. Please inform us at least 24 hours before your scheduled return."
+        },
+        {
+          question: "Does the car have Bluetooth connectivity?",
+          answer:
+            "Yes, the Toyota Etios comes with a touchscreen infotainment system with Bluetooth and USB support."
+        },
+        {
+          question: "Is there a limit on daily mileage?",
+          answer:
+            "Yes, the standard limit is 250 km per day. Extra charges apply for additional kilometers."
+        }
+      ]
+    }
+    //add extra cars
+    
   ];
 
   const handleChange = (e) => {
@@ -323,7 +800,7 @@ const CarDetail = () => {
               <SwiperSlide key={index}>
                 <div
                   className="car-detail-slide"
-                  style={{ backgroundImage: `url(${image})` }}
+                  style={{ backgroundImage: `url(${image})`}}
                 >
                   <div className="car-detail-overlay"></div>
                 </div>
@@ -667,7 +1144,7 @@ const CarDetail = () => {
 
               <div className="contact-info">
                 <Typography variant="body1">
-                  <strong>Phone:</strong> +91 00000 00000
+                  <strong>Phone:</strong> +91 8667200183 | 9840214679 | 9629528420
                 </Typography>
                 <Typography variant="body1">
                   <strong>Email:</strong> rpstourstravels@gmail.com

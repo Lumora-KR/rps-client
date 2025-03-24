@@ -13,15 +13,15 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./FeaturedPackages.css";
 import { Link } from "react-router-dom";
-import Madurai from "../../assets/home/HeroSection/madurai.jpeg";
-import Rameswaram from "../../assets/home/HeroSection/rameswaram.jpeg";
 
 const FeaturedPackages = () => {
   const swiperRef = useRef(null);
   const [selectedPackage, setSelectedPackage] = useState(null);
+
   const [openModal, setOpenModal] = useState(false);
 
   const handlePackageClick = (packageData) => {
+    console.log("Package Data hii:", packageData); // Log the package data to understand its source
     setSelectedPackage(packageData);
     setOpenModal(true);
   };
@@ -34,8 +34,8 @@ const FeaturedPackages = () => {
   const featuredPackages = [
     {
       id: 1,
-      title: "Rameshwaram",
-      image: [Madurai, Rameswaram],
+      title: "Rameshwaram Tour Package",
+      image: "https://source.unsplash.com/600x400/?rameshwaram,temple",
       location: "Rameshwaram, Tamil Nadu",
       duration: "2 Days / 1 Night",
       price: "₹4,999",
@@ -47,7 +47,7 @@ const FeaturedPackages = () => {
     {
       id: 2,
       title: "Kanyakumari Tour Package",
-      image: [],
+      image: "https://source.unsplash.com/600x400/?kanyakumari,beach",
       location: "Kanyakumari, Tamil Nadu",
       duration: "3 Days / 2 Nights",
       price: "₹7,499",
@@ -59,7 +59,7 @@ const FeaturedPackages = () => {
     {
       id: 3,
       title: "Madurai Tour Package",
-      image: [],
+      image: "https://source.unsplash.com/600x400/?madurai,temple",
       location: "Madurai, Tamil Nadu",
       duration: "2 Days / 1 Night",
       price: "₹5,499",
@@ -71,7 +71,7 @@ const FeaturedPackages = () => {
     {
       id: 4,
       title: "Kodaikanal Tour Package",
-      image: [],
+      image: "https://source.unsplash.com/600x400/?kodaikanal,hills",
       location: "Kodaikanal, Tamil Nadu",
       duration: "3 Days / 2 Nights",
       price: "₹8,999",
@@ -83,7 +83,7 @@ const FeaturedPackages = () => {
     {
       id: 5,
       title: "Ooty Tour Package",
-      image: [],
+      image: "https://source.unsplash.com/600x400/?ooty,hills",
       location: "Ooty, Tamil Nadu",
       duration: "4 Days / 3 Nights",
       price: "₹10,499",
@@ -95,7 +95,7 @@ const FeaturedPackages = () => {
     {
       id: 6,
       title: "Kerala Backwaters Package",
-      image: [],
+      image: "https://source.unsplash.com/600x400/?kerala,backwaters",
       location: "Alleppey, Kerala",
       duration: "5 Days / 4 Nights",
       price: "₹12,999",
@@ -170,7 +170,7 @@ const FeaturedPackages = () => {
           <SwiperSlide key={pkg.id}>
             <div className="package-card">
               <div className="package-image">
-                <img src={pkg.image[0] || "/placeholder.svg"} alt={pkg.title} />
+                <img src={pkg.image || "/placeholder.svg"} alt={pkg.title} />
                 <div className="package-price">{pkg.price}</div>
                 <div className="package-rating">
                   <span className="rating-value">{pkg.rating}</span>

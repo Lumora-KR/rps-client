@@ -4,24 +4,25 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import { useLanguage } from "../../pages/LanguageContext";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 // import logo from '../../assets/images/logo.png'; // Make sure to add your logo
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const { changeLanguage } = useLanguage();
+
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  
 
   const toggleDropdown = (index) => {
-    if (activeDropdown === index) {
-      setActiveDropdown(null);
-    } else {
-      setActiveDropdown(index);
-    }
+    setActiveDropdown(activeDropdown === index ? null : index);
   };
 
   useEffect(() => {
@@ -115,11 +116,11 @@ const Navbar = () => {
                     Browse Cars
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/add-car-rental" onClick={() => setIsOpen(false)}>
                     Add Rental
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     to="/enquire-car-rental"
@@ -154,16 +155,18 @@ const Navbar = () => {
                     Browse Hotels
                   </Link>
                 </li>
-                <li>
+                {/* this add acrs and have to move to dashboard and enquire-hotel having some errror */}
+                {/* <li>
                   <Link to="/add-hotel" onClick={() => setIsOpen(false)}>
                     Add Hotel
                   </Link>
-                </li>
-                <li>
+                </li> */}
+                {/* and this enquire -hotel need backend dependencies need to fix this ram 
+                 <li>
                   <Link to="/enquire-hotel" onClick={() => setIsOpen(false)}>
                     Enquire Hotel
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </li>
 
@@ -231,25 +234,29 @@ const Navbar = () => {
                   activeDropdown === 3 ? "show" : ""
                 }`}
               >
-                <li>
-                  <a href="#" onClick={() => setIsOpen(false)}>
-                    English
-                  </a>
-                </li>
-                <li>
-                  <a href="#" onClick={() => setIsOpen(false)}>
-                    Tamil
-                  </a>
-                </li>
-                <li>
-                  <a href="#" onClick={() => setIsOpen(false)}>
-                    Hindi
-                  </a>
-                </li>
+              
+              <li>
+  <a href="#" onClick={() => { changeLanguage("english"); setIsOpen(false); }}>
+    English
+  </a>
+</li>
+<li>
+  <a href="#" onClick={() => { changeLanguage("tamil"); setIsOpen(false); }}>
+    Tamil
+  </a>
+</li>
+<li>
+  <a href="#" onClick={() => { changeLanguage("hindi"); setIsOpen(false); }}>
+    Hindi
+  </a>
+</li>
               </ul>
             </li>
           </ul>
         </div>
+        <span className="navbar-toggle" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? "Close" : "Menu"}
+        </span>
       </div>
     </nav>
   );

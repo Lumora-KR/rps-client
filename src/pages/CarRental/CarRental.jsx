@@ -15,6 +15,7 @@ import {
 import SearchIcon from "@mui/icons-material/Search";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import CarCard from "../../components/CarCard/CarCard";
+import bannerImage from '/src/assets/Cars/Car-3no-bg1.jpeg';
 import "./CarRental.css";
 
 const CarRental = () => {
@@ -32,7 +33,7 @@ const CarRental = () => {
     {
       id: "swift-dzire",
       title: "Swift Dzire",
-      image: "https://source.unsplash.com/600x400/?swift,dzire,car",
+      image: "/src/assets/Cars/Car-8no-bg.jpeg",
       price: 1500,
       priceUnit: "per day",
       carType: "sedan",
@@ -45,7 +46,7 @@ const CarRental = () => {
     {
       id: "toyota-innova",
       title: "Toyota Innova Crysta",
-      image: "https://source.unsplash.com/600x400/?toyota,innova,car",
+      image: "/src/assets/Cars/Car-11.jpg",
       price: 3000,
       priceUnit: "per day",
       carType: "suv",
@@ -58,7 +59,7 @@ const CarRental = () => {
     {
       id: "tempo-traveller",
       title: "Tempo Traveller",
-      image: "https://source.unsplash.com/600x400/?tempo,traveller,van",
+      image: "src/assets/Cars/Tempo-Trave1.jpg",
       price: 4500,
       priceUnit: "per day",
       carType: "tempo",
@@ -72,7 +73,7 @@ const CarRental = () => {
     {
       id: "honda-city",
       title: "Honda City",
-      image: "https://source.unsplash.com/600x400/?honda,city,car",
+      image: "src/assets/Cars/Hcity-1.jpg",
       price: 1800,
       priceUnit: "per day",
       carType: "sedan",
@@ -85,7 +86,7 @@ const CarRental = () => {
     {
       id: "toyota-fortuner",
       title: "Toyota Fortuner",
-      image: "https://source.unsplash.com/600x400/?toyota,fortuner,suv",
+      image: "src/assets/Cars/fortuner.jpg",
       price: 5000,
       priceUnit: "per day",
       carType: "suv",
@@ -96,9 +97,9 @@ const CarRental = () => {
       description: "Luxury SUV for premium travel experience.",
     },
     {
-      id: "tata-indica",
-      title: "Tata Indica",
-      image: "https://source.unsplash.com/600x400/?tata,indica,car",
+      id: "hyundai-Hb20",
+      title: "Hundai-Hb20",
+      image: "src/assets/Cars/Car-6no-bg.jpeg",
       price: 1200,
       priceUnit: "per day",
       carType: "hatchback",
@@ -108,6 +109,20 @@ const CarRental = () => {
       fuel: "Diesel",
       description: "Economic hatchback for city travel and short trips.",
     },
+    {
+      id: 'toyota-etios',
+      title: 'Toyota Etios',
+      image: 'src/assets/Cars/Car-9no-bg.jpeg',
+      price: 1500,
+      priceUnit: 'per day',
+      carType: 'sedan',
+      seating: '5 Seater',
+      ac: true,
+      transmission: 'Manual',
+      fuel: 'Petrol',
+      description: 'Spacious and comfortable sedan, perfect for long trips and city rides.'
+    }
+    
   ];
 
   // Filter cars based on active tab, price range, car type, and search query
@@ -154,7 +169,7 @@ const CarRental = () => {
   return (
     <div className="car-rental-page">
       {/* Hero Banner */}
-      <div className="page-hero-banner">
+      <div className="page-hero-banner" style={{ backgroundImage: `url(${bannerImage})`,backgroundPosition: 'center 1' }}>
         <div className="page-hero-overlay"></div>
         <Container>
           <div className="page-hero-content">
@@ -185,6 +200,7 @@ const CarRental = () => {
               <Tab label="SUVs" />
               <Tab label="Hatchbacks" />
               <Tab label="Tempo Traveller" />
+              <Tab label="Bikes" />
             </Tabs>
           </Box>
 

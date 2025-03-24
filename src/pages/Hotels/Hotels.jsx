@@ -59,9 +59,9 @@ const Hotels = () => {
       description:
         "Experience luxury at its finest with stunning views and world-class amenities. This hotel offers spacious rooms, multiple dining options, and a relaxing spa experience.",
       images: [
-        "https://source.unsplash.com/800x600/?hotel,luxury",
-        "https://source.unsplash.com/800x600/?hotel,room",
-        "https://source.unsplash.com/800x600/?hotel,restaurant",
+        "/src/assets/Hotel/hyatt-1.jpeg",
+        "/src/assets/Hotel/hyatt-2.jpeg",
+        "/src/assets/Hotel/hyatt-3.avif",
       ],
       amenities: [
         { icon: <WifiIcon />, name: "Free WiFi" },
@@ -83,13 +83,12 @@ const Hotels = () => {
       description:
         "A premium luxury hotel offering unparalleled comfort and service. Enjoy the beautiful sea view, gourmet dining, and personalized service.",
       images: [
-        "https://source.unsplash.com/800x600/?hotel,luxury",
-        "https://source.unsplash.com/800x600/?hotel,room",
-        "https://source.unsplash.com/800x600/?hotel,restaurant",
+        "/src/assets/Hotel/justa-1.jpg",
+        "/src/assets/Hotel/justa-2.png",
+        "/src/assets/Hotel/justa-3.jpeg",
       ],
       amenities: [
         { icon: <WifiIcon />, name: "Free WiFi" },
-        { icon: <PoolIcon />, name: "Swimming Pool" },
         { icon: <RestaurantIcon />, name: "Restaurant" },
         { icon: <AcUnitIcon />, name: "Air Conditioning" },
         { icon: <LocalParkingIcon />, name: "Parking" },
@@ -107,9 +106,9 @@ const Hotels = () => {
       description:
         "A comfortable business hotel in the heart of Madurai. Convenient location with easy access to major attractions and business centers.",
       images: [
-        "https://source.unsplash.com/800x600/?hotel,business",
-        "https://source.unsplash.com/800x600/?hotel,conference",
-        "https://source.unsplash.com/800x600/?hotel,lobby",
+        "/src/assets/Hotel/tn-1.avif",
+        "/src/assets/Hotel/tn-2.jpg",
+        "/src/assets/Hotel/tn-3.jpg",
       ],
       amenities: [
         { icon: <WifiIcon />, name: "Free WiFi" },
@@ -129,9 +128,9 @@ const Hotels = () => {
       description:
         "Beachfront resort with stunning views of the sunset. Enjoy the private beach access, water sports, and seafood restaurant.",
       images: [
-        "https://source.unsplash.com/800x600/?beach,resort",
-        "https://source.unsplash.com/800x600/?hotel,beach",
-        "https://source.unsplash.com/800x600/?sunset,beach",
+        "/src/assets/Hotel/kan-1.jpg",
+        "/src/assets/Hotel/kan-2.jpg",
+        "/src/assets/Hotel/kan-3.avif",
       ],
       amenities: [
         { icon: <WifiIcon />, name: "Free WiFi" },
@@ -144,17 +143,16 @@ const Hotels = () => {
     },
     {
       id: 5,
-      name: "Budget Inn",
-      location: "Madurai",
+      name: "Hotel Arjuna",
+      location: "Rameswaram",
       price: 1200,
       rating: 3.0,
       type: "budget",
       description:
         "Affordable accommodation with all basic amenities. Perfect for travelers on a budget who still want comfort and cleanliness.",
       images: [
-        "https://source.unsplash.com/800x600/?hotel,budget",
-        "https://source.unsplash.com/800x600/?hotel,simple",
-        "https://source.unsplash.com/800x600/?hotel,basic",
+        "/src/assets/Hotel/Arjuna.jpg",
+        "/src/assets/Hotel/Arjuna2.avif"
       ],
       amenities: [
         { icon: <WifiIcon />, name: "Free WiFi" },
@@ -173,9 +171,9 @@ const Hotels = () => {
       description:
         "Nestled in the hills of Kodaikanal, this resort offers a peaceful retreat with beautiful mountain views, hiking trails, and cozy fireplaces.",
       images: [
-        "https://source.unsplash.com/800x600/?mountain,resort",
-        "https://source.unsplash.com/800x600/?hills,hotel",
-        "https://source.unsplash.com/800x600/?forest,resort",
+        "/src/assets/Hotel/kodai-1.jpg",
+        "/src/assets/Hotel/kodai-2.jpg",
+        "/src/assets/Hotel/kodai-3.avif",
       ],
       amenities: [
         { icon: <WifiIcon />, name: "Free WiFi" },
@@ -196,9 +194,9 @@ const Hotels = () => {
       description:
         "A charming hotel in the queen of hill stations. Enjoy the colonial architecture, beautiful gardens, and tea plantations nearby.",
       images: [
-        "https://source.unsplash.com/800x600/?hill,station",
-        "https://source.unsplash.com/800x600/?tea,plantation",
-        "https://source.unsplash.com/800x600/?garden,hotel",
+        "/src/assets/Hotel/ooty-1.avif",
+        "/src/assets/Hotel/ooty-2.avif",
+        "/src/assets/Hotel/ooty-3.jpg",
       ],
       amenities: [
         { icon: <WifiIcon />, name: "Free WiFi" },
@@ -219,9 +217,9 @@ const Hotels = () => {
       description:
         "Affordable beachside accommodation with clean rooms and friendly service. Walking distance to the famous Rameshwaram Temple.",
       images: [
-        "https://source.unsplash.com/800x600/?beach,hotel",
-        "https://source.unsplash.com/800x600/?temple,hotel",
-        "https://source.unsplash.com/800x600/?budget,hotel",
+        "/src/assets/Hotel/jiwan.avif",
+        "/src/assets/Hotel/jiwanrooms.jpg",
+        "/src/assets/Hotel/Mcmtower.jpg",
       ],
       amenities: [
         { icon: <WifiIcon />, name: "Free WiFi" },

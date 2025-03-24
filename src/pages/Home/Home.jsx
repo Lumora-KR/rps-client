@@ -1,5 +1,5 @@
 // pages/Home/Home.jsx
-import React from "react";
+import React, { useState }from "react";
 import { Button } from "@mui/material";
 import HeroSlider from "../../components/Ui/HeroSlider/HeroSlider";
 import EnquiryForm from "../../components/Ui/EnquiryForm/EnquiryForm";
@@ -12,79 +12,189 @@ import FlightIcon from "@mui/icons-material/Flight";
 import PeopleIcon from "@mui/icons-material/People";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import Kanyakumari from "../../assets/home/HeroSection/kanyakuymari.jpeg";
-import Madurai from "../../assets/home/HeroSection/madurai.jpeg";
-import Rameswaram from "../../assets/home/HeroSection/rameswaram.jpeg";
+//import Kanyakumari from "/src/assets/home/HeroSection/kanyakumari-1.jpeg";
+//import Madurai from "/src/assets/home/HeroSection/Madu.jpeg";
+//import Rameswaram from "/src/assets/home/HeroSection/rameswaram-1.jpeg";
+//import Bangalore from "/src/assets/home/HeroSection/bangalore-home.jpg";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import { TbArrowMoveRight } from "react-icons/tb";
 
-const Home = () => {
+
+const Home  = () => {
+  const [language, setLanguage] = useState("english"); // Default language
+
+  const handleLanguageChange = (lang) => {
+    setLanguage(lang);
+  };
+
+
+  //Home page content - and  photos done 
   // Hero slider data
   const heroSlides = [
+ 
+
     {
-      image: Rameswaram,
-      subtitle: "DISCOVER",
-      title: "RAMESHWARAM TOURS PACKAGE",
-      button: {
-        text: "Explore Now",
-        url: "/tour-packages/rameshwaram",
-      },
-    },
-    {
-      image: Kanyakumari,
-      subtitle: "EXPLORE",
-      title: "KANYAKUMARI TOURS PACKAGE",
-      button: {
-        text: "Explore Now",
-        url: "/tour-packages/kanyakumari",
-      },
-    },
-    {
-      image: Madurai,
-      subtitle: "EXPERIENCE",
-      title: "MADURAI TOURS PACKAGE",
-      button: {
-        text: "Explore Now",
-        url: "/tour-packages/madurai",
-      },
-    },
+      "home": {
+        "english": {
+
+          "heroSlides": [
+            {
+              "image": "/src/assets/home/HeroSection/rameswaram-1.jpeg",
+              "subtitle": "DISCOVER",
+              "title": "RAMESHWARAM TOURS PACKAGE",
+              "button": { "text": "Explore Now", "url": "/tour-packages/rameshwaram" }
+            },
+            {
+              "image": "/src/assets/home/HeroSection/kanyakumari-1.jpeg",
+              "subtitle": "EXPLORE",
+              "title": "KANYAKUMARI TOURS PACKAGE",
+              "button": { "text": "Explore Now", "url": "/tour-packages/kanyakumari" }
+            },
+            {
+              "image": "/src/assets/Tour-Images/Tour-7.jpeg",
+              "subtitle": "EXPLORE",
+              "title": "OOTY TOURS PACKAGE",
+              "button": { "text": "Explore Now", "url": "/tour-packages/kanyakumari" }
+            },
+            {
+              "image": "/src/assets/Tour-Images/Tour-6.jpeg",
+              "subtitle": "EXPLORE",
+              "title": "KODAIKANAL TOURS PACKAGE",
+              "button": { "text": "Explore Now", "url": "/tour-packages/kODAIKANAL" }
+            },
+            
+            {
+              "image": "/src/assets/home/HeroSection/Madu.jpeg",
+              "subtitle": "EXPLORE",
+              "title": "MADURAI TOURS PACKAGE",
+              "button": { "text": "Explore Now", "url": "/tour-packages/Madurai" }
+            },
+             
+            {
+              "image": "/src/assets/home/HeroSection/kerela-home.jpg",
+              "subtitle": "EXPLORE",
+              "title": "KERALA TOURS PACKAGE",
+              "button": { "text": "Explore Now", "url": "/tour-packages/Kerala" }
+            },
+            {
+              "image": "/src/assets/home/HeroSection/thirupati.jpg",
+              "subtitle": "EXPLORE",
+              "title": "TIRUPATI TOURS PACKAGE",
+              "button": { "text": "Explore Now", "url": "/tour-packages/kanyakumari" }
+            },
+
+          ]
+        },
+        "tamil": {
+          "seo": {
+            "title": "RPS டூர்ஸ் மற்றும் பயணங்கள் | சிறந்த சுற்றுலா தொகுப்புகள்",
+            "description": "ராமேஷ்வரம், கன்னியாகுமரி மற்றும் பிற தென் இந்திய சுற்றுலா இடங்களுக்கு பரிசுத்தமான சுற்றுலா தொகுப்புகளை ஆராயுங்கள். உங்கள் சிறந்த விடுமுறையை இப்போது புக்கிங் செய்யுங்கள்.",
+            "keywords": ["சுற்றுலா தொகுப்புகள்", "தென் இந்தியா சுற்றுலா", "ராமேஷ்வரமின் சுற்றுலா", "கன்னியாகுமரி சுற்றுலா", "ஆன்மிக சுற்றுலா", "சிறந்த பயணம்", "விடுமுறை தொகுப்புகள்"],
+            "og": {
+              "title": "RPS டூர்ஸ் மற்றும் பயணங்கள்",
+              "description": "ராமேஷ்வரம், கன்னியாகுமரி, மதுரை மற்றும் பிற இடங்களுக்கு சிறந்த சுற்றுலா தொகுப்புகளை ஆராயுங்கள்.",
+              "image": "https://source.unsplash.com/600x400/?south-india-tour",
+              "url": "https://rps-tours.vercel.app/"
+            },
+            "twitter": {
+              "card": "summary_large_image",
+              "site": "@RPSTours",
+              "title": "RPS டூர்ஸ் மற்றும் பயணங்கள்",
+              "description": "அனைத்து வகையான தென் இந்திய சுற்றுலா தொகுப்புகளை ஆராயுங்கள்.",
+              "image": "https://source.unsplash.com/600x400/?south-india-tour"
+            }
+          },
+          "heroSlides": [
+            {
+              "image": "https://source.unsplash.com/600x400/?rameshwaram",
+              "subtitle": "கண்டறி",
+              "title": "ராமேஷ்வரமின் சுற்றுலா தொகுப்பு",
+              "button": { "text": "இப்போது ஆராய்க", "url": "/tour-packages/rameshwaram" }
+            },
+            {
+              "image": "https://source.unsplash.com/600x400/?kanyakumari",
+              "subtitle": "ஆராயுங்கள்",
+              "title": "கன்னியாகுமரி சுற்றுலா தொகுப்பு",
+              "button": { "text": "இப்போது ஆராய்க", "url": "/tour-packages/kanyakumari" }
+            }
+          ]
+        },
+        "hindi": {
+          "seo": {
+            "title": "RPS टूर और यात्रा | दक्षिण भारत के बेहतरीन टूर पैकेज",
+            "description": "रामेश्वरम, कन्नiyakुमारी और अन्य दक्षिण भारतीय स्थलों के सस्ते टूर पैकेज के साथ आरपीएस टूर और यात्रा में अपना परफेक्ट अवकाश बुक करें।",
+            "keywords": ["टूर पैकेज", "दक्षिण भारत टूर", "रामेश्वरम टूर", "कन्नiyakुमारी टूर", "आध्यात्मिक टूर", "सस्ते यात्रा", "अवकाश पैकेज"],
+            "og": {
+              "title": "RPS टूर और यात्रा",
+              "description": "आरपीएस टूर और यात्रा के साथ बेहतरीन टूर पैकेजों की खोज करें।",
+              "image": "https://source.unsplash.com/600x400/?south-india-tour",
+              "url": "https://rps-tours.vercel.app/"
+            },
+            "twitter": {
+              "card": "summary_large_image",
+              "site": "@RPSTours",
+              "title": "RPS टूर और यात्रा",
+              "description": "दक्षिण भारत के सस्ते और कस्टमाइज्ड टूर पैकेज आरपीएस टूर और यात्रा में खोजें।",
+              "image": "https://source.unsplash.com/600x400/?south-india-tour"
+            }
+          },
+          "heroSlides": [
+            {
+              "image": "https://source.unsplash.com/600x400/?rameshwaram",
+              "subtitle": "खोजें",
+              "title": "रामेश्वरम टूर पैकेज",
+              "button": { "text": "अभी एक्सप्लोर करें", "url": "/tour-packages/rameshwaram" }
+            },
+            {
+              "image": "https://source.unsplash.com/600x400/?kanyakumari",
+              "subtitle": "अन्वेषण करें",
+              "title": "कन्नiyakुमारी टूर पैकेज",
+              "button": { "text": "अभी एक्सप्लोर करें", "url": "/tour-packages/kanyakumari" }
+            }
+          ]
+        }
+
+      }
+    }
+    
+
   ];
 
-  // Featured packages data
-  const featuredPackages = [
-    {
-      title: "Rameshwaram Tour Package",
-      image: "https://source.unsplash.com/600x400/?rameshwaram",
-      duration: "2 Days / 1 Night",
-      price: "₹4,999",
-      description:
-        "Explore the spiritual beauty of Rameshwaram with our carefully crafted tour package.",
-    },
-    {
-      title: "Kanyakumari Tour Package",
-      image: "https://source.unsplash.com/600x400/?kanyakumari",
-      duration: "3 Days / 2 Nights",
-      price: "₹7,499",
-      description:
-        "Experience the mesmerizing sunrise and sunset at the southernmost tip of India.",
-    },
-    {
-      title: "Madurai Tour Package",
-      image: "https://source.unsplash.com/600x400/?madurai",
-      duration: "2 Days / 1 Night",
-      price: "₹5,499",
-      description:
-        "Visit the ancient Meenakshi Temple and explore the rich culture of Madurai.",
-    },
-    {
-      title: "Kodaikanal Tour Package",
-      image: "https://source.unsplash.com/600x400/?kodaikanal",
-      duration: "3 Days / 2 Nights",
-      price: "₹8,999",
-      description:
-        "Enjoy the cool climate and scenic beauty of the Princess of Hill Stations.",
-    },
-  ];
+  // const featuredPackages = [
+  //   {
+  //     title: "Rameshwaram Tour Package",
+  //     image: "https://source.unsplash.com/600x400/?rameshwaram",
+  //     duration: "2 Days / 1 Night",
+  //     price: "₹4,999",
+  //     description:
+  //       "Explore the spiritual beauty of Rameshwaram with our carefully crafted tour package.",
+  //   },
+  //   {
+  //     title: "Kanyakumari Tour Package",
+  //     image: "https://source.unsplash.com/600x400/?kanyakumari",
+  //     duration: "3 Days / 2 Nights",
+  //     price: "₹7,499",
+  //     description:
+  //       "Experience the mesmerizing sunrise and sunset at the southernmost tip of India.",
+  //   },
+  //   {
+  //     title: "Madurai Tour Package",
+  //     image: "https://source.unsplash.com/600x400/?madurai",
+  //     duration: "2 Days / 1 Night",
+  //     price: "₹5,499",
+  //     description:
+  //       "Visit the ancient Meenakshi Temple and explore the rich culture of Madurai.",
+  //   },
+  //   {
+  //     title: "Kodaikanal Tour Package",
+  //     image: "https://source.unsplash.com/600x400/?kodaikanal",
+  //     duration: "3 Days / 2 Nights",
+  //     price: "₹8,999",
+  //     description:
+  //       "Enjoy the cool climate and scenic beauty of the Princess of Hill Stations.",
+  //   },
+  // ];
 
   // Services data
   const services = [
@@ -108,9 +218,9 @@ const Home = () => {
     },
     {
       icon: <FlightIcon fontSize="large" />,
-      title: "Airport Transfer",
+      title: "Yatra-Arranged",
       description:
-        "Hassle-free airport pickup and drop service to make your journey comfortable.",
+        "Experienced Iyer/Pandits for special poojas & rituals.Temple Darshan Assistance and Customized Yatra Packages for individuals & groups",
     },
     {
       icon: <PeopleIcon fontSize="large" />,
@@ -128,16 +238,16 @@ const Home = () => {
 
   return (
     <div className="home-page">
-      {/* Hero Section */}
+ 
       <section className="hero-section">
-        <HeroSlider slides={heroSlides} />
+        <HeroSlider slides={heroSlides[0]} language={language} />
 
         <div className="enquiry-form-container">
           <EnquiryForm />
         </div>
       </section>
 
-      {/* Welcome Section */}
+ 
       <section className="section welcome-section">
         <div className="container">
           <div className="section-header">
@@ -151,24 +261,35 @@ const Home = () => {
           <div className="welcome-content">
             <div className="welcome-text">
               <p>
-                RPS Tours & Travels is the No.1 Rameshwaram travel agency with
-                its registered office in Rameshwaram. We provide comprehensive
-                travel services including taxi services, tour packages, hotel
-                bookings, and more.
+                <b>RPS Tours & Travels – Your Trusted TamilNadu Travel Partner</b> <br />
+                Looking for the best travel agency in Rameshwaram? RPS Tours & Travels is your go-to destination for hassle-free and memorable travel experiences.
+                As the No.1 Rameshwaram travel agency, we offer a wide range of travel solutions, including taxi services, customized tour packages, 
+                hotel bookings, and more—all tailored to make your journey seamless.
               </p>
               <p>
-                We specialize in Rameshwaram to Madurai airport taxi service,
-                Kanyakumari tour packages, Traveler Rental Service, Mini Bus
-                Rental Service, Tourist Bus Rental Service, Houseboats Rental,
-                Kerala Tour Packages, and Honeymoon Packages.
+                <b>Top-Notch Travel Services in Rameshwaram & Beyond</b>
               </p>
+              <ul>
+              <li>
+                  <TbArrowMoveRight size={50} /> Domestic Pilgrimage <b>Yatra Arranged</b> – Special packages for spiritual journeys..
+                </li>
+                <li>
+                  <TbArrowMoveRight size={50} /> Rameshwaram to Madurai Airport Taxi Services – Reliable and comfortable airport transfers.
+                </li>
+                <li>
+                  <TbArrowMoveRight size={50} /> Kanyakumari Tour Packages – Explore the beauty of India's southernmost tip.
+                </li>
+                <li>
+                  <TbArrowMoveRight size={50} /> Luxury & Budget-Friendly Rentals – Choose from our traveler vans, mini buses, tourist buses, and houseboats for a personalized experience.
+                </li>
+                
+                <li>
+                  <TbArrowMoveRight size={50} /> Exclusive Kerala Tour Packages & Honeymoon Getaways – Discover the serene backwaters and breathtaking landscapes of Kerala.
+                </li>
+              </ul>
               <p>
-                Make your holidays hassle-free and gleeful with RPS Tours &
-                Travels, the largest customized South Indian tour package
-                provider for all categories. Our tour packages are wisely
-                designed to make each journey an unforgettable one, covering the
-                most exotic holiday destinations across Tamil Nadu and South
-                India.
+              With a passion for exploration and excellence, we specialize in customized tour packages, premium hotel bookings, reliable car rentals, Bike rentals  and hassle-free travel services across Tamil Nadu, Kerala, Karnataka, Andhra Pradesh, and beyond. 
+              Our fleet of well-maintained vehicles and our team of experienced travel experts make sure your journey is safe, smooth, and unforgettable.
               </p>
               <div className="welcome-buttons">
                 <Button
@@ -189,15 +310,14 @@ const Home = () => {
             </div>
             <div className="welcome-image">
               <img
-                src="https://source.unsplash.com/600x400/?travel,india"
+                src="/src/assets/Home-Page/Poster.png"
                 alt="RPS Tours"
               />
             </div>
           </div>
         </div>
       </section>
-
-      {/* Featured Packages Section */}
+              {/* Featured Packages Section */}
       {/* <section className="section featured-packages-section">
         <div className="container">
           <div className="section-header">
@@ -257,7 +377,7 @@ const Home = () => {
             <h2 className="section-title">Our Services</h2>
             <div className="section-divider"></div>
             <p className="section-subtitle">
-              Comprehensive travel services for all your needs
+            Tailored travel solutions to meet all your journey needs
             </p>
           </div>
 
@@ -288,7 +408,7 @@ const Home = () => {
             <div className="testimonial">
               <div className="testimonial-content">
                 <p>
-                  "We had an amazing experience with RPS Tours. The tour was
+                  "I'm Raj from Punjab. Recently I vist Rameswaram .We had an amazing experience with RPS Tours. The tour was
                   well organized, and the guide was knowledgeable. Will
                   definitely recommend to friends and family!"
                 </p>
@@ -299,7 +419,7 @@ const Home = () => {
                   alt="John Doe"
                 />
                 <div className="author-info">
-                  <h4>John Doe</h4>
+                  <h4>RAJ</h4>
                   <p>Rameshwaram Tour</p>
                 </div>
               </div>
@@ -319,7 +439,7 @@ const Home = () => {
                   alt="Jane Smith"
                 />
                 <div className="author-info">
-                  <h4>Jane Smith</h4>
+                  <h4>PADMASRI</h4>
                   <p>Car Rental Service</p>
                 </div>
               </div>
@@ -339,7 +459,7 @@ const Home = () => {
                   alt="Robert Johnson"
                 />
                 <div className="author-info">
-                  <h4>Robert Johnson</h4>
+                  <h4>Robert</h4>
                   <p>Kerala Honeymoon Package</p>
                 </div>
               </div>
@@ -354,7 +474,7 @@ const Home = () => {
           <div className="cta-content">
             <h2>Ready to Plan Your Next Adventure?</h2>
             <p>
-              Contact us today to book your tour package or car rental service.
+              Contact us today to book your tour package or Car,Bus and Bike rental service.
             </p>
             <div className="cta-buttons">
               <Button
