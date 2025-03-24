@@ -1,124 +1,291 @@
-/* components/PackageCard/PackageCard.css */
-.package-card {
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), 
-    box-shadow 0.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+:root {
+  /* --primary-color: #ff6b6b;
+  --secondary-color: #4ecdc4;
+  --text-dark: #2d3436;
+  --text-medium: #636e72;
+  --text-light: #b2bec3;
+  --background-light: #ffffff;
+  --background-dark: #1a1a2e; */
+  --shadow-light: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --shadow-dark: 0 10px 30px rgba(0, 0, 0, 0.3);
+  --transition-fast: 0.3s ease;
+  --transition-smooth: 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  --border-radius: 12px;
+}
+
+.tour-package-card {
+  border-radius: var(--border-radius) !important;
+  overflow: hidden;
+  transition: transform var(--transition-smooth),
+    box-shadow var(--transition-smooth) !important;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+  position: relative;
+  background-color: var(--background-light);
+}
+
+.tour-package-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
+}
+
+.tour-package-image-container {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.tour-package-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  transition: transform var(--transition-smooth);
+  display: block;
+}
+
+.tour-package-card:hover .tour-package-image {
+  transform: scale(1.08);
+}
+
+.tour-package-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  opacity: 0.7;
+  transition: opacity var(--transition-fast);
+}
+
+.tour-package-card:hover .tour-package-image-overlay {
+  opacity: 0.9;
+}
+
+.tour-package-price {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform var(--transition-fast);
+}
+
+.tour-package-card:hover .tour-package-price {
+  transform: translateY(-3px);
+}
+
+.tour-package-persons {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  z-index: 2;
+  backdrop-filter: blur(4px);
+}
+
+.tour-package-content {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+}
+
+.tour-package-ratings {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tour-package-rating-value {
+  font-weight: 600;
+  color: var(--text-medium);
+  font-size: 14px;
+}
+
+.tour-package-title {
+  font-weight: 700 !important;
+  margin-bottom: 16px !important;
+  color: var(--text-dark);
+  font-size: 18px !important;
+  line-height: 1.4 !important;
+  transition: color var(--transition-fast);
+}
+
+.tour-package-card:hover .tour-package-title {
+  color: var(--primary-color);
+}
+
+.tour-package-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tour-package-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-medium);
+}
+
+.tour-package-meta svg {
+  color: var(--primary-color);
+}
+
+.tour-package-pickup {
+  margin-top: 5px;
+  color: var(--text-medium);
+}
+
+.tour-package-pickup span {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.tour-package-link {
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.tour-package-button {
+  margin-top: 10px !important;
+  font-weight: 600 !important;
+  padding: 10px 0 !important;
+  border-radius: 8px !important;
+  text-transform: none !important;
+  font-size: 15px !important;
+  letter-spacing: 0.5px !important;
+  transition: transform var(--transition-fast),
+    box-shadow var(--transition-fast) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+.tour-package-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Dark mode support */
+.dark .tour-package-card {
+  background-color: var(--background-dark);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark .tour-package-title {
+  color: #f5f5f5;
+}
+
+.dark .tour-package-meta,
+.dark .tour-package-pickup {
+  color: #b2bec3;
+}
+
+.dark .tour-package-pickup span {
+  color: #f5f5f5;
+}
+
+/* Responsive styles */
+@media (min-width: 1200px) {
+  .tour-package-image-container {
+    height: 240px;
   }
-  
-  .package-card:hover {
-    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), 
-    box-shadow 0.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
-    transform: translateY(-12px) scale(1.03);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
+
+  .tour-package-title {
+    font-size: 20px !important;
   }
-  
-  .package-image {
-    position: relative;
+}
+
+@media (max-width: 991px) {
+  .tour-package-image-container {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tour-package-card {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  .tour-package-image-container {
     height: 220px;
-    overflow: hidden;
   }
-  
-  .package-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+
+  .tour-package-content {
+    padding: 18px;
   }
-  
-  .package-card:hover .package-image img {
-    transform: scale(1.1);
+
+  .tour-package-title {
+    font-size: 17px !important;
   }
-  
-  .package-price {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background-color: var(--primary-color);
-    color: var(--text-dark);
-    font-weight: 700;
-    padding: 5px 12px;
-    border-radius: 5px;
-    font-size: 16px;
+}
+
+@media (max-width: 576px) {
+  .tour-package-image-container {
+    height: 180px;
   }
-  
-  .package-persons {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
+
+  .tour-package-price {
+    font-size: 14px;
     padding: 5px 10px;
-    border-radius: 5px;
+  }
+
+  .tour-package-persons {
     font-size: 12px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    padding: 4px 8px;
   }
-  
-  .package-content {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+
+  .tour-package-content {
+    padding: 16px;
   }
-  
-  .package-ratings {
-    margin-bottom: 10px;
+
+  .tour-package-title {
+    font-size: 16px !important;
+    margin-bottom: 12px !important;
   }
-  
-  .package-title {
-    font-weight: 600 !important;
-    margin-bottom: 15px !important;
-    color: var(--text-dark);
-    font-size: 18px !important;
-    line-height: 1.4 !important;
-  }
-  
-  .package-meta {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 10px;
-    color: var(--text-medium);
-  }
-  
-  .package-meta svg {
-    color: var(--primary-color);
-  }
-  
-  .package-pickup {
-    margin-top: 5px;
-    margin-bottom: 20px;
-    color: var(--text-medium);
-  }
-  
-  .package-pickup span {
-    font-weight: 600;
-    color: var(--text-dark);
-  }
-  
-  .view-details-link {
-    text-decoration: none;
-    margin-top: auto;
-  }
-  
-  .view-details-button {
-    margin-top: 10px !important;
-    font-weight: 600 !important;
+
+  .tour-package-button {
+    font-size: 14px !important;
     padding: 8px 0 !important;
   }
-  
-  @media (max-width: 768px) {
-    .package-image {
-      height: 180px;
-    }
-    
-    .package-title {
-      font-size: 16px !important;
-    }
+}
+
+/* For very small devices */
+@media (max-width: 320px) {
+  .tour-package-image-container {
+    height: 160px;
   }
+
+  .tour-package-content {
+    padding: 14px;
+  }
+
+  .tour-package-title {
+    font-size: 15px !important;
+  }
+}

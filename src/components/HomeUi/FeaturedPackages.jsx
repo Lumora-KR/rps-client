@@ -35,7 +35,7 @@ const FeaturedPackages = () => {
     {
       id: 1,
       title: "Rameshwaram Tour Package",
-      image: "https://source.unsplash.com/600x400/?rameshwaram,temple",
+      image: "/src/assets/Poster-home/1.png",
       location: "Rameshwaram, Tamil Nadu",
       duration: "2 Days / 1 Night",
       price: "₹4,999",
@@ -47,7 +47,7 @@ const FeaturedPackages = () => {
     {
       id: 2,
       title: "Kanyakumari Tour Package",
-      image: "https://source.unsplash.com/600x400/?kanyakumari,beach",
+      image: "/src/assets/Poster-home/6.png",
       location: "Kanyakumari, Tamil Nadu",
       duration: "3 Days / 2 Nights",
       price: "₹7,499",
@@ -59,7 +59,7 @@ const FeaturedPackages = () => {
     {
       id: 3,
       title: "Madurai Tour Package",
-      image: "https://source.unsplash.com/600x400/?madurai,temple",
+      image: "/src/assets/Poster-home/2.png",
       location: "Madurai, Tamil Nadu",
       duration: "2 Days / 1 Night",
       price: "₹5,499",
@@ -71,7 +71,7 @@ const FeaturedPackages = () => {
     {
       id: 4,
       title: "Kodaikanal Tour Package",
-      image: "https://source.unsplash.com/600x400/?kodaikanal,hills",
+      image: "/src/assets/Poster-home/7.png",
       location: "Kodaikanal, Tamil Nadu",
       duration: "3 Days / 2 Nights",
       price: "₹8,999",
@@ -83,7 +83,7 @@ const FeaturedPackages = () => {
     {
       id: 5,
       title: "Ooty Tour Package",
-      image: "https://source.unsplash.com/600x400/?ooty,hills",
+      image: "/src/assets/Poster-home/5.png",
       location: "Ooty, Tamil Nadu",
       duration: "4 Days / 3 Nights",
       price: "₹10,499",
@@ -95,7 +95,7 @@ const FeaturedPackages = () => {
     {
       id: 6,
       title: "Kerala Backwaters Package",
-      image: "https://source.unsplash.com/600x400/?kerala,backwaters",
+      image: "/src/assets/Poster-home/3.png",
       location: "Alleppey, Kerala",
       duration: "5 Days / 4 Nights",
       price: "₹12,999",
@@ -171,7 +171,7 @@ const FeaturedPackages = () => {
             <div className="package-card">
               <div className="package-image">
                 <img src={pkg.image || "/placeholder.svg"} alt={pkg.title} />
-                <div className="package-price">{pkg.price}</div>
+                {/* <div className="package-price">{pkg.price}</div> */}
                 <div className="package-rating">
                   <span className="rating-value">{pkg.rating}</span>
                   <span className="review-count">
