@@ -8,18 +8,15 @@ import { useLanguage } from "../../pages/LanguageContext";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 // import logo from '../../assets/images/logo.png'; // Make sure to add your logo
 
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const { changeLanguage } = useLanguage();
 
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  
 
   const toggleDropdown = (index) => {
     setActiveDropdown(activeDropdown === index ? null : index);
@@ -232,29 +229,46 @@ const Navbar = () => {
                   activeDropdown === 3 ? "show" : ""
                 }`}
               >
-              
-              <li>
-  <a href="#" onClick={() => { changeLanguage("english"); setIsOpen(false); }}>
-    English
-  </a>
-</li>
-<li>
-  <a href="#" onClick={() => { changeLanguage("tamil"); setIsOpen(false); }}>
-    Tamil
-  </a>
-</li>
-<li>
-  <a href="#" onClick={() => { changeLanguage("hindi"); setIsOpen(false); }}>
-    Hindi
-  </a>
-</li>
+                <li>
+                  <a
+                    href="#"
+                    onClick={() => {
+                      changeLanguage("english");
+                      setIsOpen(false);
+                    }}
+                  >
+                    English
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    onClick={() => {
+                      changeLanguage("tamil");
+                      setIsOpen(false);
+                    }}
+                  >
+                    Tamil
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    onClick={() => {
+                      changeLanguage("hindi");
+                      setIsOpen(false);
+                    }}
+                  >
+                    Hindi
+                  </a>
+                </li>
               </ul>
             </li>
           </ul>
         </div>
-        <span className="navbar-toggle" onClick={() => setIsOpen(!isOpen)}>
+        {/* <span className="navbar-toggle" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? "Close" : "Menu"}
-        </span>
+        </span> */}
       </div>
     </nav>
   );
