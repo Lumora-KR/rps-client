@@ -42,6 +42,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import "./TourPackageDetail.css";
+import api from "../../services/api";
 
 const TourPackageDetail = () => {
   const { id } = useParams();
@@ -308,15 +309,12 @@ const TourPackageDetail = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post(
-        "http://localhost:5000/api/tour-package-detail",
-        {
-          ...formData,
-          packageId: selectedPackage.id,
-          packageName: selectedPackage.title,
-          price: selectedPackage.price,
-        }
-      );
+      const response = await api.post("/api/tour-package-detail", {
+        ...formData,
+        packageId: selectedPackage.id,
+        packageName: selectedPackage.title,
+        price: selectedPackage.price,
+      });
 
       if (response.data.success) {
         toast.success(
