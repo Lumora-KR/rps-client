@@ -1,205 +1,3 @@
-// // components/EnquiryForm/EnquiryForm.jsx
-// import React, { useState } from 'react';
-// import { Button } from '@mui/material';
-// import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
-// import MapIcon from '@mui/icons-material/Map';
-// import ApartmentIcon from '@mui/icons-material/Apartment';
-// import LocationOnIcon from '@mui/icons-material/LocationOn';
-// import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-// import PeopleIcon from '@mui/icons-material/People';
-// import AccessTimeIcon from '@mui/icons-material/AccessTime';
-// import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
-// import './EnquiryForm.css';
-
-// const EnquiryForm = () => {
-//   const [activeTab, setActiveTab] = useState('cars');
-
-//   const handleTabChange = (tab) => {
-//     setActiveTab(tab);
-//   };
-
-//   return (
-//     <div className="enquiry-form">
-//       <div className="enquiry-tabs">
-//         <button
-//           className={`enquiry-tab ${activeTab === 'cars' ? 'active' : ''}`}
-//           onClick={() => handleTabChange('cars')}
-//         >
-//           <DirectionsCarIcon /> CARS
-//         </button>
-//         <button
-//           className={`enquiry-tab ${activeTab === 'tourPackages' ? 'active' : ''}`}
-//           onClick={() => handleTabChange('tourPackages')}
-//         >
-//           <MapIcon /> TOUR PACKAGES
-//         </button>
-//         <button
-//           className={`enquiry-tab ${activeTab === 'hotels' ? 'active' : ''}`}
-//           onClick={() => handleTabChange('hotels')}
-//         >
-//           <ApartmentIcon /> HOTELS
-//         </button>
-//       </div>
-
-//       <div className="enquiry-content">
-//         {activeTab === 'cars' && (
-//           <div className="enquiry-form-content">
-//             <div className="form-grid">
-//               <div className="form-group">
-//                 <label htmlFor="fromLocation">
-//                   <LocationOnIcon fontSize="small" /> FROM
-//                 </label>
-//                 <input type="text" id="fromLocation" placeholder="Enter pickup location" />
-//               </div>
-//               <div className="form-group">
-//                 <label htmlFor="toLocation">
-//                   <LocationOnIcon fontSize="small" /> TO
-//                 </label>
-//                 <input type="text" id="toLocation" placeholder="Enter drop location" />
-//               </div>
-//               <div className="form-group">
-//                 <label htmlFor="pickupDate">
-//                   <CalendarMonthIcon fontSize="small" /> PICKUP DATE
-//                 </label>
-//                 <input type="date" id="pickupDate" />
-//               </div>
-//               <div className="form-group">
-//                 <label htmlFor="carType">
-//                   <DirectionsCarIcon fontSize="small" /> CAR TYPE
-//                 </label>
-//                 <select id="carType">
-//                   <option value="">Select Car</option>
-//                   <option value="sedan">Sedan</option>
-//                   <option value="suv">SUV</option>
-//                   <option value="tempo">Tempo Traveller</option>
-//                 </select>
-//               </div>
-//             </div>
-//             <div className="form-group-btn mt-4">
-//                 <Button
-//                   variant="contained"
-//                   color="secondary"
-//                   // fullWidth
-//                   className="mui-button"
-//                 >
-//                   ENQUIRE NOW
-//                 </Button>
-//             </div>
-//           </div>
-//         )}
-
-//         {activeTab === 'tourPackages' && (
-//           <div className="enquiry-form-content">
-//             <div className="form-grid">
-//               <div className="form-group">
-//                 <label htmlFor="packageType">
-//                   <MapIcon fontSize="small" /> PACKAGE TYPE
-//                 </label>
-//                 <select id="packageType">
-//                   <option value="">Select Package</option>
-//                   <option value="rameshwaram">Rameshwaram</option>
-//                   <option value="kanyakumari">Kanyakumari</option>
-//                   <option value="madurai">Madurai</option>
-//                   <option value="kodaikanal">Kodaikanal</option>
-//                 </select>
-//               </div>
-//               <div className="form-group">
-//                 <label htmlFor="travelDate">
-//                   <CalendarMonthIcon fontSize="small" /> TRAVEL DATE
-//                 </label>
-//                 <input type="date" id="travelDate" />
-//               </div>
-//               <div className="form-group">
-//                 <label htmlFor="duration">
-//                   <AccessTimeIcon fontSize="small" /> DURATION
-//                 </label>
-//                 <select id="duration">
-//                   <option value="">Select Days</option>
-//                   <option value="1">1 Day</option>
-//                   <option value="2">2 Days</option>
-//                   <option value="3">3 Days</option>
-//                   <option value="4">4 Days</option>
-//                   <option value="5">5+ Days</option>
-//                 </select>
-//               </div>
-//               <div className="form-group">
-//                 <label htmlFor="travelers">
-//                   <PeopleIcon fontSize="small" /> TRAVELERS
-//                 </label>
-//                 <select id="travelers">
-//                   <option value="">Select</option>
-//                   <option value="1-2">1-2</option>
-//                   <option value="3-5">3-5</option>
-//                   <option value="6-10">6-10</option>
-//                   <option value="10+">10+</option>
-//                 </select>
-//               </div>
-//             </div>
-//             <div className="form-group-btn mt-4">
-//                 <Button
-//                   variant="contained"
-//                   color="secondary"
-//                   // fullWidth
-//                   className="mui-button"
-//                 >
-//                   ENQUIRE NOW
-//                 </Button>
-//             </div>
-//           </div>
-//         )}
-
-//         {activeTab === 'hotels' && (
-//           <div className="enquiry-form-content">
-//             <div className="form-grid">
-//               <div className="form-group">
-//                 <label htmlFor="destination">
-//                   <LocationOnIcon fontSize="small" /> DESTINATION
-//                 </label>
-//                 <input type="text" id="destination" placeholder="Enter destination" />
-//               </div>
-//               <div className="form-group">
-//                 <label htmlFor="checkIn">
-//                   <CalendarMonthIcon fontSize="small" /> CHECK IN
-//                 </label>
-//                 <input type="date" id="checkIn" />
-//               </div>
-//               <div className="form-group">
-//                 <label htmlFor="checkOut">
-//                   <CalendarMonthIcon fontSize="small" /> CHECK OUT
-//                 </label>
-//                 <input type="date" id="checkOut" />
-//               </div>
-//               <div className="form-group">
-//                 <label htmlFor="rooms">
-//                   <MeetingRoomIcon fontSize="small" /> ROOMS
-//                 </label>
-//                 <select id="rooms">
-//                   <option value="1">1 Room</option>
-//                   <option value="2">2 Rooms</option>
-//                   <option value="3">3 Rooms</option>
-//                   <option value="4+">4+ Rooms</option>
-//                 </select>
-//               </div>
-//             </div>
-//             <div className="form-group-btn mt-4">
-//                 <Button
-//                   variant="contained"
-//                   color="secondary"
-//                   // fullWidth
-//                   className="mui-button"
-//                 >
-//                   ENQUIRE NOW
-//                 </Button>
-//             </div>
-//           </div>
-//         )}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default EnquiryForm;
-// components/EnquiryForm/EnquiryForm.jsx
 import React, { useState } from "react";
 import { Button, CircularProgress, Snackbar, Alert } from "@mui/material";
 import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
@@ -215,7 +13,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import axios from "axios";
+import api from "../../../services/api";
 import "./EnquiryForm.css";
 
 const EnquiryForm = () => {
@@ -389,10 +187,14 @@ const EnquiryForm = () => {
       }
 
       // Send form data to backend
+
       const response = await axios.post(
         "http://localhost:5001/api/home-enquiry",
         formData
       );
+
+      const response = await api.post("/api/home-enquiries", formData);
+
 
       if (response.data.success) {
         // setNotification({
