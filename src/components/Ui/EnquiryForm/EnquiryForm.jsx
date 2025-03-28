@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from 'axios';
 import { Button, CircularProgress, Snackbar, Alert } from "@mui/material";
 import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import MapIcon from "@mui/icons-material/Map";
@@ -188,7 +189,7 @@ const EnquiryForm = () => {
 
       // Send form data to backend
 
-      const response = await axios.post(
+      await axios.post(
         "http://localhost:5001/api/home-enquiry",
         formData
       );
