@@ -63,29 +63,9 @@ import Madu3 from '/src/assets/Home-Page/Tamil Nadu _ Bharat.jpeg';
 
 
 import './TourPackageDetail.css';
-=======
-  CircularProgress,
-} from "@mui/material";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import PeopleIcon from "@mui/icons-material/People";
-import DateRangeIcon from "@mui/icons-material/DateRange";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import CancelIcon from "@mui/icons-material/Cancel";
-import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
-import HotelIcon from "@mui/icons-material/Hotel";
-import RestaurantIcon from "@mui/icons-material/Restaurant";
-import TourIcon from "@mui/icons-material/Tour";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import axios from "axios";
-import "./TourPackageDetail.css";
+
+// Removed duplicate axios import
+
 import api from "../../services/api";
 
 
@@ -107,10 +87,18 @@ const TourPackageDetail = () => {
   const handleTabChange = (event, newValue) => {
     setActiveTab(newValue);
   };
-
+  axios.post(
+    "http://localhost:5001/api/home-enquiry",
+    formData
+  ).then(response => {
+    console.log("Response:", response);
+  }).catch(error => {
+    console.error("Error:", error);
+  });
   // Sample data for the package
   // In a real application, you would fetch this data based on the ID
   const packageData = [
+
     {
       id: "rameshwaram-one-day",
       title: "Rameshwaram One Day Tour",
@@ -223,10 +211,12 @@ const TourPackageDetail = () => {
             'Shopping for Kerala spices & souvenirs',
             'Drop back to pickup location'
           ]
-        }
-
-      id: "rameshwaram-kanyakumari-madurai",
-      title: "Rameshwaram - Kanyakumari  ",
+        },
+      ]
+      },
+      {
+        id: "rameshwaram-kanyakumari-madurai",
+        title: "Rameshwaram - Kanyakumari",
       images: [
         "https://source.unsplash.com/1200x800/?rameshwaram,temple",
         "https://source.unsplash.com/1200x800/?kanyakumari,beach",
@@ -401,8 +391,6 @@ const TourPackageDetail = () => {
     setLoading(true);
 
     try {
-
-      const response = await axios.post('http://localhost:5001/api/tour-package-detail', {
 
       const response = await api.post("/api/tour-package-detail", {
 

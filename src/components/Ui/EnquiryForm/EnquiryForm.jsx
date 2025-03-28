@@ -14,6 +14,7 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import api from "../../../services/api";
+import axios from 'axios';
 import "./EnquiryForm.css";
 
 const EnquiryForm = () => {
@@ -188,7 +189,7 @@ const EnquiryForm = () => {
 
       // Send form data to backend
 
-      const response = await axios.post(
+   await axios.post(
         "http://localhost:5001/api/home-enquiry",
         formData
       );
