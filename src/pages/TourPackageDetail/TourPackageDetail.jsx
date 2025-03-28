@@ -992,7 +992,7 @@ const TourPackageDetail = () => {
     setLoading(true);
     
     try {
-      const response = await axios.post('http://localhost:5000/api/tour-package-detail', {
+      const response = await axios.post('http://localhost:5001/api/tour-package-detail', {
         ...formData,
         packageId: selectedPackage.id,
         packageName: selectedPackage.title,

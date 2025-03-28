@@ -77,7 +77,7 @@ function App() {
             <Route path="/tour-packages/:id" element={<TourPackageDetail />} />
             <Route path="/car-rental" element={<CarRental />} />
             <Route path="/car-rental/:id" element={<CarDetail />} />
-            <Route path="/bank-detail" element={<BankDetail />} />
+            {/* <Route path="/bank-detail" element={<BankDetail />} /> */}
             <Route path="/site-seen" element={<SiteSeen />} />
             {/* <Route path="/add-car-rental" element={<AddCarRental />} /> */}
             <Route path="/enquire-car-rental" element={<EnquireCarRental />} />

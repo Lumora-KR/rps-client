@@ -57,7 +57,7 @@ const EnquireCarRental = () => {
   const fetchCars = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("http://localhost:5000/api/car-rentals");
+      const response = await axios.get("http://localhost:5001/api/car-rentals");
       if (response.data.success) {
         setCars(response.data.data);
         setFilteredCars(response.data.data);
