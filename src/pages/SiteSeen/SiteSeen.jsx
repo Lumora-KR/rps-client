@@ -127,10 +127,11 @@ const SiteSeen = () => {
           <div className="container">
             <div className="section-header">
               <button className="btn btn-back" onClick={handleBackClick}>
+                <br />
                 <i className="fas fa-arrow-left"></i> Back to Locations
               </button>
               <h2>Exploring {selectedLocation.name}</h2>
-              <p>{selectedLocation.description}</p>
+              {/* <p>{selectedLocation.description}</p> */}
             </div>
 
             <div className="spots-container">
@@ -149,27 +150,28 @@ const SiteSeen = () => {
                         <div className="col-md-6">
                           <div className="spot-image">
                             <img
-                              src={spot.image || "/placeholder.svg"}
+                              src={selectedLocation.image || "/placeholder.svg"}
                               alt={spot.name}
                             />
                           </div>
                         </div>
                         <div className="col-md-6">
                           <div className="spot-content">
-                            <h3>{spot.name}</h3>
+                            <h3>{selectedLocation.name}</h3>
                             <div className="spot-info">
                               <div className="info-item">
                                 <i className="far fa-clock"></i>
                                 <span>Opening Hours:</span>
-                                <p>{spot.openingHours}</p>
+                                <p>{selectedLocation.openingHours}</p>
                               </div>
                               <div className="info-item">
                                 <i className="fas fa-star"></i>
                                 <span>Specialty:</span>
-                                <p>{spot.specialty}</p>
+                                <p>{selectedLocation.description}</p>
                               </div>
                             </div>
                           </div>
+                          
                         </div>
                       </div>
                     </div>

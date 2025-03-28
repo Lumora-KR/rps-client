@@ -62,7 +62,7 @@ const EnquireHotel = () => {
   const fetchHotels = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("http://localhost:5000/api/hotels-list");
+      const response = await axios.get("http://localhost:5001/api/hotels-list");
       if (response.data.success) {
         setHotels(response.data.data);
         setFilteredHotels(response.data.data);
@@ -161,7 +161,7 @@ const EnquireHotel = () => {
       };
 
       const response = await axios.post(
-        "http://localhost:5000/api/hotel-enquiries",
+        "http://localhost:5001/api/hotel-enquiries",
         payload
       );
 

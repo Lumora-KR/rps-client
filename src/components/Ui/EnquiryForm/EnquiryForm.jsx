@@ -187,7 +187,14 @@ const EnquiryForm = () => {
       }
 
       // Send form data to backend
+
+      const response = await axios.post(
+        "http://localhost:5001/api/home-enquiry",
+        formData
+      );
+
       const response = await api.post("/api/home-enquiries", formData);
+
 
       if (response.data.success) {
         // setNotification({

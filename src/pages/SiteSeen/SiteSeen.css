@@ -10,7 +10,7 @@
 .site-seen-hero {
   position: relative;
   height: 60vh;
-  background-image: url("https://source.unsplash.com/1600x900/?tamil,nadu,temple");
+  background-image: url("/src/assets/home/HeroSection/banner-layer-1.png");
   background-size: cover;
   background-position: center;
   display: flex;
