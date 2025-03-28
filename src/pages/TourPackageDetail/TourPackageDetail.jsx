@@ -1,5 +1,6 @@
 // pages/TourPackageDetail/TourPackageDetail.jsx
 import React, { useState } from 'react';
+//cheacked
 import { useParams } from 'react-router-dom';
 import { 
   Container, 
