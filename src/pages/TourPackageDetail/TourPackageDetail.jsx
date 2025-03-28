@@ -67,7 +67,7 @@ import './TourPackageDetail.css';
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import api from "../../services/api";
+//import api from "../../services/api";
 
 
 const TourPackageDetail = () => {
