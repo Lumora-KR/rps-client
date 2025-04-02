@@ -20,54 +20,51 @@ import {
   InputLabel,
   Select,
   MenuItem,
-
-  CircularProgress 
-} from '@mui/material';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import PeopleIcon from '@mui/icons-material/People';
-import DateRangeIcon from '@mui/icons-material/DateRange';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import CancelIcon from '@mui/icons-material/Cancel';
-import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
-import HotelIcon from '@mui/icons-material/Hotel';
-import RestaurantIcon from '@mui/icons-material/Restaurant';
-import TourIcon from '@mui/icons-material/Tour';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import { toast} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import axios from 'axios';
-import Rmm1 from '/src/assets/Tour-Images/rmm1.jpg';
-import Rmm2 from '/src/assets/Tour-Images/Tour-4.jpeg';
-import Rmm3 from '/src/assets/RPS-2.jpeg';
-import Rmm4 from '/src/assets/Temple/Temp-10-main1.jpeg';
-import Kkm1 from '/src/assets/Tour-Images/kanayakumari-2.jpg';
-import Kkm2 from '/src/assets/Temple/Tem-1.jpeg';
-import Kkm3 from '/src/assets/Tour-Images/Tour-9.jpeg';
-import Ooty1 from '/src/assets/Tour-Images/ooty.jpg';
-import Ooty2 from '/src/assets/Tour-Images/ooty1.jpg';
-import Ooty3 from '/src/assets/Tour-Images/Ooty3.webp';
-import Ooty4 from '/src/assets/Tour-Images/Tour-6.jpeg';
+  CircularProgress,
+} from "@mui/material";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import PeopleIcon from "@mui/icons-material/People";
+import DateRangeIcon from "@mui/icons-material/DateRange";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import CancelIcon from "@mui/icons-material/Cancel";
+import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
+import HotelIcon from "@mui/icons-material/Hotel";
+import RestaurantIcon from "@mui/icons-material/Restaurant";
+import TourIcon from "@mui/icons-material/Tour";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
+import Rmm1 from "/src/assets/Tour-Images/rmm1.jpg";
+import Rmm2 from "/src/assets/Tour-Images/Tour-4.jpeg";
+import Rmm3 from "/src/assets/RPS-2.jpeg";
+import Rmm4 from "/src/assets/Temple/Temp-10-main1.jpeg";
+import Kkm1 from "/src/assets/Tour-Images/kanayakumari-2.jpg";
+import Kkm2 from "/src/assets/Temple/Tem-1.jpeg";
+import Kkm3 from "/src/assets/Tour-Images/Tour-9.jpeg";
+import Ooty1 from "/src/assets/Tour-Images/ooty.jpg";
+import Ooty2 from "/src/assets/Tour-Images/ooty1.jpg";
+import Ooty3 from "/src/assets/Tour-Images/Ooty3.webp";
+import Ooty4 from "/src/assets/Tour-Images/Tour-6.jpeg";
 //import Kerala1 from '/src/assets/Tour-Images/Kerala2.webp';
-import Kerala2 from '/src/assets/Tour-Images/Kerala-1.webp';
-import Kerala3 from '/src/assets/Tour-Images/Kerala-2.webp';
-import Kerala4 from '/src/assets/Tour-Images/Kerala-3.webp';
-import Madu1 from '/src/assets/Tour-Images/Tour-2.jpeg';
-import Madu2 from '/src/assets/home/HeroSection/Madu.jpeg';
-import Madu3 from '/src/assets/Home-Page/Tamil Nadu _ Bharat.jpeg';
+import Kerala2 from "/src/assets/Tour-Images/Kerala-1.webp";
+import Kerala3 from "/src/assets/Tour-Images/Kerala-2.webp";
+import Kerala4 from "/src/assets/Tour-Images/Kerala-3.webp";
+import Madu1 from "/src/assets/Tour-Images/Tour-2.jpeg";
+import Madu2 from "/src/assets/home/HeroSection/Madu.jpeg";
+import Madu3 from "/src/assets/Home-Page/Tamil Nadu _ Bharat.jpeg";
 
-
-import './TourPackageDetail.css';
+import "./TourPackageDetail.css";
 
 // Removed duplicate axios import
 
 import api from "../../services/api";
-
 
 const TourPackageDetail = () => {
   const { id } = useParams();
@@ -87,18 +84,17 @@ const TourPackageDetail = () => {
   const handleTabChange = (event, newValue) => {
     setActiveTab(newValue);
   };
-  axios.post(
-    "http://localhost:5001/api/home-enquiry",
-    formData
-  ).then(response => {
-    console.log("Response:", response);
-  }).catch(error => {
-    console.error("Error:", error);
-  });
+  axios
+    .post("http://localhost:5001/api/home-enquiry", formData)
+    .then((response) => {
+      console.log("Response:", response);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
   // Sample data for the package
   // In a real application, you would fetch this data based on the ID
   const packageData = [
-
     {
       id: "rameshwaram-one-day",
       title: "Rameshwaram One Day Tour",
@@ -167,62 +163,61 @@ const TourPackageDetail = () => {
       ],
     },
     {
-
-      id: 'rameshwaram-trivandrum',
-      title: 'Kerala One Day Tour',
+      id: "rameshwaram-trivandrum",
+      title: "Kerala One Day Tour",
       images: [Kerala2, Kerala3, Kerala4],
       rating: 5,
-      duration: '1 Day',
-      location: 'Kerala, India',
-      pickupFrom: 'Kochi',
+      duration: "1 Day",
+      location: "Kerala, India",
+      pickupFrom: "Kochi",
       persons: 2,
-      category: 'kerala',
-      description: 'A scenic one-day tour through the lush greenery and backwaters of Kerala, exploring famous attractions and cultural heritage.',
+      category: "kerala",
+      description:
+        "A scenic one-day tour through the lush greenery and backwaters of Kerala, exploring famous attractions and cultural heritage.",
       itinerary: [
         {
-          day: 'Scenic Escape 1',
-          title: 'Kerala Backwaters & Sightseeing',
+          day: "Scenic Escape 1",
+          title: "Kerala Backwaters & Sightseeing",
           activities: [
-            'Pickup from railway station/bus stand',
-            'Houseboat cruise in Alleppey backwaters',
-            'Explore Kumarakom Bird Sanctuary',
-            'Visit to Cochin Fort & Mattancherry Palace',
-            'Drop back to pickup location'
-          ]
+            "Pickup from railway station/bus stand",
+            "Houseboat cruise in Alleppey backwaters",
+            "Explore Kumarakom Bird Sanctuary",
+            "Visit to Cochin Fort & Mattancherry Palace",
+            "Drop back to pickup location",
+          ],
         },
         {
-          day: 'Hilltop Adventure 2',
-          title: 'Munnar Hill Station Tour',
+          day: "Hilltop Adventure 2",
+          title: "Munnar Hill Station Tour",
           activities: [
-            'Visit to Tea Estates & Tata Tea Museum',
-            'Echo Point & Kundala Lake',
-            'Eravikulam National Park',
-            'Photo stop at Top Station Viewpoint',
-            'Drop back to pickup location'
-          ]
+            "Visit to Tea Estates & Tata Tea Museum",
+            "Echo Point & Kundala Lake",
+            "Eravikulam National Park",
+            "Photo stop at Top Station Viewpoint",
+            "Drop back to pickup location",
+          ],
         },
         {
-          day: 'Waterfall Retreat 3',
-          title: 'Athirappilly & Vazhachal Waterfalls',
+          day: "Waterfall Retreat 3",
+          title: "Athirappilly & Vazhachal Waterfalls",
           activities: [
-            'Visit to Athirappilly Waterfalls',
-            'Explore Vazhachal Waterfalls',
-            'Visit to Cheeyappara & Valara Waterfalls',
-            'Shopping for Kerala spices & souvenirs',
-            'Drop back to pickup location'
-          ]
+            "Visit to Athirappilly Waterfalls",
+            "Explore Vazhachal Waterfalls",
+            "Visit to Cheeyappara & Valara Waterfalls",
+            "Shopping for Kerala spices & souvenirs",
+            "Drop back to pickup location",
+          ],
         },
-      ]
-      },
-      {
-        id: "rameshwaram-kanyakumari-madurai",
-        title: "Rameshwaram - Kanyakumari",
+      ],
+    },
+    {
+      id: "rameshwaram-kanyakumari-madurai",
+      title: "Rameshwaram - Kanyakumari",
       images: [
         "https://source.unsplash.com/1200x800/?rameshwaram,temple",
         "https://source.unsplash.com/1200x800/?kanyakumari,beach",
         "https://source.unsplash.com/1200x800/?madurai,temple",
         "https://source.unsplash.com/1200x800/?tamil,nadu",
-
       ],
       price: 18700,
       rating: 5,
@@ -391,9 +386,7 @@ const TourPackageDetail = () => {
     setLoading(true);
 
     try {
-
       const response = await api.post("/api/tour-package-detail", {
-
         ...formData,
         packageId: selectedPackage.id,
         packageName: selectedPackage.title,

@@ -18,9 +18,20 @@ import PackageCard from "../../components/PackageCard/PackageCard";
 import "./TourPackages.css";
 import bannerImage from "/src/assets/home/HeroSection/banner-layer-1.png";
 import Rameswaram from "/src/assets/Poster-home/1.png";
+import Kanyakumari from "/src/assets/Poster-home/5.png";
+import Madurai from "/src/assets/Poster-home/2.png";
+import Kodaikanal from "/src/assets/Poster-home/10.png";
+import Thiruvananthapuram from "/src/assets/Poster-home/3.png";
+import Pondycherry from "/src/assets/Poster-home/4.png";
+import Ooty from "/src/assets/Poster-home/9.png";
+import Bangalore from "/src/assets/Poster-home/6.png";
+import Goa from "/src/assets/Poster-home/7.png";
+import Tirupati from "/src/assets/Poster-home/8.png";
+import Vellore from "/src/assets/Poster-home/11.png";
+import Thanjavur from "/src/assets/Poster-home/12.png";
 //fun
 const TourPackages = () => {
-  const { id } = useParams(); // ✅ Updated: Get ID from URL
+  const { id } = useParams(); // Get ID from URL
   const [activeTab, setActiveTab] = useState(0);
   const [priceRange, setPriceRange] = useState("");
   const [duration, setDuration] = useState("");
@@ -46,7 +57,7 @@ const TourPackages = () => {
     {
       id: "rameshwaram-kanyakumari",
       title: "Kanyakumari ",
-      image: "/src/assets/Poster-home/5.png",
+      image: Kanyakumari,
       rating: 5,
       duration: "3 Days / 2 Nights",
       location: "Rameshwaram, Kanyakumari, Madurai",
@@ -57,7 +68,7 @@ const TourPackages = () => {
     {
       id: "rameshwaram-trivandrum",
       title: "Thiruvananthapuram [Kerala]",
-      image: "/src/assets/Poster-home/3.png",
+      image: Thiruvananthapuram,
       rating: 5,
       duration: "4 Days / 3 Nights",
       location: "Rameshwaram, Kanyakumari, Thiruvananthapuram",
@@ -68,7 +79,7 @@ const TourPackages = () => {
     {
       id: "madurai",
       title: "Madurai - Tour Package",
-      image: "/src/assets/Poster-home/2.png",
+      image: Madurai,
       rating: 4.5,
       duration: "3 Days / 2 Nights",
       location: "Madurai, Kodaikanal",
@@ -79,7 +90,7 @@ const TourPackages = () => {
     {
       id: "Kodaikanal",
       title: "Kodaikanal  Tour Package",
-      image: "/src/assets/Poster-home/10.png",
+      image: Kodaikanal,
       rating: 4.5,
       duration: "3 Days / 2 Nights",
       location: "Madurai, Kodaikanal",
@@ -90,7 +101,7 @@ const TourPackages = () => {
     {
       id: "Pondycherry",
       title: "Pondycherry Special Tour",
-      image: "/src/assets/Poster-home/4.png",
+      image: Pondycherry,
       rating: 5,
       duration: "5 Days / 4 Nights",
       location: "Pondycherry,Aurovil-Beach",
@@ -99,9 +110,9 @@ const TourPackages = () => {
       category: "Tamil Nadu",
     },
     {
-      id: "ooty-coonoor",
+      id: "ooty-tour",
       title: "Ooty - Coonoor Hill Station Tour",
-      image: "/src/assets/Poster-home/9.png",
+      image: Ooty,
       rating: 4.5,
       duration: "4 Days / 3 Nights",
       location: "Ooty, Coonoor",
@@ -112,7 +123,7 @@ const TourPackages = () => {
     {
       id: "bangalore-mysore",
       title: "Bangalore - Mysore Heritage Tour",
-      image: "/src/assets/Poster-home/6.png",
+      image: Bangalore,
       rating: 4.5,
       duration: "4 Days / 3 Nights",
       location: "Bangalore, Mysore",
@@ -123,7 +134,7 @@ const TourPackages = () => {
     {
       id: "Tirupati",
       title: "Tirupati-Andhra Pradesh Tour",
-      image: "/src/assets/Poster-home/8.png",
+      image: Tirupati,
       rating: 4.5,
       duration: "4 Days / 3 Nights",
       location: "Bangalore, Mysore",
@@ -134,7 +145,7 @@ const TourPackages = () => {
     {
       id: "Vellore",
       title: "Vellore  Tour Package ",
-      image: "/src/assets/Poster-home/11.png",
+      image: Vellore,
       rating: 4.5,
       duration: "4 Days / 3 Nights",
       location: "Bangalore, Mysore",
@@ -145,7 +156,7 @@ const TourPackages = () => {
     {
       id: "Thanjavur",
       title: "Thanjavur Tour Package ",
-      image: "/src/assets/Poster-home/12.png",
+      image: Thanjavur,
       rating: 4.5,
       duration: "2 Days / 1 Nights",
       location: "Thanjavur",
@@ -156,7 +167,7 @@ const TourPackages = () => {
     {
       id: "Goa",
       title: "Goa  Tour Package ",
-      image: "/src/assets/Poster-home/7.png",
+      image: Goa,
       rating: 4.5,
       duration: "4 Days / 3 Nights",
       location: "Mumbai,Goa",

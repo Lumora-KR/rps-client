@@ -17,6 +17,13 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 //import Rameswaram from "/src/assets/home/HeroSection/rameswaram-1.jpeg";
 //import Bangalore from "/src/assets/home/HeroSection/bangalore-home.jpg";
 import Rameswaram from "/src/assets/home/HeroSection/rameswaram-1.jpeg";
+import Kanyakumari from "/src/assets/home/HeroSection/kanyakumari-1.jpeg";
+import Ooty from "/src/assets/Tour-Images/Tour-7.jpeg";
+import kodikanal from "/src/assets/Tour-Images/Tour-6.jpeg";
+import Madurai from "/src/assets/home/HeroSection/Madu.jpeg";
+import Kerala from "/src/assets/home/HeroSection/kerela-home.jpg";
+import Thirupati from "/src/assets/home/HeroSection/thirupati.jpg";
+import HomePoster from "/src/assets/Home-Page/Poster.png";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import { TbArrowMoveRight } from "react-icons/tb";
@@ -41,11 +48,11 @@ const Home = () => {
               title: "RAMESHWARAM TOURS PACKAGE",
               button: {
                 text: "Explore Now",
-                url: "/tour-packages/rameshwaram",
+                url: "/tour-packages/rameshwaram-one-day",
               },
             },
             {
-              image: "/src/assets/home/HeroSection/kanyakumari-1.jpeg",
+              image: Kanyakumari,
               subtitle: "EXPLORE",
               title: "KANYAKUMARI TOURS PACKAGE",
               button: {
@@ -54,36 +61,39 @@ const Home = () => {
               },
             },
             {
-              image: "/src/assets/Tour-Images/Tour-7.jpeg",
+              image: Ooty,
               subtitle: "EXPLORE",
               title: "OOTY TOURS PACKAGE",
               button: {
                 text: "Explore Now",
-                url: "/tour-packages/kanyakumari",
+                url: "/tour-packages/ooty-tour",
               },
             },
             {
-              image: "/src/assets/Tour-Images/Tour-6.jpeg",
+              image: kodikanal,
               subtitle: "EXPLORE",
               title: "KODAIKANAL TOURS PACKAGE",
               button: { text: "Explore Now", url: "/tour-packages/kODAIKANAL" },
             },
 
             {
-              image: "/src/assets/home/HeroSection/Madu.jpeg",
+              image: Madurai,
               subtitle: "EXPLORE",
               title: "MADURAI TOURS PACKAGE",
               button: { text: "Explore Now", url: "/tour-packages/Madurai" },
             },
 
             {
-              image: "/src/assets/home/HeroSection/kerela-home.jpg",
+              image: Kerala,
               subtitle: "EXPLORE",
               title: "KERALA TOURS PACKAGE",
-              button: { text: "Explore Now", url: "/tour-packages/Kerala" },
+              button: {
+                text: "Explore Now",
+                url: "/tour-packages/rameshwaram-trivandrum",
+              },
             },
             {
-              image: "/src/assets/home/HeroSection/thirupati.jpg",
+              image: Thirupati,
               subtitle: "EXPLORE",
               title: "TIRUPATI TOURS PACKAGE",
               button: {
@@ -364,7 +374,7 @@ const Home = () => {
               </div>
             </div>
             <div className="welcome-image">
-              <img src="/src/assets/Home-Page/Poster.png" alt="RPS Tours" />
+              <img src={HomePoster} alt="RPS Tours" />
             </div>
           </div>
         </div>
