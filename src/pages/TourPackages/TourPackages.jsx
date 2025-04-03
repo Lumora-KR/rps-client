@@ -173,8 +173,23 @@ const TourPackages = () => {
       location: "Mumbai,Goa",
       pickupFrom: "Tamil Nadu",
       persons: 2,
-      category: "Tamil Nadu",
+      category: 'Tamil Nadu'
     },
+    {
+      id: 'Munnar',
+      title: 'Munnar  Tour Package ',
+      image: '/src/assets/Poster-home/7.png',
+      rating: 4.5,
+      duration: '4 Days / 3 Nights',
+      location: 'kerela',
+      pickupFrom: 'Tamil Nadu',
+      persons: 2,
+      category: 'Kerela'
+    }
+
+    },
+
+
 
     // add card content  and add card here and update the TourPackageDetails.jsx
   ];

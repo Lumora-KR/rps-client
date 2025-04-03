@@ -453,7 +453,7 @@ const siteSeen = {
         {
           id: 1,
           name: "Brihadeeswarar Temple",
-          image: "https://source.unsplash.com/800x600/?brihadeeswarar",
+          image: "/src/assets/Site-Seen/tan-1.jpeg",
           openingHours: "6:00 AM - 12:30 PM, 4:00 PM - 8:30 PM",
           specialty:
             "UNESCO World Heritage site, known for its Chola architecture. Built by Raja Raja Chola I in the 11th century, the temple features a 216-foot vimana (tower), granite construction, and detailed sculptures that celebrate the grandeur of the Chola dynasty.",
@@ -461,7 +461,7 @@ const siteSeen = {
         {
           id: 2,
           name: "Thanjavur Palace",
-          image: "https://source.unsplash.com/800x600/?palace,ancient",
+          image: "/src/assets/Site-Seen/tan-2.jpg",
           openingHours: "9:00 AM - 6:00 PM",
           specialty:
             "16th-century palace with ancient art and sculptures. Once the royal residence of the Nayaks and Marathas, it houses museums, royal durbar halls, and beautiful frescoes depicting scenes from epics and local history.",
@@ -469,7 +469,7 @@ const siteSeen = {
         {
           id: 3,
           name: "Saraswathi Mahal Library",
-          image: "https://source.unsplash.com/800x600/?library,ancient",
+          image: "/src/assets/Site-Seen/tan-3.webp",
           openingHours: "10:00 AM - 5:00 PM (Closed on Fridays)",
           specialty:
             "Ancient library with rare palm-leaf manuscripts. Considered one of the oldest libraries in Asia, it contains over 60,000 volumes in Tamil, Sanskrit, Marathi, and Telugu, preserving centuries of literary and scholarly wisdom.",
@@ -477,7 +477,7 @@ const siteSeen = {
         {
           id: 4,
           name: "Schwartz Church",
-          image: "https://source.unsplash.com/800x600/?church,colonial",
+          image: "/src/assets/Site-Seen/tan-4.jpg",
           openingHours: "8:00 AM - 6:00 PM",
           specialty:
             "A colonial-era church built by the British. Located near Brihadeeswarar Temple, this simple yet historic Protestant church was built in 1779 by Raja Serfoji II in memory of Danish missionary Rev. Schwartz.",
@@ -485,7 +485,7 @@ const siteSeen = {
         {
           id: 5,
           name: "Rajarajan Manimandapam",
-          image: "https://source.unsplash.com/800x600/?memorial,king",
+          image: "/src/assets/Site-Seen/tan-5.jpg",
           openingHours: "9:00 AM - 5:00 PM",
           specialty:
             "Memorial for the Chola king Rajaraja I. This modern structure commemorates the legacy of the great ruler who built the Brihadeeswarar Temple and established Tanjavur as a flourishing cultural capital.",
@@ -493,7 +493,7 @@ const siteSeen = {
         {
           id: 6,
           name: "Sangeetha Mahal",
-          image: "https://source.unsplash.com/800x600/?music,hall",
+          image: "/src/assets/Site-Seen/tan-6.webp",
           openingHours: "9:00 AM - 5:00 PM",
           specialty:
             "Historical hall used for musical performances. Known for its excellent acoustics, it once hosted classical concerts for the royal court and continues to echo the city's deep connection with Carnatic music.",
@@ -501,7 +501,7 @@ const siteSeen = {
         {
           id: 7,
           name: "Gangaikonda Cholapuram",
-          image: "https://source.unsplash.com/800x600/?temple,chola",
+          image: "/src/assets/Site-Seen/tan-7.jpeg",
           openingHours: "6:00 AM - 12:00 PM, 4:00 PM - 8:00 PM",
           specialty:
             "Temple built by Rajendra Chola I. A brilliant example of Dravidian architecture, it was constructed to commemorate the Chola conquest of the Ganga region, and rivals Brihadeeswarar Temple in grandeur and design.",
@@ -509,7 +509,7 @@ const siteSeen = {
         {
           id: 8,
           name: "Punnainallur Mariamman Temple",
-          image: "https://source.unsplash.com/800x600/?temple,mariamman",
+          image: "/src/assets/Site-Seen/tan-8.jpg",
           openingHours: "6:00 AM - 1:00 PM, 4:00 PM - 8:30 PM",
           specialty:
             "Temple dedicated to Goddess Mariamman. One of the most powerful and popular shrines for the goddess of rain and fertility, attracting devotees who seek healing and blessings.",
@@ -517,7 +517,7 @@ const siteSeen = {
         {
           id: 9,
           name: "Alangudi Temple",
-          image: "https://source.unsplash.com/800x600/?temple,jupiter",
+          image: "/src/assets/Site-Seen/tan-9.jpg",
           openingHours: "6:00 AM - 12:30 PM, 4:00 PM - 8:30 PM",
           specialty:
             "Famous Navagraha temple dedicated to Guru (Jupiter). It is believed that worshipping here during Guru Peyarchi brings wisdom, prosperity, and relief from planetary afflictions in one's horoscope.",
@@ -525,7 +525,7 @@ const siteSeen = {
         {
           id: 10,
           name: "Art Gallery",
-          image: "https://source.unsplash.com/800x600/?art,museum",
+          image: "/src/assets/Site-Seen/tan-10.webp",
           openingHours: "10:00 AM - 5:00 PM (Closed on Fridays)",
           specialty:
             "Museum showcasing bronze statues and Chola artifacts. Located within the palace complex, it houses a magnificent collection of South Indian bronze idols, stone sculptures, and ancient paintings from the Chola and Nayak periods.",

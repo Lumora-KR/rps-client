@@ -187,6 +187,18 @@
 
 @media (max-width: 768px) {
   .travel-desk-hero {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('/src/assets/home/HeroSection/banner-layer-1.png');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: var(--spacing-xxl);
     height: 250px;
   }
 

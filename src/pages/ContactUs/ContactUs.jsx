@@ -80,9 +80,9 @@ const ContactUs = () => {
   // Contact information data - can be moved to a separate data file
   const contactInfo = {
     address: '123 Main Street, Rameshwaram, Tamil Nadu, India',
-    phone: '+91 00000 00000',
+    phone: '+91 8667200183 | 9840214679 | 9629528420',
     email: 'rpstourstravels@gmail.com',
-    whatsapp: '+91 00000 00000',
+    whatsapp: '+91 8667200183',
     hours: 'Mon - Sat: 9:00 AM - 6:00 PM'
   };
   
@@ -91,19 +91,19 @@ const ContactUs = () => {
     {
       title: 'Rameshwaram Office',
       address: '123 Temple Street, Rameshwaram, Tamil Nadu, India',
-      phone: '+91 00000 00000',
+      phone: '+91 8667200183 | 9840214679 | 9629528420',
       email: 'rameshwaram@rpstours.in'
     },
     {
       title: 'Madurai Office',
       address: '456 Anna Nagar, Madurai, Tamil Nadu, India',
-      phone: '+91 00000 00000',
+      phone: '+91 8667200183 | 9840214679 | 9629528420',
       email: 'madurai@rpstours.in'
     },
     {
       title: 'Kanyakumari Office',
       address: '789 Beach Road, Kanyakumari, Tamil Nadu, India',
-      phone: '+91 00000 00000',
+      phone: '+91 8667200183 | 9840214679 | 9629528420',
       email: 'kanyakumari@rpstours.in'
     }
   ];

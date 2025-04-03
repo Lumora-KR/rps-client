@@ -32,6 +32,7 @@ import RoomServiceIcon from "@mui/icons-material/RoomService";
 import LocalBarIcon from "@mui/icons-material/LocalBar";
 import BreakfastDiningIcon from "@mui/icons-material/BreakfastDining";
 import TvIcon from "@mui/icons-material/Tv";
+import bannerImage from '/src/assets/home/HeroSection/banner-layer-1.png';
 import "./Hotels.css";
 
 const Hotels = () => {
@@ -233,7 +234,7 @@ const Hotels = () => {
   // Initialize filtered hotels with all hotels
   useEffect(() => {
     setFilteredHotels(hotels);
-  }, []);
+  }, [0]);
 
   const handleFilterChange = (event) => {
     setFilters({
@@ -288,7 +289,7 @@ const Hotels = () => {
   return (
     <div className="hotels-page">
       {/* Hero Section */}
-      <div className="hotels-hero">
+      <div className="hotels-hero"  style={{ backgroundImage: `url(${bannerImage})`,backgroundPosition: 'center 1' }}>
         <div className="hotels-hero-content">
           <h1>Find Your Perfect Stay</h1>
           <p>Discover comfortable accommodations for your journey</p>

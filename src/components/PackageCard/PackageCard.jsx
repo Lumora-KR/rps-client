@@ -24,7 +24,7 @@ const PackageCard = ({
           alt={title}
           className="tour-package-image"
         />
-        <div className="tour-package-price">₹{price?.toLocaleString()}</div>
+        {/* <div className="tour-package-price">₹{price?.toLocaleString()}</div> */}
         {persons && (
           <div className="tour-package-persons">
             <PeopleIcon fontSize="small" />
