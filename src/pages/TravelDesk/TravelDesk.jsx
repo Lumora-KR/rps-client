@@ -1,3 +1,4 @@
+
 // import React from 'react';
 // import { Button } from '@mui/material';
 // import FlightIcon from '@mui/icons-material/Flight';
@@ -175,6 +176,21 @@ import './TravelDesk.css';
 import { Link } from 'react-router-dom';
 import { BikeScooter } from '@mui/icons-material';
 
+import React, { useState } from "react";
+import { Button } from "@mui/material";
+import FlightIcon from "@mui/icons-material/Flight";
+import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
+import HotelIcon from "@mui/icons-material/Hotel";
+import TrainIcon from "@mui/icons-material/Train";
+import DirectionsBoatIcon from "@mui/icons-material/DirectionsBoat";
+import LocalTaxiIcon from "@mui/icons-material/LocalTaxi";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import SupportAgentIcon from "@mui/icons-material/SupportAgent";
+import ServiceModal from "../../components/ServiceModal/ServiceModal";
+import "./TravelDesk.css";
+import { Link } from "react-router-dom";
+
+
 const TravelDesk = () => {
   const [selectedService, setSelectedService] = useState(null);
   const [openModal, setOpenModal] = useState(false);
@@ -191,13 +207,14 @@ const TravelDesk = () => {
   const services = [
     {
       icon: <FlightIcon />,
-      title: 'Flight Booking',
-      description: 'Book domestic and international flights at the best prices.'
+      title: "Flight Booking",
+      description:
+        "Book domestic and international flights at the best prices.",
     },
     {
       icon: <DirectionsCarIcon />,
-      title: 'Car Rental',
-      description: 'Wide range of vehicles for all your travel needs.'
+      title: "Car Rental",
+      description: "Wide range of vehicles for all your travel needs.",
     },
     {
       icon: <BikeScooter />,
@@ -206,58 +223,58 @@ const TravelDesk = () => {
     },
     {
       icon: <HotelIcon />,
-      title: 'Hotel Booking',
-      description: 'Find and book comfortable stays across destinations.'
+      title: "Hotel Booking",
+      description: "Find and book comfortable stays across destinations.",
     },
     {
       icon: <TrainIcon />,
-      title: 'Train Tickets',
-      description: 'Hassle-free train ticket booking and confirmation.'
+      title: "Train Tickets",
+      description: "Hassle-free train ticket booking and confirmation.",
     },
     {
       icon: <DirectionsBoatIcon />,
-      title: 'Ferry Services',
-      description: 'Book ferry tickets for island destinations.'
+      title: "Ferry Services",
+      description: "Book ferry tickets for island destinations.",
     },
     {
       icon: <LocalTaxiIcon />,
-      title: 'Airport Transfer',
-      description: 'Reliable pickup and drop service at airports.'
-    }
+      title: "Airport Transfer",
+      description: "Reliable pickup and drop service at airports.",
+    },
   ];
 
   const features = [
     {
       icon: <CheckCircleIcon />,
-      title: '24/7 Support',
-      description: 'Round-the-clock assistance for all your travel needs.'
+      title: "24/7 Support",
+      description: "Round-the-clock assistance for all your travel needs.",
     },
     {
       icon: <CheckCircleIcon />,
-      title: 'Best Prices',
-      description: 'Guaranteed best rates and special discounts.'
+      title: "Best Prices",
+      description: "Guaranteed best rates and special discounts.",
     },
     {
       icon: <CheckCircleIcon />,
-      title: 'Instant Confirmation',
-      description: 'Quick confirmation for all your bookings.'
+      title: "Instant Confirmation",
+      description: "Quick confirmation for all your bookings.",
     },
     {
       icon: <CheckCircleIcon />,
-      title: 'Secure Payments',
-      description: 'Safe and secure payment options available.'
-    }
+      title: "Secure Payments",
+      description: "Safe and secure payment options available.",
+    },
   ];
 
   return (
     <div className="travel-desk-page">
       {/* Service Modal */}
-      <ServiceModal 
-        open={openModal} 
-        onClose={handleCloseModal} 
-        service={selectedService} 
+      <ServiceModal
+        open={openModal}
+        onClose={handleCloseModal}
+        service={selectedService}
       />
-      
+
       {/* Hero Section */}
       <div className="travel-desk-hero">
         <div className="travel-desk-hero-content">
@@ -278,13 +295,11 @@ const TravelDesk = () => {
           <div className="services-grid">
             {services.map((service, index) => (
               <div key={index} className="service-card">
-                <div className="service-icon">
-                  {service.icon}
-                </div>
+                <div className="service-icon">{service.icon}</div>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
-                <Button 
-                  variant="outlined" 
+                <Button
+                  variant="outlined"
                   color="primary"
                   fullWidth
                   onClick={() => handleServiceClick(service)}
@@ -307,8 +322,11 @@ const TravelDesk = () => {
           <div className="features-grid">
             {features.map((feature, index) => (
               <div key={index} className="feature-card">
-                <div className="feature-icon">
-                  {feature.icon}
+                <div className="feature-icon-travel-desk">
+                  {/* {feature.icon} */}
+                  <p>
+                    <CheckCircleIcon className="travel-desk-icon" />
+                  </p>
                 </div>
                 <h3>{feature.title}</h3>
                 <p>{feature.description}</p>
@@ -324,22 +342,14 @@ const TravelDesk = () => {
               <SupportAgentIcon />
             </div>
             <h2>Need Assistance?</h2>
-            <p>Our travel experts are here to help you plan your perfect trip</p>
+            <p>
+              Our travel experts are here to help you plan your perfect trip
+            </p>
             <div className="support-buttons">
-              <Button 
-                variant="contained" 
-                color="primary"
-                size="large"
-              >
-                <Link to='/contact-us'>
-                Contact Us
-                </Link>
+              <Button variant="contained" color="primary" size="large">
+                <Link to="/contact-us">Contact Us</Link>
               </Button>
-              <Button 
-                variant="outlined" 
-                color="primary"
-                size="large"
-              >
+              <Button variant="outlined" color="primary" size="large">
                 View FAQs
               </Button>
             </div>
