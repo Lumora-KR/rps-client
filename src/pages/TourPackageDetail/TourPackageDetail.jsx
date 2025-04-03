@@ -43,7 +43,7 @@ import TourIcon from "@mui/icons-material/Tour";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import axios from "axios";
+ import axios from "axios";
 import Rmm1 from "/src/assets/Tour-Images/rmm1.jpg";
 import Rmm2 from "/src/assets/Tour-Images/Tour-4.jpeg";
 import Rmm3 from "/src/assets/RPS-2.jpeg";
@@ -68,7 +68,7 @@ import "./TourPackageDetail.css";
 
 // Removed duplicate axios import
 
-import api from "../../services/api";
+// import api from "../../services/api";
 
 const TourPackageDetail = () => {
   const { id } = useParams();
@@ -184,6 +184,7 @@ const TourPackageDetail = () => {
             'Drop back to pickup location'
           ]
         },
+      
         {
           day: 'Day 2',
           title: 'Kanyakumari Sightseeing',
@@ -325,8 +326,11 @@ const TourPackageDetail = () => {
             'Shopping for Kerala spices & souvenirs',
             'Drop back to pickup location'
           ]
-        }
-
+        },
+        {
+          day: "Waterfall Retreat 3",
+          title: "Athirappilly & Vazhachal Waterfalls",
+          activities: [
             "Visit to Athirappilly Waterfalls",
             "Explore Vazhachal Waterfalls",
             "Visit to Cheeyappara & Valara Waterfalls",
@@ -1027,8 +1031,6 @@ const TourPackageDetail = () => {
     setLoading(true);
     
     try {
-
-      const response = await axios.post('http://localhost:5001/api/tour-package-detail', {
 
       const response = await api.post("/api/tour-package-detail", {
         ...formData,
