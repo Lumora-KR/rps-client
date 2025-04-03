@@ -176,21 +176,6 @@ import './TravelDesk.css';
 import { Link } from 'react-router-dom';
 import { BikeScooter } from '@mui/icons-material';
 
-import React, { useState } from "react";
-import { Button } from "@mui/material";
-import FlightIcon from "@mui/icons-material/Flight";
-import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
-import HotelIcon from "@mui/icons-material/Hotel";
-import TrainIcon from "@mui/icons-material/Train";
-import DirectionsBoatIcon from "@mui/icons-material/DirectionsBoat";
-import LocalTaxiIcon from "@mui/icons-material/LocalTaxi";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import SupportAgentIcon from "@mui/icons-material/SupportAgent";
-import ServiceModal from "../../components/ServiceModal/ServiceModal";
-import "./TravelDesk.css";
-import { Link } from "react-router-dom";
-
-
 const TravelDesk = () => {
   const [selectedService, setSelectedService] = useState(null);
   const [openModal, setOpenModal] = useState(false);

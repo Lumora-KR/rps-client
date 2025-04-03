@@ -15,7 +15,6 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import api from "../../../services/api";
-import axios from 'axios';
 import "./EnquiryForm.css";
 
 const EnquiryForm = () => {
@@ -190,9 +189,6 @@ const EnquiryForm = () => {
 
       // Send form data to backend
 
-
-      await axios.post(
-
    await axios.post(
 
         "http://localhost:5001/api/home-enquiry",
@@ -203,12 +199,12 @@ const EnquiryForm = () => {
 
 
       if (response.data.success) {
-        // setNotification({
-        //   open: true,
-        //   message:
-        //     response.data.message || "Your enquiry has been sent successfully!",
-        //   severity: "success",
-        // });
+        setNotification({
+          open: true,
+          message:
+            response.data.message || "Your enquiry has been sent successfully!",
+          severity: "success",
+        });
         toast.success(
           "Your enquiry request has been sent successfully! We will contact you shortly to confirm your booking.",
           {
