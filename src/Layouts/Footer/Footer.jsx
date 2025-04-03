@@ -43,7 +43,11 @@ const Footer = () => {
                 <li><Link to="/tour-packages/kanyakumari">Kanyakumari</Link></li>
                 <li><Link to="/tour-packages/madurai">Madurai</Link></li>
                 <li><Link to="/tour-packages/kodaikanal">Kodaikanal</Link></li>
+                <li><Link to="/tour-packages/ Ooty">Ooty</Link></li>
                 <li><Link to="/tour-packages/kerala">Kerala</Link></li>
+                <li><Link to="/tour-packages/Munnar">Munnar</Link></li>
+                <li><Link to="/tour-packages/Tirupati">Tirupati</Link></li>
+                <li><Link to="/tour-packages/Goa">Goa</Link></li>
                 <li><Link to="/tour-packages/honeymoon">Honeymoon Packages</Link></li>
               </ul>
             </div>

@@ -7,7 +7,7 @@
   /* Hero Banner */
   .about-hero-banner {
     height: 400px;
-    background-image: url('https://source.unsplash.com/1600x900/?india,travel,landscape');
+    background-image: url('/src/assets/home/HeroSection/banner-layer-1.png');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -96,7 +96,7 @@
     width: 70%;
     height: 60%;
     top: 0;
-    left: 0;
+    left: -15%;
     z-index: 3;
   }
   
@@ -104,7 +104,7 @@
     width: 60%;
     height: 40%;
     top: 20%;
-    right: 0;
+    right: -2%;
     z-index: 2;
   }
   

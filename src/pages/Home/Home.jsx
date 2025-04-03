@@ -12,6 +12,7 @@ import FlightIcon from "@mui/icons-material/Flight";
 import PeopleIcon from "@mui/icons-material/People";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 //import Kanyakumari from "/src/assets/home/HeroSection/kanyakumari-1.jpeg";
 //import Madurai from "/src/assets/home/HeroSection/Madu.jpeg";
 //import Rameswaram from "/src/assets/home/HeroSection/rameswaram-1.jpeg";
@@ -217,7 +218,7 @@ const Home  = () => {
         "Book comfortable and affordable hotels at your destination with our hotel booking service.",
     },
     {
-      icon: <FlightIcon fontSize="large" />,
+      icon: <LocalFireDepartmentIcon fontSize="large" />,
       title: "Yatra-Arranged",
       description:
         "Experienced Iyer/Pandits for special poojas & rituals.Temple Darshan Assistance and Customized Yatra Packages for individuals & groups",
@@ -414,10 +415,10 @@ const Home  = () => {
                 </p>
               </div>
               <div className="testimonial-author">
-                <img
+                {/* <img
                   src="https://randomuser.me/api/portraits/men/32.jpg"
                   alt="John Doe"
-                />
+                /> */}
                 <div className="author-info">
                   <h4>RAJ</h4>
                   <p>Rameshwaram Tour</p>
@@ -434,10 +435,10 @@ const Home  = () => {
                 </p>
               </div>
               <div className="testimonial-author">
-                <img
+                {/* <img
                   src="https://randomuser.me/api/portraits/women/44.jpg"
                   alt="Jane Smith"
-                />
+                /> */}
                 <div className="author-info">
                   <h4>PADMASRI</h4>
                   <p>Car Rental Service</p>
@@ -454,10 +455,10 @@ const Home  = () => {
                 </p>
               </div>
               <div className="testimonial-author">
-                <img
+                {/* <img
                   src="https://randomuser.me/api/portraits/men/67.jpg"
                   alt="Robert Johnson"
-                />
+                /> */}
                 <div className="author-info">
                   <h4>Robert</h4>
                   <p>Kerala Honeymoon Package</p>

@@ -173,6 +173,7 @@ import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import ServiceModal from '../../components/ServiceModal/ServiceModal';
 import './TravelDesk.css';
 import { Link } from 'react-router-dom';
+import { BikeScooter } from '@mui/icons-material';
 
 const TravelDesk = () => {
   const [selectedService, setSelectedService] = useState(null);
@@ -197,6 +198,11 @@ const TravelDesk = () => {
       icon: <DirectionsCarIcon />,
       title: 'Car Rental',
       description: 'Wide range of vehicles for all your travel needs.'
+    },
+    {
+      icon: <BikeScooter />,
+      title: 'Bike Rental',
+      description: 'Explore destinations on two wheels.'
     },
     {
       icon: <HotelIcon />,

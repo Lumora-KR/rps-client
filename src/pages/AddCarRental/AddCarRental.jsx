@@ -1039,7 +1039,7 @@ const AddCarRental = () => {
                   required
                   InputProps={{
                     startAdornment: (
-                      <span style={{ marginRight: "8px" }}>₹</span>
+                      <span style={{ marginRight: "8px" }}>Emptyaddcard</span>
                     ),
                   }}
                 />
