@@ -59,7 +59,7 @@ const CarRental = () => {
     {
       id: "tempo-traveller",
       title: "Tempo Traveller",
-      image: "src/assets/Cars/Tempo-Trave1.jpg",
+      image: "/src/assets/Cars/Tempo-Trave1.jpg",
       price: 4500,
       priceUnit: "per day",
       carType: "tempo",
@@ -73,7 +73,7 @@ const CarRental = () => {
     {
       id: "honda-city",
       title: "Honda City",
-      image: "src/assets/Cars/Hcity-1.jpg",
+      image: "/src/assets/Cars/Hcity-1.jpg",
       price: 1800,
       priceUnit: "per day",
       carType: "sedan",
@@ -86,7 +86,7 @@ const CarRental = () => {
     {
       id: "toyota-fortuner",
       title: "Toyota Fortuner",
-      image: "src/assets/Cars/fortuner.jpg",
+      image: "/src/assets/Cars/fortuner.jpg",
       price: 5000,
       priceUnit: "per day",
       carType: "suv",
@@ -99,7 +99,7 @@ const CarRental = () => {
     {
       id: "hyundai-Hb20",
       title: "Hundai-Hb20",
-      image: "src/assets/Cars/Car-6no-bg.jpeg",
+      image: "/src/assets/Cars/Car-6no-bg.jpeg",
       price: 1200,
       priceUnit: "per day",
       carType: "hatchback",
@@ -112,7 +112,7 @@ const CarRental = () => {
     {
       id: 'toyota-etios',
       title: 'Toyota Etios',
-      image: 'src/assets/Cars/Car-9no-bg.jpeg',
+      image: '/src/assets/Cars/Car-9no-bg.jpeg',
       price: 1500,
       priceUnit: 'per day',
       carType: 'sedan',

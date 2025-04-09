@@ -19,7 +19,7 @@ const siteSeen = {
         {
           id: 2,
           name: "Pamban Bridge",
-          image: "src/assets/Site-Seen/Ram-2.avif",
+          image: "/src/assets/Site-Seen/Ram-2.avif",
           openingHours: "Open 24 hours",
           specialty:
             "India's first sea bridge with scenic ocean views. It connects the island of Rameswaram to mainland India and features a double-leaf bascule section that can be raised to let ships pass underneath—an engineering marvel completed in 1914.",
@@ -27,7 +27,7 @@ const siteSeen = {
         {
           id: 3,
           name: "Dhanushkodi Beach",
-          image: "src/assets/Site-Seen/Ram-3.jpg",
+          image: "/src/assets/Site-Seen/Ram-3.jpg",
           openingHours: "6:00 AM - 6:00 PM",
           specialty:
             "A ghost town where the Bay of Bengal meets the Indian Ocean. Once a bustling town, it was destroyed in the 1964 cyclone. The beach is known for its spiritual aura and is said to be the starting point of the mythical Ram Setu.",
