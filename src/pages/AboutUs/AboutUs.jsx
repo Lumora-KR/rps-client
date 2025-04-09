@@ -264,15 +264,15 @@ Because travel isn’t just about sightseeing — it's about living life fully, 
             <div className="team-member">
               <div className="team-member-image">
                 <img
-                  src=""
-                  alt="John Doe"
+                  src="/src/assets/CEO.jpeg"
+                  alt="radhika"
                 />
               </div>
               <h3>Radhika</h3>
               <p>Founder & CEO</p>
             </div>
 
-            <div className="team-member">
+            {/* <div className="team-member">
               <div className="team-member-image">
                 <img
                   src=""
@@ -303,7 +303,7 @@ Because travel isn’t just about sightseeing — it's about living life fully, 
               </div>
               <h3>blank</h3>
               <p>Travel Consultant</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

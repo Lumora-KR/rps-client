@@ -189,13 +189,13 @@ const EnquiryForm = () => {
 
       // Send form data to backend
 
-   await axios.post(
+  //  await axios.post(
 
-        "http://localhost:5001/api/home-enquiry",
-        formData
-      );
+  //       "http://localhost:5001/api/home-enquiry",
+  //       formData
+  //     );
 
-      const response = await api.post("/api/home-enquiries", formData);
+      const response = await api.post("http://localhost:5001/api/home-enquiries", formData);
 
 
       if (response.data.success) {

@@ -37,7 +37,7 @@ const ContactUs = () => {
     setLoading(true);
     
     try {
-      const response = await axios.post('http://localhost:5000/api/contact', formData);
+      const response = await axios.post('http://localhost:5001/api/contact', formData);
       
       if (response.data.success) {
         // Show success toast
@@ -89,10 +89,10 @@ const ContactUs = () => {
   // Office locations data - can be moved to a separate data file
   const officeLocations = [
     {
-      title: 'Rameshwaram Office',
-      address: '123 Temple Street, Rameshwaram, Tamil Nadu, India',
+      title: 'Chennai Office',
+      address: '789 Beach Road, Kanyakumari, Tamil Nadu, India',
       phone: '+91 8667200183 | 9840214679 | 9629528420',
-      email: 'rameshwaram@rpstours.in'
+      email: 'kanyakumari@rpstours.in'
     },
     {
       title: 'Madurai Office',
@@ -101,11 +101,13 @@ const ContactUs = () => {
       email: 'madurai@rpstours.in'
     },
     {
-      title: 'Kanyakumari Office',
-      address: '789 Beach Road, Kanyakumari, Tamil Nadu, India',
+      title: 'Rameshwaram Office',
+      address: '123 Temple Street, Rameshwaram, Tamil Nadu, India',
       phone: '+91 8667200183 | 9840214679 | 9629528420',
-      email: 'kanyakumari@rpstours.in'
-    }
+      email: 'rameshwaram@rpstours.in'
+    },
+    
+    
   ];
   
   return (

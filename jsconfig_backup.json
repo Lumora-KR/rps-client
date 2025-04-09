@@ -1,5 +1,5 @@
 {
-<<<<<<< HEAD
+
   "compilerOptions": {
     "baseUrl": "src", 
     "paths": {
@@ -10,16 +10,5 @@
     }
   }
 }
-=======
-    "compilerOptions": {
-      "baseUrl": "src", 
-      "paths": {
-        "@components/*": ["components/*"],
-        "@pages/*": ["pages/*"],
-        "@assets/*": ["assets/*"],
-        "@utils/*": ["utils/*"]
-      }
-    }
-  }
+
   
->>>>>>> a9df3a12ab01e59c9c99d86473632639edaec9e3

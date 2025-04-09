@@ -102,9 +102,7 @@ const TourPackageDetail = () => {
     {
       id: 'rameshwaram-one-day',
       title: 'Rameshwaram  Tour',
-      images: [Rmm1,Rmm2,Rmm3,Rmm4,
-      
-      ],
+      images: [Rmm1,Rmm2,Rmm3,Rmm4],
       rating: 5,
       duration: '1 Day',
       location: 'Rameshwaram, Tamil Nadu',
