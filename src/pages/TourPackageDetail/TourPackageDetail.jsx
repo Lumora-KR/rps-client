@@ -62,6 +62,7 @@ import Kerala4 from "/src/assets/Tour-Images/Kerala-3.webp";
 import Madu1 from "/src/assets/Tour-Images/Tour-2.jpeg";
 import Madu2 from "/src/assets/home/HeroSection/Madu.jpeg";
 import Madu3 from "/src/assets/Home-Page/Tamil Nadu _ Bharat.jpeg";
+import bang1 from "/src/assets/Tour-Images/Bangalore-1.webp"
 
 import "./TourPackageDetail.css";
 
@@ -542,7 +543,7 @@ const TourPackageDetail = () => {
     {
       id: 'bangalore-mysore',
       title: 'Bangalore One Day Tour',
-      images: ['/src/assets/Tour-Images/Bangalore-1.webp','/src/assets/Tour-Images/Bangaloe-2.webp','/src/assets/Tour-Images/Bangalore-4.webp'],
+      images: [bang1],
       rating: 5,
       duration: '1 Day',
       location: 'Bangalore, Karnataka',
