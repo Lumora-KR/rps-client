@@ -499,7 +499,7 @@ const TourPackages = () => {
       category: "tamil-nadu",
     },
     {
-      id: "ooty-tour",
+      id: "ooty",
       title: "Ooty - Coonoor Hill Station Tour",
       image: Ooty,
       rating: 4.5,

@@ -220,7 +220,7 @@ const TourPackageDetail = () => {
       ]
     },
     {
-      id: 'ooty-coonoor',
+      id: 'ooty',
       title: 'Ooty  Tour',
       images: [Ooty1, Ooty2, Ooty3, Ooty4],
       rating: 5,
