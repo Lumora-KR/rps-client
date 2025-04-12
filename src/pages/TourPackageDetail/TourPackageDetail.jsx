@@ -543,6 +543,7 @@ const TourPackageDetail = () => {
     {
       id: 'bangalore-mysore',
       title: 'Bangalore One Day Tour',
+      //sample test 
       images: [bang1],
       rating: 5,
       duration: '1 Day',
