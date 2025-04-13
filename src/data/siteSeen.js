@@ -1,9 +1,11 @@
+import kal from "/src/assets/Site-Seen/Apj-1.jpg";
+
 const siteSeen = {
   locations: [
     {
       id: 1,
       name: "APJ-ABDUL KALAM Memorial  ",
-      image: "/src/assets/Site-Seen/Apj-1.jpg",
+      image: kal,
       openingHours: "9:00 AM - 5:00 PM,",
       description: "Rameswaram, a peaceful island town linked by the stunning Pamban Bridge, is known for its ancient temples, calm beaches, and as the birthplace of Dr. A.P.J. Abdul Kalam. From selling newspapers on its streets to traveling the world as a scientist and President, Kalam’s journey began here. Visitors can explore his memorial, walk through his childhood home, and feel inspired by the town that shaped one of India’s greatest minds.",
 

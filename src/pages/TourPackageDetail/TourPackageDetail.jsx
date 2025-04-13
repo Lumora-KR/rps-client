@@ -63,7 +63,26 @@ import Madu1 from "/src/assets/Tour-Images/Tour-2.jpeg";
 import Madu2 from "/src/assets/home/HeroSection/Madu.jpeg";
 import Madu3 from "/src/assets/Home-Page/Tamil Nadu _ Bharat.jpeg";
 import bang1 from "/src/assets/Tour-Images/Bangalore-1.webp"
-
+import bang2 from '/src/assets/Tour-Images/Bangaloe-2.webp';
+import bang3 from '/src/assets/Tour-Images/Bangalore-4.webp';
+import pondy from "/src/assets/Tour-Images/Pondy-1.webp";
+import pondy1 from "/src/assets/Tour-Images/Pondy-2.webp";
+import thiru from "/src/assets/Tour-Images/Tirupati-1.avif";
+import thiru1 from "/src/assets/Tour-Images/Tirupati-2.webp";
+import thiru2 from "/src/assets/Tour-Images/Tirupati3.webp";
+import vel from '/src/assets/Tour-Images/vellore-1.jpg';
+import vel1 from '/src/assets/Tour-Images/vellore-2.jpg';
+import vel2 from '/src/assets/Tour-Images/vellore-3.jpg'
+import kod from '/src/assets/Tour-Images/kodaikanal.jpg'
+import kod2 from '/src/assets/Tour-Images/kodaikanal2.jpg';
+import kod3 from '/src/assets/Tour-Images/kodaikanal3.jpg';
+import kod4 from '/src/assets/Tour-Images/kodaikanal1.jpg';
+import goa  from '/src/assets/Tour-Images/Goa-1.webp';
+import goa1 from '/src/assets/Tour-Images/Goa-2.webp';
+import goa2 from '/src/assets/Tour-Images/Goa-3.webp';
+import tan from '/src/assets/Temple/Temp-9-main.jpeg';
+import tan1 from '/src/assets/Temple/Temp-4.jpeg';
+import tan2 from '/src/assets/Temple/Temp-5.jpeg';
 import "./TourPackageDetail.css";
 
 
@@ -339,49 +358,46 @@ const TourPackageDetail = () => {
         },
       ],
     },
-    {
-      id: "rameshwaram-kanyakumari-madurai",
-      title: "Rameshwaram - Kanyakumari",
-      images: [
-        "https://source.unsplash.com/1200x800/?rameshwaram,temple",
-        "https://source.unsplash.com/1200x800/?kanyakumari,beach",
-        "https://source.unsplash.com/1200x800/?madurai,temple",
-        "https://source.unsplash.com/1200x800/?tamil,nadu",
+    // {
+    //   id: "rameshwaram-kanyakumari-madurai",
+    //   title: "Rameshwaram - Kanyakumari rosan",
+    //   images: [
+       
 
-      ],
-      inclusions: ['AC Transport', 'Tour Guide', 'Entry Fees'],
-      exclusions: ['Meals', 'Personal Expenses', 'Camera Fees'],
-      faqs: [
-        {
-          question: 'Is hotel accommodation included?',
-          answer: 'No, this is a one-day tour and does not include hotel stays.'
-        },
-        {
-          question: 'Can I get a pickup from Trivandrum?',
-          answer: 'Yes, but it will incur additional charges. Please contact us for details.'
-        },
-        {
-          question: 'Are houseboat meals included?',
-          answer: 'No, meals are not included, but you can purchase food on the houseboat at an additional cost.'
-        },
-        {
-          question: 'What should I carry for the tour?',
-          answer: 'Comfortable clothing, sunglasses, sunscreen, camera, and some cash for personal expenses.'
-        },
-        {
-          question: 'Is the tour suitable for elderly people?',
-          answer: 'Yes, the tour is suitable for all age groups, but some locations may require walking.'
-        },
-        {
-          question: 'Do I need to book in advance?',
-          answer: 'Yes, it is recommended to book at least 24 hours in advance to secure availability.'
-        },
-        {
-          question: 'Are entry tickets for attractions included?',
-          answer: 'Yes, entry fees to major attractions are included in the package.'
-        }
-      ]
-    },
+    //   ],
+    //   inclusions: ['AC Transport', 'Tour Guide', 'Entry Fees'],
+    //   exclusions: ['Meals', 'Personal Expenses', 'Camera Fees'],
+    //   faqs: [
+    //     {
+    //       question: 'Is hotel accommodation included?',
+    //       answer: 'No, this is a one-day tour and does not include hotel stays.'
+    //     },
+    //     {
+    //       question: 'Can I get a pickup from Trivandrum?',
+    //       answer: 'Yes, but it will incur additional charges. Please contact us for details.'
+    //     },
+    //     {
+    //       question: 'Are houseboat meals included?',
+    //       answer: 'No, meals are not included, but you can purchase food on the houseboat at an additional cost.'
+    //     },
+    //     {
+    //       question: 'What should I carry for the tour?',
+    //       answer: 'Comfortable clothing, sunglasses, sunscreen, camera, and some cash for personal expenses.'
+    //     },
+    //     {
+    //       question: 'Is the tour suitable for elderly people?',
+    //       answer: 'Yes, the tour is suitable for all age groups, but some locations may require walking.'
+    //     },
+    //     {
+    //       question: 'Do I need to book in advance?',
+    //       answer: 'Yes, it is recommended to book at least 24 hours in advance to secure availability.'
+    //     },
+    //     {
+    //       question: 'Are entry tickets for attractions included?',
+    //       answer: 'Yes, entry fees to major attractions are included in the package.'
+    //     }
+    //   ]
+    // },
     {
       id: 'madurai',
       title: 'Madurai One Day Tour',
@@ -464,7 +480,7 @@ const TourPackageDetail = () => {
     {
       id: 'Pondycherry',
       title: 'Pondicherry One Day Tour',
-      images: ['/src/assets/Tour-Images/Pondy-1.webp','/src/assets/Tour-Images/pondy-2.webp'],
+      images: [pondy,pondy1],
       rating: 5,
       duration: '1 Day',
       location: 'Pondicherry, India',
@@ -544,7 +560,7 @@ const TourPackageDetail = () => {
       id: 'bangalore-mysore',
       title: 'Bangalore One Day Tour',
       //sample test 
-      images: [bang1],
+      images: [bang1,bang2,bang3],
       rating: 5,
       duration: '1 Day',
       location: 'Bangalore, Karnataka',
@@ -623,7 +639,7 @@ const TourPackageDetail = () => {
     {
       id: 'Tirupati',
       title: 'Tirupati One Day Tour',
-      images: ['/src/assets/Tour-Images/Tirupati-2.webp','/src/assets/Tour-Images/Tirupati3.webp','/src/assets/Tour-Images/Tirupati-1.avif'],
+      images: [thiru,thiru1,thiru2],
       rating: 5,
       duration: '1 Day',
       location: 'Tirupati, Andhra Pradesh',
@@ -702,7 +718,7 @@ const TourPackageDetail = () => {
     {
       id: 'Vellore',
       title: 'Vellore One Day Tour',
-      images: ['/src/assets/Tour-Images/vellore-1.jpg','/src/assets/Tour-Images/vellore-2.jpg','/src/assets/Tour-Images/vellore-3.jpg',],
+      images: [vel,vel1,vel2],
       rating: 5,
       duration: '1 Day',
       location: 'Vellore, Tamil Nadu',
@@ -781,7 +797,7 @@ const TourPackageDetail = () => {
     {
       id: 'Kodaikanal',
       title: 'Kodaikanal One Day Tour',
-      images: ['/src/assets/Tour-Images/kodaikanal.jpg','/src/assets/Tour-Images/kodaikanal2.jpg','/src/assets/Tour-Images/kodaikanal3.jpg','/src/assets/Tour-Images/kodaikanal1.jpg'],
+      images: [kod,kod2,kod3,kod4],
       rating: 5,
       duration: '1 Day',
       location: 'Kodaikanal, Tamil Nadu',
@@ -860,7 +876,7 @@ const TourPackageDetail = () => {
     {
       id: 'Goa',
       title: 'Goa One Day Tour',
-      images: ['/src/assets/Tour-Images/Goa-1.webp','/src/assets/Tour-Images/Goa-2.webp','/src/assets/Tour-Images/Goa-3.webp'],
+      images: [goa,goa1,goa2],
       rating: 5,
       duration: '1 Day',
       location: 'Goa, India',
@@ -939,7 +955,7 @@ const TourPackageDetail = () => {
     {
       id: 'Thanjavur',
       title: 'Thanjavur  Tour package ',
-      images: ['/src/assets/Temple/Temp-9-main.jpeg','/src/assets/Temple/Temp-4.jpeg','/src/assets/Temple/Temp-5.jpeg'],
+      images: [tan,tan1,tan2],
       rating: 5,
       duration: '1 Day',
       location: 'Thanjavur, Tamil Nadu',
