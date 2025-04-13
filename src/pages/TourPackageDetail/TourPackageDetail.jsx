@@ -66,7 +66,7 @@ import bang1 from "/src/assets/Tour-Images/Bangalore-1.webp"
 import bang2 from '/src/assets/Tour-Images/Bangaloe-2.webp';
 import bang3 from '/src/assets/Tour-Images/Bangalore-4.webp';
 import pondy from "/src/assets/Tour-Images/Pondy-1.webp";
-import pondy1 from "/src/assets/Tour-Images/Pondy-2.webp";
+import pondy1 from "/src/assets/Tour-Images/pondy-2.webp";
 import thiru from "/src/assets/Tour-Images/Tirupati-1.avif";
 import thiru1 from "/src/assets/Tour-Images/Tirupati-2.webp";
 import thiru2 from "/src/assets/Tour-Images/Tirupati3.webp";

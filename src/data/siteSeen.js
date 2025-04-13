@@ -84,7 +84,6 @@ const siteSeen = {
         },
       ],
     },
-    
     {
       id: 2,
       name: "Madurai",
