@@ -7,7 +7,7 @@ import ram5 from  "/src/assets/Site-Seen/ram-5.jpg";
 import ram6 from  "/src/assets/Site-Seen/Ram-6.avif";
 import ram7 from "/src/assets/Site-Seen/Ram-7.jpg";
 import ram8 from "/src/assets/Site-Seen/Ram-8.webp";
-import Ram9 from '../assets/Site-Seen/Ram-9.jpeg';
+import ram9 from '/src/assets/Site-Seen/Ram-9.jpeg';
 
 import madu from "/src/assets/Site-Seen/Madu-1.webp";
 import madu1 from "/src/assets/Site-Seen/Madu-1.webp";
