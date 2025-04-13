@@ -2,12 +2,12 @@ import kal from "/src/assets/Site-Seen/Apj-1.jpg";
 import ram1 from "/src/assets/Site-Seen/Ram-1.webp";
 import ram2 from "/src/assets/Site-Seen/Ram-2.avif";
 import ram3 from "/src/assets/Site-Seen/Ram-3.jpg";
-import ram4 from  "/src/assets/Site-Seen/Ram-4.jpg";
-import ram5 from  "/src/assets/Site-Seen/ram-5.jpg";
-import ram6 from  "/src/assets/Site-Seen/Ram-6.avif";
+import ram4 from "/src/assets/Site-Seen/Ram-4.jpg";
+import ram5 from "/src/assets/Site-Seen/ram-5.jpg";
+import ram6 from "/src/assets/Site-Seen/Ram-6.avif";
 import ram7 from "/src/assets/Site-Seen/Ram-7.jpg";
 import ram8 from "/src/assets/Site-Seen/Ram-8.webp";
-import ram9 from '/src/assets/Site-Seen/Ram-9.jpeg';
+import ram9 from "/src/assets/Site-Seen/Ram-9.jpeg";
 
 import madu from "/src/assets/Site-Seen/Madu-1.webp";
 import madu1 from "/src/assets/Site-Seen/Madu-1.webp";
@@ -30,8 +30,8 @@ import cnn6 from "/src/assets/Site-Seen/cnn-7.jpeg";
 import cnn7 from "/src/assets/Site-Seen/cnn-8.webp";
 import cnn8 from "/src/assets/Site-Seen/cnn-9.jpeg";
 import cnn9 from "/src/assets/Site-Seen/cnn-10.jpg";
-import cnn10 from "/src/assets/Site-Seen/cnn-11.jpg"
-import kod from  "/src/assets/Tour-Images/kodaikanal.jpg"
+import cnn10 from "/src/assets/Site-Seen/cnn-11.jpg";
+import kod from "/src/assets/Tour-Images/kodaikanal.jpg";
 import kod1 from "/src/assets/Site-Seen/kod-1.jpg";
 import kod2 from "/src/assets/Site-Seen/kod-2.jpg";
 import kod3 from "/src/assets/Site-Seen/kod-3.jpg";
@@ -42,7 +42,7 @@ import kod7 from "/src/assets/Site-Seen/kod-7.jpeg";
 import kod8 from "/src/assets/Site-Seen/kod-8.jpg";
 import kod9 from "/src/assets/Site-Seen/kod-9.webp";
 import kod10 from "/src/assets/Site-Seen/kod-10.jpg";
-import kan from "/src/assets/Tour-Images/kanayakumari-2.jpg"
+import kan from "/src/assets/Tour-Images/kanayakumari-2.jpg";
 import kan1 from "/src/assets/Site-Seen/kan-1.jpeg";
 import kan2 from "/src/assets/Site-Seen/kan-2.jpeg";
 import kan3 from "/src/assets/Site-Seen/kan-3.webp";
@@ -65,8 +65,6 @@ import tan8 from "/src/assets/Site-Seen/tan-8.jpg";
 import tan9 from "/src/assets/Site-Seen/tan-9.jpg";
 import tan10 from "/src/assets/Site-Seen/tan-10.webp";
 
-
-
 const siteSeen = {
   locations: [
     {
@@ -74,7 +72,8 @@ const siteSeen = {
       name: "APJ-ABDUL KALAM Memorial  ",
       image: kal,
       openingHours: "9:00 AM - 5:00 PM,",
-      description: "Rameswaram, a peaceful island town linked by the stunning Pamban Bridge, is known for its ancient temples, calm beaches, and as the birthplace of Dr. A.P.J. Abdul Kalam. From selling newspapers on its streets to traveling the world as a scientist and President, Kalam’s journey began here. Visitors can explore his memorial, walk through his childhood home, and feel inspired by the town that shaped one of India’s greatest minds.",
+      description:
+        "Rameswaram, a peaceful island town linked by the stunning Pamban Bridge, is known for its ancient temples, calm beaches, and as the birthplace of Dr. A.P.J. Abdul Kalam. From selling newspapers on its streets to traveling the world as a scientist and President, Kalam’s journey began here. Visitors can explore his memorial, walk through his childhood home, and feel inspired by the town that shaped one of India’s greatest minds.",
 
       spots: [
         {
@@ -88,7 +87,7 @@ const siteSeen = {
         {
           id: 2,
           name: "Pamban Bridge",
-          image:ram2 ,
+          image: ram2,
           openingHours: "Open 24 hours",
           specialty:
             "India's first sea bridge with scenic ocean views. It connects the island of Rameswaram to mainland India and features a double-leaf bascule section that can be raised to let ships pass underneath—an engineering marvel completed in 1914.",
@@ -104,7 +103,7 @@ const siteSeen = {
         {
           id: 4,
           name: "Panchamukhi Hanuman Temple",
-          image:ram4,
+          image: ram4,
           openingHours: "6:00 AM - 12:30 PM, 4:00 PM - 8:30 PM",
           specialty:
             "Temple with five-faced Hanuman idol and floating stone. The idol represents Hanuman in five forms—Hanuman, Narasimha, Garuda, Varaha, and Hayagriva. The floating stone is believed to be a part of the Ram Setu built by the vanaras.",
@@ -120,7 +119,7 @@ const siteSeen = {
         {
           id: 6,
           name: "Agnitheertham",
-          image:ram6 ,
+          image: ram6,
           openingHours: "Open 24 hours",
           specialty:
             "Holy water site where devotees take a ritual bath. It is believed that Lord Rama took a dip here after worshipping Lord Shiva, and bathing here is said to absolve one's sins and purify the soul.",
@@ -185,8 +184,9 @@ const siteSeen = {
         {
           id: 4,
           name: "Gandhi Memorial Museum",
-          image: madu4 ,
-          openingHours: "10:00 AM - 1:00 PM, 2:00 PM - 5:30 PM (Closed on Fridays)",
+          image: madu4,
+          openingHours:
+            "10:00 AM - 1:00 PM, 2:00 PM - 5:30 PM (Closed on Fridays)",
           specialty:
             "Museum showcasing Gandhi's life and Indian independence. It houses a part of the blood-stained garment worn by Gandhi during his assassination and offers a deep dive into India’s freedom struggle.",
         },
@@ -233,14 +233,14 @@ const siteSeen = {
         {
           id: 10,
           name: "Samanar Hills",
-          image:madu10 ,
+          image: madu10,
           openingHours: "6:00 AM - 6:00 PM",
           specialty:
             "Rock-cut Jain temples with ancient carvings. These hills contain centuries-old inscriptions and sculptures dating back to the 1st century AD, offering panoramic views and a glimpse into Madurai's Jain heritage.",
         },
       ],
     },
-    
+
     {
       id: 3,
       name: "Chennai",
@@ -251,7 +251,7 @@ const siteSeen = {
         {
           id: 1,
           name: "Marina Beach",
-          image:cnn1, 
+          image: cnn1,
           openingHours: "Open 24 hours (Swimming not allowed)",
           specialty:
             "The second-longest urban beach in the world, stretching over 13 km along the Bay of Bengal. A popular hangout for locals and tourists alike, it features statues, food stalls, and hosts public events and cultural performances.",
@@ -330,11 +330,11 @@ const siteSeen = {
         },
       ],
     },
-    
+
     {
       id: 4,
       name: "Kodaikanal",
-      image:kod ,
+      image: kod,
       description:
         "A hill station known as the 'Princess of Hill Stations', famous for its scenic beauty and pleasant climate.",
       spots: [
@@ -381,7 +381,7 @@ const siteSeen = {
         {
           id: 6,
           name: "Bear Shola Falls",
-          image:kod6,
+          image: kod6,
           openingHours: "9:00 AM - 5:30 PM",
           specialty:
             "Seasonal waterfall surrounded by lush forest. Legend says bears used to come here to drink water, and the peaceful trail leading up to it makes for a serene short hike in the woods.",
@@ -420,7 +420,7 @@ const siteSeen = {
         },
       ],
     },
-    
+
     {
       id: 5,
       name: "Kanyakumari",
@@ -510,7 +510,7 @@ const siteSeen = {
         },
       ],
     },
-    
+
     {
       id: 6,
       name: "Tanjavur",
@@ -600,7 +600,6 @@ const siteSeen = {
         },
       ],
     },
-    
   ],
 };
 
