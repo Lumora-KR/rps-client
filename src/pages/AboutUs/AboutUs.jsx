@@ -8,6 +8,14 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import DirectionsIcon from "@mui/icons-material/Directions";
 import "./AboutUs.css";
 import { Link } from "react-router-dom";
+import kod from "/src/assets/Site-Seen/Ram-2.avif"
+import kod1 from "/src/assets/Site-Seen/kod-5.jpg";
+import kod2 from "/src/assets/Site-Seen/cnn-2.jpg"
+import post1 from "/src/assets/Poster-home/RPS-poster.png";
+import post2 from "/src/assets/Poster-home/RPS-poster-1.png";
+import post3 from "/src/assets/Poster-home/RPS-poster-2.png";
+import post4 from  "/src/assets/Poster-home/RPS-poster-3.png";
+import ceo from "/src/assets/CEO.jpeg";
 
 const AboutUs = () => {
   const controls = useAnimation();
@@ -86,8 +94,7 @@ const AboutUs = () => {
                 variants={imageVariants}
               >
                 <img
-                  src="/src/assets/Site-Seen/Ram-2.avif"
-                  alt="Temple"
+                  src={kod}                  alt="Temple"
                 />
               </motion.div>
               <motion.div
@@ -95,7 +102,7 @@ const AboutUs = () => {
                 variants={imageVariants}
               >
                 <img
-                  src="/src/assets/Site-Seen/kod-5.jpg"
+                  src={kod1}
                   alt="Waterfall"
                 />
               </motion.div>
@@ -104,7 +111,7 @@ const AboutUs = () => {
                 variants={imageVariants}
               >
                 <img
-                  src="/src/assets/Site-Seen/cnn-2.jpg"
+                  src={kod2}
                   alt="Lake View"
                 />
               </motion.div>
@@ -195,7 +202,7 @@ Because travel isn’t just about sightseeing — it's about living life fully, 
             <div className="why-choose-item">
               <div className="why-choose-icon">
                 <img
-                  src="/src/assets/Poster-home/RPS-poster.png"
+                  src={post1}
                   alt="Experienced Team"
                 />
               </div>
@@ -209,7 +216,7 @@ Because travel isn’t just about sightseeing — it's about living life fully, 
             <div className="why-choose-item">
               <div className="why-choose-icon">
                 <img
-                  src="/src/assets/Poster-home/RPS-poster-1.png"
+                  src={post2}
                   alt="Customized Packages"
                 />
               </div>
@@ -223,7 +230,7 @@ Because travel isn’t just about sightseeing — it's about living life fully, 
             <div className="why-choose-item">
               <div className="why-choose-icon">
                 <img
-                  src="/src/assets/Poster-home/RPS-poster-2.png"
+                  src={post3}
                   alt="Quality Service"
                 />
               </div>
@@ -236,7 +243,7 @@ Because travel isn’t just about sightseeing — it's about living life fully, 
             <div className="why-choose-item">
               <div className="why-choose-icon">
                 <img
-                  src="/src/assets/Poster-home/RPS-poster-3.png"
+                  src={post4}
                   alt="Affordable Prices"
                 />
               </div>
@@ -264,7 +271,7 @@ Because travel isn’t just about sightseeing — it's about living life fully, 
             <div className="team-member">
               <div className="team-member-image">
                 <img
-                  src="/src/assets/CEO.jpeg"
+                  src={ceo}
                   alt="radhika"
                 />
               </div>

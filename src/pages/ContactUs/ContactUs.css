@@ -3,7 +3,7 @@
   }
   
   .page-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/1600x400/?travel,contact');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/src/assets/home/HeroSection/banner-layer-1.png');
     background-size: cover;
     background-position: center;
     color: white;
