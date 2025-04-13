@@ -172,6 +172,7 @@ import LocalTaxiIcon from '@mui/icons-material/LocalTaxi';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import ServiceModal from '../../components/ServiceModal/ServiceModal';
+//import bannerImage from '/src/assets/Cars/Car-3no-bg1.jpeg';
 import './TravelDesk.css';
 import { Link } from 'react-router-dom';
 import { BikeScooter } from '@mui/icons-material';
