@@ -547,8 +547,30 @@ import RoomServiceIcon from "@mui/icons-material/RoomService";
 import LocalBarIcon from "@mui/icons-material/LocalBar";
 import BreakfastDiningIcon from "@mui/icons-material/BreakfastDining";
 import TvIcon from "@mui/icons-material/Tv";
-import HotelBookingModal from "../../components/HotelBookingModal/HotelBookingModal";
 import "./Hotels.css";
+import hyatt1 from "/src/assets/Hotel/hyatt-1.jpeg";
+import hyatt2 from "/src/assets/Hotel/hyatt-2.jpeg";
+import hyatt3 from "/src/assets/Hotel/hyatt-3.avif";
+import Justa1 from "/src/assets/Hotel/justa-1.jpg";
+import Justa2 from "/src/assets/Hotel/justa-2.png";
+import Justa3 from "/src/assets/Hotel/justa-3.jpeg";
+import tam1 from "/src/assets/Hotel/tn-1.avif";
+import tam2 from "/src/assets/Hotel/tn-2.jpg";
+import tam3 from "/src/assets/Hotel/tn-3.jpg";
+import kan1 from "/src/assets/Hotel/kan-1.jpg";
+import kan2 from "/src/assets/Hotel/kan-2.jpg";
+import kan3 from "/src/assets/Hotel/kan-3.avif";
+import arju1 from "/src/assets/Hotel/Arjuna.jpg";
+import arju2 from "/src/assets/Hotel/Arjuna2.avif";
+import kod1 from "/src/assets/Hotel/kodai-1.jpg";
+import kod2 from "/src/assets/Hotel/kodai-2.jpg";
+import kod3 from "/src/assets/Hotel/kodai-3.avif";
+import oot1 from "/src/assets/Hotel/ooty-1.avif";
+import oot2 from "/src/assets/Hotel/ooty-2.avif";
+import oot3 from "/src/assets/Hotel/ooty-3.jpg";
+import bh1 from "/src/assets/Hotel/jiwan.avif";
+import bh2 from "/src/assets/Hotel/jiwanrooms.jpg";
+import bh3 from "/src/assets/Hotel/Mcmtower.jpg";
 
 const Hotels = () => {
   const [filters, setFilters] = useState({
@@ -575,11 +597,7 @@ const Hotels = () => {
       type: "luxury",
       description:
         "Experience luxury at its finest with stunning views and world-class amenities. This hotel offers spacious rooms, multiple dining options, and a relaxing spa experience.",
-      images: [
-        "/src/assets/Hotel/hyatt-1.jpeg",
-        "/src/assets/Hotel/hyatt-2.jpeg",
-        "/src/assets/Hotel/hyatt-3.avif",
-      ],
+      images: [hyatt1, hyatt2, hyatt3],
       amenities: [
         { icon: <WifiIcon />, name: "Free WiFi" },
         { icon: <PoolIcon />, name: "Swimming Pool" },
@@ -599,11 +617,7 @@ const Hotels = () => {
       type: "luxury",
       description:
         "A premium luxury hotel offering unparalleled comfort and service. Enjoy the beautiful sea view, gourmet dining, and personalized service.",
-      images: [
-        "/src/assets/Hotel/justa-1.jpg",
-        "/src/assets/Hotel/justa-2.png",
-        "/src/assets/Hotel/justa-3.jpeg",
-      ],
+      images: [Justa1, Justa2, Justa3],
       amenities: [
         { icon: <WifiIcon />, name: "Free WiFi" },
         { icon: <RestaurantIcon />, name: "Restaurant" },
@@ -622,11 +636,7 @@ const Hotels = () => {
       type: "business",
       description:
         "A comfortable business hotel in the heart of Madurai. Convenient location with easy access to major attractions and business centers.",
-      images: [
-        "/src/assets/Hotel/tn-1.avif",
-        "/src/assets/Hotel/tn-2.jpg",
-        "/src/assets/Hotel/tn-3.jpg",
-      ],
+      images: [tam1, tam2, tam3],
       amenities: [
         { icon: <WifiIcon />, name: "Free WiFi" },
         { icon: <RestaurantIcon />, name: "Restaurant" },
@@ -644,11 +654,7 @@ const Hotels = () => {
       type: "luxury",
       description:
         "Beachfront resort with stunning views of the sunset. Enjoy the private beach access, water sports, and seafood restaurant.",
-      images: [
-        "/src/assets/Hotel/kan-1.jpg",
-        "/src/assets/Hotel/kan-2.jpg",
-        "/src/assets/Hotel/kan-3.avif",
-      ],
+      images: [kan1, kan2, kan3],
       amenities: [
         { icon: <WifiIcon />, name: "Free WiFi" },
         { icon: <PoolIcon />, name: "Swimming Pool" },
@@ -687,11 +693,7 @@ const Hotels = () => {
       type: "luxury",
       description:
         "Nestled in the hills of Kodaikanal, this resort offers a peaceful retreat with beautiful mountain views, hiking trails, and cozy fireplaces.",
-      images: [
-        "/src/assets/Hotel/kodai-1.jpg",
-        "/src/assets/Hotel/kodai-2.jpg",
-        "/src/assets/Hotel/kodai-3.avif",
-      ],
+      images: [kod1, kod2, kod3],
       amenities: [
         { icon: <WifiIcon />, name: "Free WiFi" },
         { icon: <RestaurantIcon />, name: "Restaurant" },
@@ -710,11 +712,7 @@ const Hotels = () => {
       type: "business",
       description:
         "A charming hotel in the queen of hill stations. Enjoy the colonial architecture, beautiful gardens, and tea plantations nearby.",
-      images: [
-        "/src/assets/Hotel/ooty-1.avif",
-        "/src/assets/Hotel/ooty-2.avif",
-        "/src/assets/Hotel/ooty-3.jpg",
-      ],
+      images: [oot1, oot2, oot3],
       amenities: [
         { icon: <WifiIcon />, name: "Free WiFi" },
         { icon: <RestaurantIcon />, name: "Restaurant" },
@@ -733,11 +731,7 @@ const Hotels = () => {
       type: "budget",
       description:
         "Affordable beachside accommodation with clean rooms and friendly service. Walking distance to the famous Rameshwaram Temple.",
-      images: [
-        "/src/assets/Hotel/jiwan.avif",
-        "/src/assets/Hotel/jiwanrooms.jpg",
-        "/src/assets/Hotel/Mcmtower.jpg",
-      ],
+      images: [bh1, bh2, bh3],
       amenities: [
         { icon: <WifiIcon />, name: "Free WiFi" },
         { icon: <AcUnitIcon />, name: "Air Conditioning" },
@@ -750,7 +744,7 @@ const Hotels = () => {
   // Initialize filtered hotels with all hotels
   useEffect(() => {
     setFilteredHotels(hotels);
-  }, []);
+  }, [0]);
 
   const handleFilterChange = (event) => {
     setFilters({
@@ -814,7 +808,13 @@ const Hotels = () => {
   return (
     <div className="hotels-page">
       {/* Hero Section */}
-      <div className="hotels-hero">
+      <div
+        className="hotels-hero"
+        style={{
+          backgroundImage: `url(${bannerImage})`,
+          backgroundPosition: "center 1",
+        }}
+      >
         <div className="hotels-hero-content">
           <h1>Find Your Perfect Stay</h1>
           <p>Discover comfortable accommodations for your journey</p>

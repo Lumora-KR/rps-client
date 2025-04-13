@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { Button, CircularProgress, Snackbar, Alert } from "@mui/material";
 import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import MapIcon from "@mui/icons-material/Map";
@@ -189,17 +190,17 @@ const EnquiryForm = () => {
 
       // Send form data to backend
 
-      await axios.post("http://localhost:5000/api/home-enquiries", formData);
+      await axios.post("http://localhost:5001/api/home-enquiry", formData);
 
       const response = await api.post("/api/home-enquiries", formData);
 
       if (response.data.success) {
-        // setNotification({
-        //   open: true,
-        //   message:
-        //     response.data.message || "Your enquiry has been sent successfully!",
-        //   severity: "success",
-        // });
+        setNotification({
+          open: true,
+          message:
+            response.data.message || "Your enquiry has been sent successfully!",
+          severity: "success",
+        });
         toast.success(
           "Your enquiry request has been sent successfully! We will contact you shortly to confirm your booking.",
           {

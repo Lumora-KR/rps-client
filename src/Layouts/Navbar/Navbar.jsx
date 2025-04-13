@@ -197,13 +197,13 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              {/* <Link
+              <Link
                 to="/bank-detail"
                 className="nav-link"
                 onClick={() => setIsOpen(false)}
               >
                 Bank Detail
-              </Link> */}
+              </Link>
             </li>
             <li className="nav-item">
               <Link

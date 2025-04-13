@@ -12,6 +12,7 @@ import FlightIcon from "@mui/icons-material/Flight";
 import PeopleIcon from "@mui/icons-material/People";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
 //import Kanyakumari from "/src/assets/home/HeroSection/kanyakumari-1.jpeg";
 //import Madurai from "/src/assets/home/HeroSection/Madu.jpeg";
 //import Rameswaram from "/src/assets/home/HeroSection/rameswaram-1.jpeg";
@@ -275,7 +276,7 @@ const Home = () => {
         "Book comfortable and affordable hotels at your destination with our hotel booking service.",
     },
     {
-      icon: <FlightIcon fontSize="large" />,
+      icon: <LocalFireDepartmentIcon fontSize="large" />,
       title: "Yatra-Arranged",
       description:
         "Experienced Iyer/Pandits for special poojas & rituals.Temple Darshan Assistance and Customized Yatra Packages for individuals & groups",

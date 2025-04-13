@@ -3,8 +3,8 @@
   }
   
   .hotels-hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      url('https://source.unsplash.com/1600x400/?hotel,luxury');
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('/src/assets/home/HeroSection/banner-layer-1.png'); */
     background-size: cover;
     background-position: center;
     height: 300px;
@@ -17,9 +17,16 @@
   }
   
   .hotels-hero-content h1 {
+    color: #333;
     font-size: var(--font-size-display);
     font-weight: var(--font-weight-bold);
     margin-bottom: var(--spacing-sm);
+  }
+  .hotels-hero-content p {
+    color: var(--text-medium);
+    font-size: var(--font-size-lg);
+    max-width: 600px;
+    margin: 0 auto;
   }
   
   .hotels-search-section {

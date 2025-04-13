@@ -16,6 +16,18 @@ import SearchIcon from "@mui/icons-material/Search";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import CarCard from "../../components/CarCard/CarCard";
 import bannerImage from '/src/assets/Cars/Car-3no-bg1.jpeg';
+import swift from "/src/assets/Cars/Car-8no-bg.jpeg";
+import toyoto from "/src/assets/Cars/Car-11.jpg";
+import tempo from "/src/assets/Cars/Tempo-Trave1.jpg";
+import honda from "/src/assets/Cars/Hcity-1.jpg";
+import fortuner from "/src/assets/Cars/fortuner.jpg";
+import hyundai from "/src/assets/Cars/Car-6no-bg.jpeg";
+import etios from "/src/assets/Cars/Car-9no-bg.jpeg";
+import post1 from "/src/assets/Poster-home/RPS-poster-1.png";
+import post2 from "/src/assets/Poster-home/RPS-poster-2.png";
+import post3 from "/src/assets/Poster-home/RPS-poster-3.png";
+import post4 from "/src/assets/Poster-home/RPS-1.jpeg";
+
 import "./CarRental.css";
 
 const CarRental = () => {
@@ -33,7 +45,7 @@ const CarRental = () => {
     {
       id: "swift-dzire",
       title: "Swift Dzire",
-      image: "/src/assets/Cars/Car-8no-bg.jpeg",
+      image: swift,
       price: 1500,
       priceUnit: "per day",
       carType: "sedan",
@@ -46,7 +58,7 @@ const CarRental = () => {
     {
       id: "toyota-innova",
       title: "Toyota Innova Crysta",
-      image: "/src/assets/Cars/Car-11.jpg",
+      image: toyoto,
       price: 3000,
       priceUnit: "per day",
       carType: "suv",
@@ -59,7 +71,7 @@ const CarRental = () => {
     {
       id: "tempo-traveller",
       title: "Tempo Traveller",
-      image: "src/assets/Cars/Tempo-Trave1.jpg",
+      image: tempo,
       price: 4500,
       priceUnit: "per day",
       carType: "tempo",
@@ -73,7 +85,7 @@ const CarRental = () => {
     {
       id: "honda-city",
       title: "Honda City",
-      image: "src/assets/Cars/Hcity-1.jpg",
+      image: honda,
       price: 1800,
       priceUnit: "per day",
       carType: "sedan",
@@ -86,7 +98,7 @@ const CarRental = () => {
     {
       id: "toyota-fortuner",
       title: "Toyota Fortuner",
-      image: "src/assets/Cars/fortuner.jpg",
+      image: fortuner,
       price: 5000,
       priceUnit: "per day",
       carType: "suv",
@@ -99,7 +111,7 @@ const CarRental = () => {
     {
       id: "hyundai-Hb20",
       title: "Hundai-Hb20",
-      image: "src/assets/Cars/Car-6no-bg.jpeg",
+      image: hyundai,
       price: 1200,
       priceUnit: "per day",
       carType: "hatchback",
@@ -112,7 +124,7 @@ const CarRental = () => {
     {
       id: 'toyota-etios',
       title: 'Toyota Etios',
-      image: 'src/assets/Cars/Car-9no-bg.jpeg',
+      image: etios,
       price: 1500,
       priceUnit: 'per day',
       carType: 'sedan',
@@ -326,7 +338,7 @@ const CarRental = () => {
               <div className="rental-feature">
                 <div className="feature-icon">
                   <img
-                    src="/placeholder.svg?height=60&width=60"
+                    src={post1}
                     alt="Well-maintained Vehicles"
                   />
                 </div>
@@ -342,7 +354,7 @@ const CarRental = () => {
               <div className="rental-feature">
                 <div className="feature-icon">
                   <img
-                    src="/placeholder.svg?height=60&width=60"
+                    src={post2}
                     alt="Professional Drivers"
                   />
                 </div>
@@ -358,7 +370,7 @@ const CarRental = () => {
               <div className="rental-feature">
                 <div className="feature-icon">
                   <img
-                    src="/placeholder.svg?height=60&width=60"
+                    src={post3}
                     alt="Flexible Rental Options"
                   />
                 </div>
@@ -374,7 +386,7 @@ const CarRental = () => {
               <div className="rental-feature">
                 <div className="feature-icon">
                   <img
-                    src="/placeholder.svg?height=60&width=60"
+                    src={post4}
                     alt="24/7 Support"
                   />
                 </div>

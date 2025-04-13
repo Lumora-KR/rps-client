@@ -1,11 +1,11 @@
 :root {
-  /* --primary-color: #ff6b6b;
+  --primary-color: #ff6b6b;
   --secondary-color: #4ecdc4;
   --text-dark: #2d3436;
   --text-medium: #636e72;
   --text-light: #b2bec3;
   --background-light: #ffffff;
-  --background-dark: #1a1a2e; */
+  --background-dark: #1a1a2e;
   --shadow-light: 0 10px 30px rgba(0, 0, 0, 0.1);
   --shadow-dark: 0 10px 30px rgba(0, 0, 0, 0.3);
   --transition-fast: 0.3s ease;
@@ -33,7 +33,7 @@
 
 .tour-package-image-container {
   position: relative;
-  height: 220px;
+  height: 250px;
   overflow: hidden;
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
@@ -41,7 +41,7 @@
 
 .tour-package-image {
   width: 100%;
-  height: 100%;
+  height: 18rem;
   object-fit: fill;
   transition: transform var(--transition-smooth);
   display: block;
@@ -70,7 +70,7 @@
   opacity: 0.9;
 }
 
-.tour-package-price {
+/* .tour-package-price {
   position: absolute;
   top: 15px;
   left: 15px;
@@ -83,7 +83,7 @@
   z-index: 2;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform var(--transition-fast);
-}
+} */
 
 .tour-package-card:hover .tour-package-price {
   transform: translateY(-3px);

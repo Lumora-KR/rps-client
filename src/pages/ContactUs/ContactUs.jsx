@@ -37,7 +37,7 @@ const ContactUs = () => {
     setLoading(true);
     
     try {
-      const response = await axios.post('http://localhost:5000/api/contact', formData);
+      const response = await axios.post('http://localhost:5001/api/contact', formData);
       
       if (response.data.success) {
         // Show success toast
@@ -80,32 +80,34 @@ const ContactUs = () => {
   // Contact information data - can be moved to a separate data file
   const contactInfo = {
     address: '123 Main Street, Rameshwaram, Tamil Nadu, India',
-    phone: '+91 00000 00000',
+    phone: '+91 8667200183 | 9840214679 | 9629528420',
     email: 'rpstourstravels@gmail.com',
-    whatsapp: '+91 00000 00000',
+    whatsapp: '+91 8667200183',
     hours: 'Mon - Sat: 9:00 AM - 6:00 PM'
   };
   
   // Office locations data - can be moved to a separate data file
   const officeLocations = [
     {
-      title: 'Rameshwaram Office',
-      address: '123 Temple Street, Rameshwaram, Tamil Nadu, India',
-      phone: '+91 00000 00000',
-      email: 'rameshwaram@rpstours.in'
+      title: 'Chennai Office',
+      address: '789 Beach Road, Kanyakumari, Tamil Nadu, India',
+      phone: '+91 8667200183 | 9840214679 | 9629528420',
+      email: 'kanyakumari@rpstours.in'
     },
     {
       title: 'Madurai Office',
       address: '456 Anna Nagar, Madurai, Tamil Nadu, India',
-      phone: '+91 00000 00000',
+      phone: '+91 8667200183 | 9840214679 | 9629528420',
       email: 'madurai@rpstours.in'
     },
     {
-      title: 'Kanyakumari Office',
-      address: '789 Beach Road, Kanyakumari, Tamil Nadu, India',
-      phone: '+91 00000 00000',
-      email: 'kanyakumari@rpstours.in'
-    }
+      title: 'Rameshwaram Office',
+      address: '123 Temple Street, Rameshwaram, Tamil Nadu, India',
+      phone: '+91 8667200183 | 9840214679 | 9629528420',
+      email: 'rameshwaram@rpstours.in'
+    },
+    
+    
   ];
   
   return (

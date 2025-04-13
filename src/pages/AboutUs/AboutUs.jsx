@@ -8,6 +8,14 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import DirectionsIcon from "@mui/icons-material/Directions";
 import "./AboutUs.css";
 import { Link } from "react-router-dom";
+import kod from "/src/assets/Site-Seen/Ram-2.avif"
+import kod1 from "/src/assets/Site-Seen/kod-5.jpg";
+import kod2 from "/src/assets/Site-Seen/cnn-2.jpg"
+import post1 from "/src/assets/Poster-home/RPS-poster.png";
+import post2 from "/src/assets/Poster-home/RPS-poster-1.png";
+import post3 from "/src/assets/Poster-home/RPS-poster-2.png";
+import post4 from  "/src/assets/Poster-home/RPS-poster-3.png";
+import ceo from "/src/assets/CEO.jpeg";
 
 const AboutUs = () => {
   const controls = useAnimation();
@@ -86,8 +94,7 @@ const AboutUs = () => {
                 variants={imageVariants}
               >
                 <img
-                  src="https://source.unsplash.com/600x800/?temple,india"
-                  alt="Temple"
+                  src={kod}                  alt="Temple"
                 />
               </motion.div>
               <motion.div
@@ -95,7 +102,7 @@ const AboutUs = () => {
                 variants={imageVariants}
               >
                 <img
-                  src="https://source.unsplash.com/600x400/?waterfall,india"
+                  src={kod1}
                   alt="Waterfall"
                 />
               </motion.div>
@@ -104,7 +111,7 @@ const AboutUs = () => {
                 variants={imageVariants}
               >
                 <img
-                  src="https://source.unsplash.com/600x400/?lake,mountains"
+                  src={kod2}
                   alt="Lake View"
                 />
               </motion.div>
@@ -132,23 +139,17 @@ const AboutUs = () => {
               </motion.h1>
 
               <motion.p variants={textVariants} className="about-description">
-                RPS tours travels and travels is one of the leading travels in
-                Rameshwaram, we are doing this service since 2000, our main
-                office is located in Rameshwaram. "Customer satisfaction is our
-                success". So we are providing a comfortable package to the
-                customer. We are providing a cab according to the family or a
-                team. We have different types of cars to satisfy the customer
-                and to make them comfort.
+              Welcome to RPS Tours & Travels, one of the most trusted and experienced travel agencies based in the holy town of Rameswaram. Established in 2000, we’ve been helping travelers create unforgettable memories for over two decades. Whether you're traveling solo, with family, or as part of a group, we offer customized, budget-friendly, and comfortable travel experiences across South India.
+              At RPS, we truly believe that "Customer satisfaction is our success." That’s why we go the extra mile to deliver seamless travel planning, personalized service, and top-notch comfort every step of the way. From small cars to luxury SUVs and tempo travellers, we provide the perfect vehicle to suit your journey — no matter the group size or occasion.
               </motion.p>
 
               <motion.p variants={textVariants} className="about-description">
-                We offer maximum inclusions for minimum cost. Life is an
-                adventure that needs to be lived to the fullest. Our
-                professionals can assist our customers in booking their Air
-                Tickets through an authorised Government Agency for trouble and
-                hassle free reimbursement. Travel far and wide not to escape
-                life but to live it in all its glory. Travel is more than
-                sightseeing and will keep our mind and body feeling fresh!
+              Our mission is simple:<br />
+               👉 To provide maximum inclusions at minimum cost <br />
+               👉 To offer hassle-free bookings for cabs, tours, flights, trains, and buses <br/>
+               👉 To ensure safe, smooth, and spiritually enriching travel for all our customers<br />
+We also assist in Air Ticket bookings through authorized government agencies — helping you secure travel reimbursement smoothly and confidently.
+Because travel isn’t just about sightseeing — it's about living life fully, creating memories, and exploring with peace of mind. And at RPS Tours & Travels, we make sure your journey is just that — effortless, joyful, and unforgettable.
               </motion.p>
 
               <motion.div className="about-features" variants={textVariants}>
@@ -201,7 +202,7 @@ const AboutUs = () => {
             <div className="why-choose-item">
               <div className="why-choose-icon">
                 <img
-                  src="/placeholder.svg?height=60&width=60"
+                  src={post1}
                   alt="Experienced Team"
                 />
               </div>
@@ -215,7 +216,7 @@ const AboutUs = () => {
             <div className="why-choose-item">
               <div className="why-choose-icon">
                 <img
-                  src="/placeholder.svg?height=60&width=60"
+                  src={post2}
                   alt="Customized Packages"
                 />
               </div>
@@ -229,7 +230,7 @@ const AboutUs = () => {
             <div className="why-choose-item">
               <div className="why-choose-icon">
                 <img
-                  src="/placeholder.svg?height=60&width=60"
+                  src={post3}
                   alt="Quality Service"
                 />
               </div>
@@ -242,7 +243,7 @@ const AboutUs = () => {
             <div className="why-choose-item">
               <div className="why-choose-icon">
                 <img
-                  src="/placeholder.svg?height=60&width=60"
+                  src={post4}
                   alt="Affordable Prices"
                 />
               </div>
@@ -270,46 +271,46 @@ const AboutUs = () => {
             <div className="team-member">
               <div className="team-member-image">
                 <img
-                  src="https://randomuser.me/api/portraits/men/32.jpg"
-                  alt="John Doe"
+                  src={ceo}
+                  alt="radhika"
                 />
               </div>
-              <h3>John Doe</h3>
+              <h3>Radhika</h3>
               <p>Founder & CEO</p>
             </div>
 
-            <div className="team-member">
+            {/* <div className="team-member">
               <div className="team-member-image">
                 <img
-                  src="https://randomuser.me/api/portraits/women/44.jpg"
+                  src=""
                   alt="Jane Smith"
                 />
               </div>
-              <h3>Jane Smith</h3>
+              <h3>Blank</h3>
               <p>Tour Manager</p>
             </div>
 
             <div className="team-member">
               <div className="team-member-image">
                 <img
-                  src="https://randomuser.me/api/portraits/men/67.jpg"
+                  src=""
                   alt="Robert Johnson"
                 />
               </div>
-              <h3>Robert Johnson</h3>
+              <h3>Radhika</h3>
               <p>Customer Support</p>
             </div>
 
             <div className="team-member">
               <div className="team-member-image">
                 <img
-                  src="https://randomuser.me/api/portraits/women/28.jpg"
+                  src=""
                   alt="Emily Davis"
                 />
               </div>
-              <h3>Emily Davis</h3>
+              <h3>blank</h3>
               <p>Travel Consultant</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
