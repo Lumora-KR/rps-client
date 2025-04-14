@@ -110,9 +110,7 @@ const TourPackageDetail = () => {
   };
   axios
 
-    .post("/api/home-enquiry", formData)
-
-    .post("http://localhost:5000/api/home-enquiries", formData)
+    .post("/api/home-enquiries", formData)
 
     .then((response) => {
       console.log("Response:", response);

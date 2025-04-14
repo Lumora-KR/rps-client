@@ -199,8 +199,6 @@ const EnquiryForm = () => {
 
       const response = await api.post("/api/home-enquiries", formData);
 
-      await axios.post("/api/home-enquiry", formData);
-
 
     
 
