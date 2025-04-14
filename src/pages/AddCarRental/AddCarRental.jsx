@@ -887,7 +887,7 @@ const AddCarRental = () => {
       });
 
       const response = await axios.post(
-        "http://localhost:5001/api/car-rentals",
+        "/api/car-rentals",
         formDataToSend,
         {
           headers: {

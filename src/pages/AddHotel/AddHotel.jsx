@@ -647,7 +647,7 @@ const AddHotel = () => {
       });
 
       const response = await axios.post(
-        "http://localhost:5001/api/hotels-list",
+        "/api/hotels-list",
         formDataToSend,
         {
           headers: {

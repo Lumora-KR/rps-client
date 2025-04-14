@@ -109,7 +109,7 @@ const TourPackageDetail = () => {
     setActiveTab(newValue);
   };
   axios
-    .post("http://localhost:5001/api/home-enquiry", formData)
+    .post("/api/home-enquiry", formData)
     .then((response) => {
       console.log("Response:", response);
     })
