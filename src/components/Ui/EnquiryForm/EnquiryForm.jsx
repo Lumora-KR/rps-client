@@ -199,10 +199,10 @@ const EnquiryForm = () => {
 
       const response = await api.post("/api/home-enquiries", formData);
 
-      await axios.post("http://localhost:5001/api/home-enquiry", formData);
+      await axios.post("/api/home-enquiry", formData);
 
 
-      const response = await api.post("/api/home-enquiries", formData);
+    
 
       if (response.data.success) {
         setNotification({
