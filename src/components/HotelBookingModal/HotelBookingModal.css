@@ -1,0 +1,129 @@
+.booking-modal .MuiDialog-paper {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.booking-modal-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: var(--primary-color, #1976d2);
+  color: white;
+}
+
+.booking-title-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-title-content .MuiTypography-subtitle1 {
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+.close-button {
+  color: white !important;
+}
+
+.booking-form {
+  padding: 8px;
+}
+
+.form-section-title {
+  position: relative;
+  margin-bottom: 16px !important;
+  font-weight: 600 !important;
+  color: var(--text-dark, #333);
+}
+
+.form-section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--primary-color, #1976d2);
+  border-radius: 3px;
+}
+
+.booking-summary {
+  margin-top: 16px;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color, #1976d2);
+}
+
+.summary-details {
+  margin-top: 12px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.summary-item .MuiTypography-body1 {
+  font-weight: 500;
+}
+
+.booking-actions {
+  padding: 16px 24px;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Dark mode support */
+[data-theme="dark"] .booking-modal-title {
+  background-color: #2d3748;
+}
+
+[data-theme="dark"] .form-section-title {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .booking-summary {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left-color: var(--primary-color, #1976d2);
+}
+
+[data-theme="dark"] .booking-actions {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .booking-modal .MuiDialog-paper {
+    margin: 16px;
+    width: calc(100% - 32px);
+    max-height: calc(100% - 32px);
+  }
+
+  .booking-title-content .MuiTypography-h5 {
+    font-size: 1.2rem;
+  }
+
+  .booking-title-content .MuiTypography-subtitle1 {
+    font-size: 0.9rem;
+  }
+
+  .form-section-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-modal-title {
+    padding: 12px 16px;
+  }
+
+  .booking-form {
+    padding: 4px;
+  }
+
+  .booking-actions {
+    padding: 12px 16px;
+  }
+}

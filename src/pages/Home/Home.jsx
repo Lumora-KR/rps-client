@@ -1,5 +1,5 @@
 // pages/Home/Home.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@mui/material";
 import HeroSlider from "../../components/Ui/HeroSlider/HeroSlider";
 import EnquiryForm from "../../components/Ui/EnquiryForm/EnquiryForm";
@@ -12,7 +12,7 @@ import FlightIcon from "@mui/icons-material/Flight";
 import PeopleIcon from "@mui/icons-material/People";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
+import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
 //import Kanyakumari from "/src/assets/home/HeroSection/kanyakumari-1.jpeg";
 //import Madurai from "/src/assets/home/HeroSection/Madu.jpeg";
 //import Rameswaram from "/src/assets/home/HeroSection/rameswaram-1.jpeg";
@@ -28,9 +28,19 @@ import HomePoster from "/src/assets/Home-Page/Poster.png";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import { TbArrowMoveRight } from "react-icons/tb";
+import TravelLoader from "../../components/TravelLoader/TravelLoader";
 
 const Home = () => {
   const [language, setLanguage] = useState("english"); // Default language
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleLanguageChange = (lang) => {
     setLanguage(lang);
@@ -286,102 +296,111 @@ const Home = () => {
   ];
 
   return (
-    <div className="home-page">
-      <section className="hero-section">
-        <HeroSlider slides={heroSlides[0]} language={language} />
+    <>
+      <TravelLoader loading={loading} />
 
-        <div className="enquiry-form-container">
-          <EnquiryForm />
-        </div>
-      </section>
+      {!loading && (
+        <div className="home-page">
+          <section className="hero-section">
+            <HeroSlider slides={heroSlides[0]} language={language} />
 
-      <section className="section welcome-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Welcome to RPS Tours & Travels</h2>
-            <div className="section-divider"></div>
-            <p className="section-subtitle">
-              Your Trusted Travel Partner in South India
-            </p>
-          </div>
+            <div className="enquiry-form-container">
+              <EnquiryForm />
+            </div>
+          </section>
 
-          <div className="welcome-content">
-            <div className="welcome-text">
-              <p>
-                <b>
-                  RPS Tours & Travels – Your Trusted TamilNadu Travel Partner
-                </b>{" "}
-                <br />
-                Looking for the best travel agency in Rameshwaram? RPS Tours &
-                Travels is your go-to destination for hassle-free and memorable
-                travel experiences. As the No.1 Rameshwaram travel agency, we
-                offer a wide range of travel solutions, including taxi services,
-                customized tour packages, hotel bookings, and more—all tailored
-                to make your journey seamless.
-              </p>
-              <p>
-                <b>Top-Notch Travel Services in Rameshwaram & Beyond</b>
-              </p>
-              <ul>
-                <li>
-                  <TbArrowMoveRight size={50} /> Domestic Pilgrimage{" "}
-                  <b>Yatra Arranged</b> – Special packages for spiritual
-                  journeys..
-                </li>
-                <li>
-                  <TbArrowMoveRight size={50} /> Rameshwaram to Madurai Airport
-                  Taxi Services – Reliable and comfortable airport transfers.
-                </li>
-                <li>
-                  <TbArrowMoveRight size={50} /> Kanyakumari Tour Packages –
-                  Explore the beauty of India's southernmost tip.
-                </li>
-                <li>
-                  <TbArrowMoveRight size={50} /> Luxury & Budget-Friendly
-                  Rentals – Choose from our traveler vans, mini buses, tourist
-                  buses, and houseboats for a personalized experience.
-                </li>
+          <section className="section welcome-section">
+            <div className="container">
+              <div className="section-header">
+                <h2 className="section-title">
+                  Welcome to RPS Tours & Travels
+                </h2>
+                <div className="section-divider"></div>
+                <p className="section-subtitle">
+                  Your Trusted Travel Partner in South India
+                </p>
+              </div>
 
-                <li>
-                  <TbArrowMoveRight size={50} /> Exclusive Kerala Tour Packages
-                  & Honeymoon Getaways – Discover the serene backwaters and
-                  breathtaking landscapes of Kerala.
-                </li>
-              </ul>
-              <p>
-                With a passion for exploration and excellence, we specialize in
-                customized tour packages, premium hotel bookings, reliable car
-                rentals, Bike rentals and hassle-free travel services across
-                Tamil Nadu, Kerala, Karnataka, Andhra Pradesh, and beyond. Our
-                fleet of well-maintained vehicles and our team of experienced
-                travel experts make sure your journey is safe, smooth, and
-                unforgettable.
-              </p>
-              <div className="welcome-buttons">
-                <Button
-                  variant="contained"
-                  color="primary"
-                  className="mui-button"
-                >
-                  <Link to="/tour-packages">Explore Packages</Link>
-                </Button>
-                <Button
-                  variant="outlined"
-                  color="primary"
-                  className="mui-button"
-                >
-                  <Link to="/contact-us">Contact Us</Link>
-                </Button>
+              <div className="welcome-content">
+                <div className="welcome-text">
+                  <p>
+                    <b>
+                      RPS Tours & Travels – Your Trusted TamilNadu Travel
+                      Partner
+                    </b>{" "}
+                    <br />
+                    Looking for the best travel agency in Rameshwaram? RPS Tours
+                    & Travels is your go-to destination for hassle-free and
+                    memorable travel experiences. As the No.1 Rameshwaram travel
+                    agency, we offer a wide range of travel solutions, including
+                    taxi services, customized tour packages, hotel bookings, and
+                    more—all tailored to make your journey seamless.
+                  </p>
+                  <p>
+                    <b>Top-Notch Travel Services in Rameshwaram & Beyond</b>
+                  </p>
+                  <ul>
+                    <li>
+                      <TbArrowMoveRight size={50} /> Domestic Pilgrimage{" "}
+                      <b>Yatra Arranged</b> – Special packages for spiritual
+                      journeys..
+                    </li>
+                    <li>
+                      <TbArrowMoveRight size={50} /> Rameshwaram to Madurai
+                      Airport Taxi Services – Reliable and comfortable airport
+                      transfers.
+                    </li>
+                    <li>
+                      <TbArrowMoveRight size={50} /> Kanyakumari Tour Packages –
+                      Explore the beauty of India's southernmost tip.
+                    </li>
+                    <li>
+                      <TbArrowMoveRight size={50} /> Luxury & Budget-Friendly
+                      Rentals – Choose from our traveler vans, mini buses,
+                      tourist buses, and houseboats for a personalized
+                      experience.
+                    </li>
+
+                    <li>
+                      <TbArrowMoveRight size={50} /> Exclusive Kerala Tour
+                      Packages & Honeymoon Getaways – Discover the serene
+                      backwaters and breathtaking landscapes of Kerala.
+                    </li>
+                  </ul>
+                  <p>
+                    With a passion for exploration and excellence, we specialize
+                    in customized tour packages, premium hotel bookings,
+                    reliable car rentals, Bike rentals and hassle-free travel
+                    services across Tamil Nadu, Kerala, Karnataka, Andhra
+                    Pradesh, and beyond. Our fleet of well-maintained vehicles
+                    and our team of experienced travel experts make sure your
+                    journey is safe, smooth, and unforgettable.
+                  </p>
+                  <div className="welcome-buttons">
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      className="mui-button"
+                    >
+                      <Link to="/tour-packages">Explore Packages</Link>
+                    </Button>
+                    <Button
+                      variant="outlined"
+                      color="primary"
+                      className="mui-button"
+                    >
+                      <Link to="/contact-us">Contact Us</Link>
+                    </Button>
+                  </div>
+                </div>
+                <div className="welcome-image">
+                  <img src={HomePoster} alt="RPS Tours" />
+                </div>
               </div>
             </div>
-            <div className="welcome-image">
-              <img src={HomePoster} alt="RPS Tours" />
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Featured Packages Section */}
-      {/* <section className="section featured-packages-section">
+          </section>
+          {/* Featured Packages Section */}
+          {/* <section className="section featured-packages-section">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">Featured Tour Packages</h2>
@@ -427,142 +446,144 @@ const Home = () => {
           </div>
         </div>
       </section> */}
-      <section className="section featured-packages-section">
-        <div className="container">
-          <FeaturedPackages />
-        </div>
-      </section>
+          <section className="section featured-packages-section">
+            <div className="container">
+              <FeaturedPackages />
+            </div>
+          </section>
 
-      {/* Services Section */}
-      <section className="section services-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Our Services</h2>
-            <div className="section-divider"></div>
-            <p className="section-subtitle">
-              Tailored travel solutions to meet all your journey needs
-            </p>
-          </div>
-
-          <div className="services-grid">
-            {services.map((service, index) => (
-              <div key={index} className="service-card">
-                <div className="service-icon">{service.icon}</div>
-                <h3 className="service-title">{service.title}</h3>
-                <p className="service-description">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="section testimonials-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">What Our Customers Say</h2>
-            <div className="section-divider"></div>
-            <p className="section-subtitle">
-              Read testimonials from our satisfied customers
-            </p>
-          </div>
-
-          <div className="testimonials-container">
-            <div className="testimonial">
-              <div className="testimonial-content">
-                <p>
-                  "I'm Raj from Punjab. Recently I vist Rameswaram .We had an
-                  amazing experience with RPS Tours. The tour was well
-                  organized, and the guide was knowledgeable. Will definitely
-                  recommend to friends and family!"
+          {/* Services Section */}
+          <section className="section services-section">
+            <div className="container">
+              <div className="section-header">
+                <h2 className="section-title">Our Services</h2>
+                <div className="section-divider"></div>
+                <p className="section-subtitle">
+                  Tailored travel solutions to meet all your journey needs
                 </p>
               </div>
-              <div className="testimonial-author">
-                {/* <img
-                  src="https://randomuser.me/api/portraits/men/32.jpg"
-                  alt="John Doe"
-                /> */}
-                <div className="author-info">
-                  <h4>RAJ</h4>
-                  <p>Rameshwaram Tour</p>
+
+              <div className="services-grid">
+                {services.map((service, index) => (
+                  <div key={index} className="service-card">
+                    <div className="service-icon">{service.icon}</div>
+                    <h3 className="service-title">{service.title}</h3>
+                    <p className="service-description">{service.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Testimonials Section */}
+          <section className="section testimonials-section">
+            <div className="container">
+              <div className="section-header">
+                <h2 className="section-title">What Our Customers Say</h2>
+                <div className="section-divider"></div>
+                <p className="section-subtitle">
+                  Read testimonials from our satisfied customers
+                </p>
+              </div>
+
+              <div className="testimonials-container">
+                <div className="testimonial">
+                  <div className="testimonial-content">
+                    <p>
+                      "I'm Raj from Punjab. Recently I vist Rameswaram .We had
+                      an amazing experience with RPS Tours. The tour was well
+                      organized, and the guide was knowledgeable. Will
+                      definitely recommend to friends and family!"
+                    </p>
+                  </div>
+                  <div className="testimonial-author">
+                    <img
+                      src="https://randomuser.me/api/portraits/men/32.jpg"
+                      alt="John Doe"
+                    />
+                    <div className="author-info">
+                      <h4>RAJ</h4>
+                      <p>Rameshwaram Tour</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="testimonial">
+                  <div className="testimonial-content">
+                    <p>
+                      "The car rental service was excellent. The driver was
+                      punctual, and the vehicle was clean and comfortable. Will
+                      use their service again for sure!"
+                    </p>
+                  </div>
+                  <div className="testimonial-author">
+                    <img
+                      src="https://randomuser.me/api/portraits/women/44.jpg"
+                      alt="Jane Smith"
+                    />
+                    <div className="author-info">
+                      <h4>PADMASRI</h4>
+                      <p>Car Rental Service</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="testimonial">
+                  <div className="testimonial-content">
+                    <p>
+                      "Our honeymoon package to Kerala was perfect. The hotels,
+                      transportation, and activities were all well arranged.
+                      Thank you for making our honeymoon special!"
+                    </p>
+                  </div>
+                  <div className="testimonial-author">
+                    <img
+                      src="https://randomuser.me/api/portraits/men/67.jpg"
+                      alt="Robert Johnson"
+                    />
+                    <div className="author-info">
+                      <h4>Robert</h4>
+                      <p>Kerala Honeymoon Package</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+          </section>
 
-            <div className="testimonial">
-              <div className="testimonial-content">
+          {/* Call to Action Section */}
+          <section className="section cta-section">
+            <div className="container">
+              <div className="cta-content">
+                <h2>Ready to Plan Your Next Adventure?</h2>
                 <p>
-                  "The car rental service was excellent. The driver was
-                  punctual, and the vehicle was clean and comfortable. Will use
-                  their service again for sure!"
+                  Contact us today to book your tour package or Car,Bus and Bike
+                  rental service.
                 </p>
-              </div>
-              <div className="testimonial-author">
-                {/* <img
-                  src="https://randomuser.me/api/portraits/women/44.jpg"
-                  alt="Jane Smith"
-                /> */}
-                <div className="author-info">
-                  <h4>PADMASRI</h4>
-                  <p>Car Rental Service</p>
+                <div className="cta-buttons">
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    size="large"
+                    className="mui-button"
+                  >
+                    <Link to="/car-rental">Book Now</Link>
+                  </Button>
+                  <Button
+                    variant="outlined"
+                    style={{ color: "white", borderColor: "white" }}
+                    size="large"
+                    className="mui-button"
+                  >
+                    <Link to="/contact-us">Contact Us</Link>
+                  </Button>
                 </div>
               </div>
             </div>
-
-            <div className="testimonial">
-              <div className="testimonial-content">
-                <p>
-                  "Our honeymoon package to Kerala was perfect. The hotels,
-                  transportation, and activities were all well arranged. Thank
-                  you for making our honeymoon special!"
-                </p>
-              </div>
-              <div className="testimonial-author">
-                {/* <img
-                  src="https://randomuser.me/api/portraits/men/67.jpg"
-                  alt="Robert Johnson"
-                /> */}
-                <div className="author-info">
-                  <h4>Robert</h4>
-                  <p>Kerala Honeymoon Package</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          </section>
         </div>
-      </section>
-
-      {/* Call to Action Section */}
-      <section className="section cta-section">
-        <div className="container">
-          <div className="cta-content">
-            <h2>Ready to Plan Your Next Adventure?</h2>
-            <p>
-              Contact us today to book your tour package or Car,Bus and Bike
-              rental service.
-            </p>
-            <div className="cta-buttons">
-              <Button
-                variant="contained"
-                color="secondary"
-                size="large"
-                className="mui-button"
-              >
-                <Link to="/car-rental">Book Now</Link>
-              </Button>
-              <Button
-                variant="outlined"
-                style={{ color: "white", borderColor: "white" }}
-                size="large"
-                className="mui-button"
-              >
-                <Link to="/contact-us">Contact Us</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+      )}
+    </>
   );
 };
 
