@@ -62,7 +62,11 @@ const EnquireHotel = () => {
   const fetchHotels = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("http://localhost:5000/api/hotels-list");
+
+      const response = await axios.get("/api/hotels-list");
+
+    
+
       if (response.data.success) {
         setHotels(response.data.data);
         setFilteredHotels(response.data.data);
@@ -161,7 +165,10 @@ const EnquireHotel = () => {
       };
 
       const response = await axios.post(
+
+        "/api/hotel-enquiries",
         "http://localhost:5000/api/hotel-enquiries",
+
         payload
       );
 
@@ -314,7 +321,11 @@ const EnquireHotel = () => {
                 <div className="hotel-image">
                   {hotel.images && hotel.images.length > 0 ? (
                     <img
-                      src={`http://localhost:5000${hotel.images[0]}`}
+
+                      src={`${hotel.images[0]}`}
+
+                     
+
                       alt={hotel.name}
                       style={{
                         width: "100%",
@@ -425,7 +436,11 @@ const EnquireHotel = () => {
                   <div className="hotel-detail-image">
                     {selectedHotel.images && selectedHotel.images.length > 0 ? (
                       <img
-                        src={`http://localhost:5000${selectedHotel.images[0]}`}
+
+                        src={`${selectedHotel.images[0]}`}
+
+                     
+
                         alt={selectedHotel.name}
                         style={{
                           width: "100%",

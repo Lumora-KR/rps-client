@@ -726,7 +726,7 @@ const CarDetail = () => {
       };
 
       const response = await axios.post(
-        "http://localhost:5001/api/car-rental-detail",
+        "/api/car-rental-detail",
         payload
       );
 
