@@ -57,7 +57,7 @@ const EnquireCarRental = () => {
   const fetchCars = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("http://localhost:5000/api/car-rentals");
+      const response = await axios.get("/api/car-rentals");
       if (response.data.success) {
         setCars(response.data.data);
         setFilteredCars(response.data.data);
@@ -175,7 +175,7 @@ const EnquireCarRental = () => {
       };
 
       const response = await axios.post(
-        "http://localhost:5000/api/car-rental-detail",
+        "/api/car-rental-detail",
         payload
       );
 
@@ -360,7 +360,7 @@ const EnquireCarRental = () => {
                       {/* Car Card Image */}
                       {car.images && car.images.length > 0 ? (
                         <img
-                          src={`http://localhost:5000{car.images[0]}`}
+                          src={`http://localhost:5001{car.images[0]}`}
                           alt={car.title}
                           style={{
                             width: "100%",
@@ -448,7 +448,7 @@ const EnquireCarRental = () => {
                     {/* Selected Car Image */}
                     {selectedCar.images && selectedCar.images.length > 0 ? (
                       <img
-                        src={`http://localhost:5000{selectedCar.images[0]}`}
+                        src={`http://localhost:5001{selectedCar.images[0]}`}
                         alt={selectedCar.title}
                         style={{
                           width: "100%",

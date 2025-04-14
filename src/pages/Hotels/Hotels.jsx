@@ -158,8 +158,7 @@ const Hotels = () => {
       description:
         "Affordable accommodation with all basic amenities. Perfect for travelers on a budget who still want comfort and cleanliness.",
       images: [
-        "/src/assets/Hotel/Arjuna.jpg",
-        "/src/assets/Hotel/Arjuna2.avif",
+        arju1,arju2
       ],
       amenities: [
         { icon: <WifiIcon />, name: "Free WiFi" },
