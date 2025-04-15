@@ -109,7 +109,7 @@ const TourPackageDetail = () => {
   const handleTabChange = (event, newValue) => {
     setActiveTab(newValue);
   };
-  axios
+  api
 
     .post("/api/tour-package-detail", formData)
 
