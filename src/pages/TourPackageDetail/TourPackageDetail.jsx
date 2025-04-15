@@ -44,7 +44,7 @@ import TourIcon from "@mui/icons-material/Tour";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
- import axios from "axios";
+ //import axios from "axios";
 import Rmm1 from "/src/assets/Tour-Images/rmm1.jpg";
 import Rmm2 from "/src/assets/Tour-Images/Tour-4.jpeg";
 import Rmm3 from "/src/assets/RPS-2.jpeg";
@@ -109,16 +109,16 @@ const TourPackageDetail = () => {
   const handleTabChange = (event, newValue) => {
     setActiveTab(newValue);
   };
-  api
+  // axios
 
-    .post("/api/tour-package-detail", formData)
+  //   .post("/api/tour-packages", formData)
 
-    .then((response) => {
-      console.log("Response:", response);
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
+  //   .then((response) => {
+  //     console.log("Response:", response);
+  //   })
+  //   .catch((error) => {
+  //     console.error("Error:", error);
+  //   });
   // Sample data for the package
   // In a real application, you would fetch this data based on the ID
   const packageData =[
