@@ -111,7 +111,7 @@ const TourPackageDetail = () => {
   };
   axios
 
-    .post("/api/home-enquiries", formData)
+    .post("/api/tour-package-detail", formData)
 
     .then((response) => {
       console.log("Response:", response);
