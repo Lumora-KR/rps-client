@@ -513,7 +513,7 @@ import {
 } from "@mui/icons-material";
 import { toast } from "react-toastify";
 //import axios from "axios";
-import api from "../../../services/api";
+import api from "../../services/api";
 import "./AddHotel.css";
 
 const AddHotel = () => {
