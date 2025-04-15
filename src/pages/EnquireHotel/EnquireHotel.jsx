@@ -27,6 +27,7 @@ import {
 } from "@mui/icons-material";
 import { toast } from "react-toastify";
 import axios from "axios";
+import api from "../../services/api";
 import "./EnquireHotel.css";
 
 const EnquireHotel = () => {
@@ -164,7 +165,7 @@ const EnquireHotel = () => {
         hotelName: selectedHotel.name,
       };
 
-      const response = await axios.post(
+      const response = await api.post(
 
         "/api/hotel-enquiries",
         "http://localhost:5000/api/hotel-enquiries",

@@ -25,7 +25,7 @@ import {
   CircularProgress 
 } from '@mui/material';
 
-//import api from "../../services/api";
+import api from "../../services/api";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -1051,7 +1051,7 @@ const TourPackageDetail = () => {
     
     try {
 
-      const response = await axios.post("/api/tour-package-detail", {
+      const response = await api.post("/api/tour-package-detail", {
         ...formData,
         packageId: selectedPackage.id,
         packageName: selectedPackage.title,

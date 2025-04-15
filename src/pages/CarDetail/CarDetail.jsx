@@ -37,7 +37,8 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import axios from "axios";
+//import axios from "axios";
+import api from "../../services/api";
 import "./CarDetail.css";
 
 const CarDetail = () => {
@@ -725,7 +726,7 @@ const CarDetail = () => {
         // priceUnit: carData?.priceUnit
       };
 
-      const response = await axios.post(
+      const response = await api.post(
         "/api/car-rental-detail",
         payload
       );

@@ -8,7 +8,8 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import SendIcon from '@mui/icons-material/Send';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import axios from 'axios';
+//import axios from 'axios';
+import api from "../../services/api";
 import './ContactUs.css';
 
 
@@ -37,7 +38,7 @@ const ContactUs = () => {
     setLoading(true);
     
     try {
-      const response = await axios.post('/api/contact', formData);
+      const response = await api.post('/api/contact', formData);
       
       if (response.data.success) {
         // Show success toast
