@@ -22,7 +22,7 @@ import {
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 //import axios from 'axios';
-import api from "../../../services/api";
+import api from "../../services/api";
 import './EnquiryFormModal.css';
 
 const EnquiryFormModal = ({ open, onClose, type, serviceData, packageData }) => {
