@@ -512,7 +512,8 @@ import {
   Delete as DeleteIcon,
 } from "@mui/icons-material";
 import { toast } from "react-toastify";
-import axios from "axios";
+//import axios from "axios";
+import api from "../../../services/api";
 import "./AddHotel.css";
 
 const AddHotel = () => {
@@ -646,7 +647,7 @@ const AddHotel = () => {
         formDataToSend.append("images", image);
       });
 
-      const response = await axios.post(
+      const response = await api.post(
 
         "/api/hotels-list",
 

@@ -25,6 +25,7 @@ import {
 } from "@mui/icons-material";
 import { toast } from "react-toastify";
 import axios from "axios";
+import api from "../../services/api";
 import "./EnquireCarRental.css";
 
 const EnquireCarRental = () => {
@@ -174,7 +175,7 @@ const EnquireCarRental = () => {
         carName: selectedCar.title,
       };
 
-      const response = await axios.post(
+      const response = await api.post(
         "/api/car-rental-detail",
         payload
       );

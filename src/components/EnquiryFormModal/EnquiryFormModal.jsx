@@ -21,7 +21,8 @@ import {
   useTheme
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import axios from 'axios';
+//import axios from 'axios';
+import api from "../../../services/api";
 import './EnquiryFormModal.css';
 
 const EnquiryFormModal = ({ open, onClose, type, serviceData, packageData }) => {
@@ -71,7 +72,7 @@ const EnquiryFormModal = ({ open, onClose, type, serviceData, packageData }) => 
       const endpoint = isBooking ? '/api/booking-enquiry' : '/api/service-enquiry';
       
       // Send the form data to the backend
-      await axios.post(endpoint, {
+      await api.post(endpoint, {
         ...formData,
         enquiryType: isBooking ? 'booking' : 'service',
         enquiryFor: isBooking ? packageData?.title : serviceData?.title

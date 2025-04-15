@@ -18,7 +18,8 @@ import {
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
 import CloseIcon from "@mui/icons-material/Close";
-import axios from "axios";
+//import axios from "axios";
+import api from "../../services/api";
 import "./HotelBookingModal.css";
 
 const HotelBookingModal = ({ open, onClose, hotel }) => {
@@ -111,7 +112,7 @@ const HotelBookingModal = ({ open, onClose, hotel }) => {
     setLoading(true);
 
     try {
-      const response = await axios.post(
+      const response = await api.post(
         "http://localhost:5000/api/hotel-enquiries",
         formData
       );
