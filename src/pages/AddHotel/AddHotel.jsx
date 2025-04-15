@@ -651,7 +651,7 @@ const AddHotel = () => {
 
         "/api/hotels-list",
 
-        "http://localhost:5000/api/hotels-list",
+        "http://localhost:5001/api/hotels-list",
 
         formDataToSend,
         {

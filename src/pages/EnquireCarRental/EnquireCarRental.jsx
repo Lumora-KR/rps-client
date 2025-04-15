@@ -449,7 +449,7 @@ const EnquireCarRental = () => {
                     {/* Selected Car Image */}
                     {selectedCar.images && selectedCar.images.length > 0 ? (
                       <img
-                        src={`http://localhost:5001{selectedCar.images[0]}`}
+                        src={`{selectedCar.images[0]}`}
                         alt={selectedCar.title}
                         style={{
                           width: "100%",

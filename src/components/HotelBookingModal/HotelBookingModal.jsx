@@ -113,7 +113,7 @@ const HotelBookingModal = ({ open, onClose, hotel }) => {
 
     try {
       const response = await api.post(
-        "http://localhost:5000/api/hotel-enquiries",
+        "/api/hotel-enquiries",
         formData
       );
 
