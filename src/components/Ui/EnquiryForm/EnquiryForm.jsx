@@ -197,7 +197,7 @@ const EnquiryForm = () => {
           //       formData
           //     );
 
-      const response = await api.post("/api/home-enquiries", formData);
+      const response = await api.post('/api/home-enquiries', formData);
 
       if (response.data.success) {
         setNotification({
