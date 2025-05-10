@@ -265,8 +265,7 @@
   
   /* Call to Action Section */
   .cta-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/1600x900/?travel,india');
-    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) ;
     background-position: center;
     color: white;
     text-align: center;

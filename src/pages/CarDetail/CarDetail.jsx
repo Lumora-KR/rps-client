@@ -39,6 +39,15 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 //import axios from "axios";
 import api from "../../services/api";
+//images
+import Toyoto from "/src/assets/Cars/Car-11.jpg";
+import swift from "/src/assets/Cars/Car-8no-bg.jpeg";
+import tempo from "/src/assets/Cars/Tempo-Trave1.jpg";
+import honda from "/src/assets/Cars/Hcity-1.jpg";
+import fortuner from "/src/assets/Cars/fortuner.jpg";
+import hyundai from '/src/assets/Cars/Car-6no-bg.jpeg';
+import etios from "/src/assets/Cars/Car-9no-bg.jpeg"
+
 import "./CarDetail.css";
 
 const CarDetail = () => {
@@ -62,7 +71,7 @@ const CarDetail = () => {
       id: "toyota-innova",
       title: "Toyota Innova Crysta",
       images: [
-        "/src/assets/Cars/Car-11.jpg"
+        Toyoto
       ],
       price: 3000,
       priceUnit: "per day",
@@ -143,7 +152,7 @@ const CarDetail = () => {
       id: "swift-dzire",
       title: "swift dzire",
       images: [
-      '/src/assets/Cars/Car-8no-bg.jpeg'
+      swift
       ],
       price: 3000,
       priceUnit: "per day",
@@ -224,7 +233,7 @@ const CarDetail = () => {
       id: "tempo-traveller",
       title: "Tempo Traveller",
       images: [
-        "/src/assets/Cars/Tempo-Trave1.jpg"
+        tempo
       ],
       price: 4500,
       priceUnit: "per day",
@@ -320,7 +329,7 @@ const CarDetail = () => {
       id: "honda-city",
       title: "Honda City",
       images: [
-        "/src/assets/Cars/Hcity-1.jpg"
+        honda
       ],
       price: 2800,
       priceUnit: "per day",
@@ -416,7 +425,7 @@ const CarDetail = () => {
       id: "toyota-fortuner",
       title: "Toyota Fortuner",
       images: [
-        "/src/assets/Cars/fortuner.jpg"
+        fortuner
       ],
       price: 5500,
       priceUnit: "per day",
@@ -513,7 +522,7 @@ const CarDetail = () => {
       id: "hyundai-Hb20",
       title: "Hyundai HB20",
       images: [
-        '/src/assets/Cars/Car-6no-bg.jpeg'
+        hyundai
       ],
       price: 2200,
       priceUnit: "per day",
@@ -609,7 +618,8 @@ const CarDetail = () => {
       id: "toyota-etios",
       title: "Toyota Etios",
       images: [
-        "/src/assets/Cars/Car-9no-bg.jpeg"
+        etios
+        
       ],
       price: 2500,
       priceUnit: "per day",

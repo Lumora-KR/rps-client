@@ -42,9 +42,9 @@ const Home = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleLanguageChange = (lang) => {
-    setLanguage(lang);
-  };
+  // const handleLanguageChange = (lang) => {
+  //   setLanguage(lang);
+  // };
 
   //Home page content - and  photos done
   // Hero slider data
@@ -114,108 +114,108 @@ const Home = () => {
             },
           ],
         },
-        tamil: {
-          seo: {
-            title: "RPS டூர்ஸ் மற்றும் பயணங்கள் | சிறந்த சுற்றுலா தொகுப்புகள்",
-            description:
-              "ராமேஷ்வரம், கன்னியாகுமரி மற்றும் பிற தென் இந்திய சுற்றுலா இடங்களுக்கு பரிசுத்தமான சுற்றுலா தொகுப்புகளை ஆராயுங்கள். உங்கள் சிறந்த விடுமுறையை இப்போது புக்கிங் செய்யுங்கள்.",
-            keywords: [
-              "சுற்றுலா தொகுப்புகள்",
-              "தென் இந்தியா சுற்றுலா",
-              "ராமேஷ்வரமின் சுற்றுலா",
-              "கன்னியாகுமரி சுற்றுலா",
-              "ஆன்மிக சுற்றுலா",
-              "சிறந்த பயணம்",
-              "விடுமுறை தொகுப்புகள்",
-            ],
-            og: {
-              title: "RPS டூர்ஸ் மற்றும் பயணங்கள்",
-              description:
-                "ராமேஷ்வரம், கன்னியாகுமரி, மதுரை மற்றும் பிற இடங்களுக்கு சிறந்த சுற்றுலா தொகுப்புகளை ஆராயுங்கள்.",
-              image: "https://source.unsplash.com/600x400/?south-india-tour",
-              url: "https://rps-tours.vercel.app/",
-            },
-            twitter: {
-              card: "summary_large_image",
-              site: "@RPSTours",
-              title: "RPS டூர்ஸ் மற்றும் பயணங்கள்",
-              description:
-                "அனைத்து வகையான தென் இந்திய சுற்றுலா தொகுப்புகளை ஆராயுங்கள்.",
-              image: "https://source.unsplash.com/600x400/?south-india-tour",
-            },
-          },
-          heroSlides: [
-            {
-              image: "https://source.unsplash.com/600x400/?rameshwaram",
-              subtitle: "கண்டறி",
-              title: "ராமேஷ்வரமின் சுற்றுலா தொகுப்பு",
-              button: {
-                text: "இப்போது ஆராய்க",
-                url: "/tour-packages/rameshwaram",
-              },
-            },
-            {
-              image: "https://source.unsplash.com/600x400/?kanyakumari",
-              subtitle: "ஆராயுங்கள்",
-              title: "கன்னியாகுமரி சுற்றுலா தொகுப்பு",
-              button: {
-                text: "இப்போது ஆராய்க",
-                url: "/tour-packages/kanyakumari",
-              },
-            },
-          ],
-        },
-        hindi: {
-          seo: {
-            title: "RPS टूर और यात्रा | दक्षिण भारत के बेहतरीन टूर पैकेज",
-            description:
-              "रामेश्वरम, कन्नiyakुमारी और अन्य दक्षिण भारतीय स्थलों के सस्ते टूर पैकेज के साथ आरपीएस टूर और यात्रा में अपना परफेक्ट अवकाश बुक करें।",
-            keywords: [
-              "टूर पैकेज",
-              "दक्षिण भारत टूर",
-              "रामेश्वरम टूर",
-              "कन्नiyakुमारी टूर",
-              "आध्यात्मिक टूर",
-              "सस्ते यात्रा",
-              "अवकाश पैकेज",
-            ],
-            og: {
-              title: "RPS टूर और यात्रा",
-              description:
-                "आरपीएस टूर और यात्रा के साथ बेहतरीन टूर पैकेजों की खोज करें।",
-              image: "https://source.unsplash.com/600x400/?south-india-tour",
-              url: "https://rps-tours.vercel.app/",
-            },
-            twitter: {
-              card: "summary_large_image",
-              site: "@RPSTours",
-              title: "RPS टूर और यात्रा",
-              description:
-                "दक्षिण भारत के सस्ते और कस्टमाइज्ड टूर पैकेज आरपीएस टूर और यात्रा में खोजें।",
-              image: "https://source.unsplash.com/600x400/?south-india-tour",
-            },
-          },
-          heroSlides: [
-            {
-              image: "https://source.unsplash.com/600x400/?rameshwaram",
-              subtitle: "खोजें",
-              title: "रामेश्वरम टूर पैकेज",
-              button: {
-                text: "अभी एक्सप्लोर करें",
-                url: "/tour-packages/rameshwaram",
-              },
-            },
-            {
-              image: "https://source.unsplash.com/600x400/?kanyakumari",
-              subtitle: "अन्वेषण करें",
-              title: "कन्नiyakुमारी टूर पैकेज",
-              button: {
-                text: "अभी एक्सप्लोर करें",
-                url: "/tour-packages/kanyakumari",
-              },
-            },
-          ],
-        },
+        // tamil: {
+        //   seo: {
+        //     title: "RPS டூர்ஸ் மற்றும் பயணங்கள் | சிறந்த சுற்றுலா தொகுப்புகள்",
+        //     description:
+        //       "ராமேஷ்வரம், கன்னியாகுமரி மற்றும் பிற தென் இந்திய சுற்றுலா இடங்களுக்கு பரிசுத்தமான சுற்றுலா தொகுப்புகளை ஆராயுங்கள். உங்கள் சிறந்த விடுமுறையை இப்போது புக்கிங் செய்யுங்கள்.",
+        //     keywords: [
+        //       "சுற்றுலா தொகுப்புகள்",
+        //       "தென் இந்தியா சுற்றுலா",
+        //       "ராமேஷ்வரமின் சுற்றுலா",
+        //       "கன்னியாகுமரி சுற்றுலா",
+        //       "ஆன்மிக சுற்றுலா",
+        //       "சிறந்த பயணம்",
+        //       "விடுமுறை தொகுப்புகள்",
+        //     ],
+        //     og: {
+        //       title: "RPS டூர்ஸ் மற்றும் பயணங்கள்",
+        //       description:
+        //         "ராமேஷ்வரம், கன்னியாகுமரி, மதுரை மற்றும் பிற இடங்களுக்கு சிறந்த சுற்றுலா தொகுப்புகளை ஆராயுங்கள்.",
+        //       image: "https://source.unsplash.com/600x400/?south-india-tour",
+        //       url: "https://rps-tours.vercel.app/",
+        //     },
+        //     twitter: {
+        //       card: "summary_large_image",
+        //       site: "@RPSTours",
+        //       title: "RPS டூர்ஸ் மற்றும் பயணங்கள்",
+        //       description:
+        //         "அனைத்து வகையான தென் இந்திய சுற்றுலா தொகுப்புகளை ஆராயுங்கள்.",
+        //       image: "https://source.unsplash.com/600x400/?south-india-tour",
+        //     },
+        //   },
+        //   heroSlides: [
+        //     {
+        //       image: "https://source.unsplash.com/600x400/?rameshwaram",
+        //       subtitle: "கண்டறி",
+        //       title: "ராமேஷ்வரமின் சுற்றுலா தொகுப்பு",
+        //       button: {
+        //         text: "இப்போது ஆராய்க",
+        //         url: "/tour-packages/rameshwaram",
+        //       },
+        //     },
+        //     {
+        //       image: "https://source.unsplash.com/600x400/?kanyakumari",
+        //       subtitle: "ஆராயுங்கள்",
+        //       title: "கன்னியாகுமரி சுற்றுலா தொகுப்பு",
+        //       button: {
+        //         text: "இப்போது ஆராய்க",
+        //         url: "/tour-packages/kanyakumari",
+        //       },
+        //     },
+        //   ],
+        // },
+        // hindi: {
+        //   seo: {
+        //     title: "RPS टूर और यात्रा | दक्षिण भारत के बेहतरीन टूर पैकेज",
+        //     description:
+        //       "रामेश्वरम, कन्नiyakुमारी और अन्य दक्षिण भारतीय स्थलों के सस्ते टूर पैकेज के साथ आरपीएस टूर और यात्रा में अपना परफेक्ट अवकाश बुक करें।",
+        //     keywords: [
+        //       "टूर पैकेज",
+        //       "दक्षिण भारत टूर",
+        //       "रामेश्वरम टूर",
+        //       "कन्नiyakुमारी टूर",
+        //       "आध्यात्मिक टूर",
+        //       "सस्ते यात्रा",
+        //       "अवकाश पैकेज",
+        //     ],
+        //     og: {
+        //       title: "RPS टूर और यात्रा",
+        //       description:
+        //         "आरपीएस टूर और यात्रा के साथ बेहतरीन टूर पैकेजों की खोज करें।",
+        //       image: "",
+        //       url: "https://rps-tours.vercel.app/",
+        //     },
+        //     twitter: {
+        //       card: "summary_large_image",
+        //       site: "@RPSTours",
+        //       title: "RPS टूर और यात्रा",
+        //       description:
+        //         "दक्षिण भारत के सस्ते और कस्टमाइज्ड टूर पैकेज आरपीएस टूर और यात्रा में खोजें।",
+        //       image: "https://source.unsplash.com/600x400/?south-india-tour",
+        //     },
+        //   },
+        //   heroSlides: [
+        //     {
+        //       image: "https://source.unsplash.com/600x400/?rameshwaram",
+        //       subtitle: "खोजें",
+        //       title: "रामेश्वरम टूर पैकेज",
+        //       button: {
+        //         text: "अभी एक्सप्लोर करें",
+        //         url: "/tour-packages/rameshwaram",
+        //       },
+        //     },
+        //     {
+        //       image: "https://source.unsplash.com/600x400/?kanyakumari",
+        //       subtitle: "अन्वेषण करें",
+        //       title: "कन्नiyakुमारी टूर पैकेज",
+        //       button: {
+        //         text: "अभी एक्सप्लोर करें",
+        //         url: "/tour-packages/kanyakumari",
+        //       },
+        //     },
+        //   ],
+        // },
       },
     },
   ];
@@ -497,12 +497,12 @@ const Home = () => {
                     </p>
                   </div>
                   <div className="testimonial-author">
-                    <img
+                    {/* <img
                       src="https://randomuser.me/api/portraits/men/32.jpg"
                       alt="John Doe"
-                    />
+                    /> */}
                     <div className="author-info">
-                      <h4>RAJ</h4>
+                      <h4>Raj kumar</h4>
                       <p>Rameshwaram Tour</p>
                     </div>
                   </div>
@@ -517,10 +517,10 @@ const Home = () => {
                     </p>
                   </div>
                   <div className="testimonial-author">
-                    <img
+                    {/* <img
                       src="https://randomuser.me/api/portraits/women/44.jpg"
                       alt="Jane Smith"
-                    />
+                    /> */}
                     <div className="author-info">
                       <h4>PADMASRI</h4>
                       <p>Car Rental Service</p>
@@ -537,12 +537,12 @@ const Home = () => {
                     </p>
                   </div>
                   <div className="testimonial-author">
-                    <img
+                    {/* <img
                       src="https://randomuser.me/api/portraits/men/67.jpg"
                       alt="Robert Johnson"
-                    />
+                    /> */}
                     <div className="author-info">
-                      <h4>Robert</h4>
+                      <h4>Richard</h4>
                       <p>Kerala Honeymoon Package</p>
                     </div>
                   </div>

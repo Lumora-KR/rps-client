@@ -335,13 +335,13 @@ const EnquireHotel = () => {
                       }}
                       onError={(e) => {
                         e.target.onerror = null;
-                        e.target.src =
-                          "https://source.unsplash.com/800x600/?hotel";
+                        // e.target.src =
+                        //   "https://source.unsplash.com/800x600/?hotel";
                       }}
                     />
                   ) : (
                     <img
-                      src="https://source.unsplash.com/800x600/?hotel"
+                      src=""
                       alt={hotel.name}
                       style={{
                         width: "100%",
@@ -451,13 +451,13 @@ const EnquireHotel = () => {
                         }}
                         onError={(e) => {
                           e.target.onerror = null;
-                          e.target.src =
-                            "https://source.unsplash.com/800x600/?hotel";
+                          // e.target.src =
+                          //   "https://source.unsplash.com/800x600/?hotel";
                         }}
                       />
                     ) : (
                       <img
-                        src="https://source.unsplash.com/800x600/?hotel"
+                        src=""
                         alt={selectedHotel.name}
                         style={{
                           width: "100%",
