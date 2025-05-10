@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import { useLanguage } from "../../pages/LanguageContext";
+// import { useLanguage } from "../../pages/LanguageContext";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 // import logo from '../../assets/images/logo.png'; // Make sure to add your logo
 
@@ -12,7 +12,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-  const { changeLanguage } = useLanguage();
+  // const { changeLanguage } = useLanguage();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -119,12 +119,12 @@ const Navbar = () => {
                   </Link>
                 </li> */}
                 <li>
-                  <Link
+                  {/* <Link
                     to="/enquire-car-rental"
                     onClick={() => setIsOpen(false)}
                   >
                     Enquire Rental Car
-                  </Link>
+                  </Link> */}
                 </li>
               </ul>
             </li>
@@ -196,7 +196,7 @@ const Navbar = () => {
                 About Us
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link
                 to="/bank-detail"
                 className="nav-link"
@@ -204,7 +204,7 @@ const Navbar = () => {
               >
                 Bank Detail
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item">
               <Link
                 to="/contact-us"
@@ -214,7 +214,7 @@ const Navbar = () => {
                 Contact Us
               </Link>
             </li>
-            <li
+            {/* <li
               className={`nav-item dropdown ${
                 activeDropdown === 3 ? "active" : ""
               }`}
@@ -265,7 +265,7 @@ const Navbar = () => {
                   </a>
                 </li>
               </ul>
-            </li>
+            </li> IF you want the language button to work here is the code use uncommand to enable */}
           </ul>
         </div>
         {/* <span className="navbar-toggle" onClick={() => setIsOpen(!isOpen)}>

@@ -55,7 +55,7 @@ const TravelLoader = ({ loading = true, onLoadingComplete }) => {
               }}
               transition={{
                 repeat: Number.POSITIVE_INFINITY,
-                duration: 3,
+                duration: 1,
                 ease: "linear",
               }}
             >
