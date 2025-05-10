@@ -542,7 +542,7 @@ const Home = () => {
                       alt="Robert Johnson"
                     /> */}
                     <div className="author-info">
-                      <h4>Richard</h4>
+                      <h4>Kevin paul </h4>
                       <p>Kerala Honeymoon Package</p>
                     </div>
                   </div>
